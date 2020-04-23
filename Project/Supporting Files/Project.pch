@@ -1,0 +1,97 @@
+//
+//  Project.pch
+//  Project
+//
+//  Created by Chenyi on 2018/1/13.
+//  Copyright © 2018年 Chenyi. All rights reserved.
+//
+
+#ifndef Project_pch
+#define Project_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Common.h"
+#endif
+
+//常用
+#define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
+#define SCREEN_MIN      MIN(SCREEN_HEIGHT, SCREEN_WIDTH)
+#define SCREEN_MAX      MAX(SCREEN_HEIGHT, SCREEN_WIDTH)
+
+#define MAIN_COLOR              RGBCOLOR(180, 160, 120)
+#define TABBAT_COLOR            RGBCOLOR(114, 109, 109)
+#define VC_BG_COLOR             COLOR_W(246)
+#define HEIGHT_AD_COLUMN        SCALE_FIT(110)
+#define PADDING_HORIZ           WIDTH(12)
+#define PADDING_WIDTH           (SCREEN_WIDTH - PADDING_HORIZ * 2)
+
+#define KeyWindow          [UIApplication sharedApplication].keyWindow
+#define UserDefaults       [NSUserDefaults standardUserDefaults]
+#define NotificationCenter [NSNotificationCenter defaultCenter]
+#define FileManager        [NSFileManager defaultManager]
+
+//4.7英寸屏幕进行基础适配
+#define kDevice_Is_iPhoneX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
+#define kNavBar_H               44
+#define kTabBar_H               49
+#define kStatusBar_H            (kDevice_Is_iPhoneX ? 44 : 20)
+#define kBottomMargin           (kDevice_Is_iPhoneX ? 34.f : 0.f)
+#define kStatusBarAndNavBar_H   (kStatusBar_H + kNavBar_H)
+#define kTabbarAndBottomMargin  (kTabBar_H + kBottomMargin)
+//#define kSafeArea_H             (SCREEN_HEIGHT - kStatusBarAndNavBar_H - kTabbarAndBottomMargin)
+//#define kSafeAreaAndStatusBar_H (SCREEN_HEIGHT - kStatusBar_H - kBottomMargin)
+//#define kSafeAreaAndNavBar_H    (SCREEN_HEIGHT - kStatusBarAndNavBar_H - kBottomMargin)
+NS_INLINE CGFloat kSafeArea_H() {
+    UIViewController *vc = [SystemManager currentVC];
+    CGFloat height = SCREEN_HEIGHT - kBottomMargin;
+    if (!vc.hidesBottomBarWhenPushed) {
+        height -= kTabBar_H;
+    }
+    if (!vc.navigationController.navigationBar.isHidden) {
+        height -= (kNavBar_H + kStatusBar_H);
+    }
+    return height;
+}
+
+#define WIDTH(w)        (w) * SCREEN_MIN / 375
+#define HEIGHT(h)       (h) * (SCREEN_MAX - kStatusBar_H) / (667 - kStatusBar_H)
+#define HEIGHT_N(h)     (h) * (SCREEN_MAX - kStatusBarAndNavBar_H) / (667 - kStatusBarAndNavBar_H)
+#define HEIGHT_NT(h)    (h) * (SCREEN_MAX - kStatusBarAndNavBar_H - kTabbarAndBottomMargin) / (667 - kStatusBarAndNavBar_H - kTabbarAndBottomMargin)
+#define FONTSIZE(s)     (s) * SCREEN_MIN / 375
+
+//自定义颜色
+#define RGBACOLOR(r, g, b, a)   [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define RGBCOLOR(r, g, b)       RGBACOLOR(r, g, b, 1.0)
+#define COLOR_W(c)              [UIColor colorWithWhite:(c) / 255.0 alpha:1]
+//字体
+#define Font_Thin(s)            [UIFont fontWithName:@"PingFangSC-Thin" size:FONTSIZE(s)]
+#define Font_Light(s)           [UIFont fontWithName:@"PingFangSC-Light" size:FONTSIZE(s)]
+#define Font_Regular(s)         [UIFont fontWithName:@"PingFangSC-Regular" size:FONTSIZE(s)]
+#define Font_Medium(s)          [UIFont fontWithName:@"PingFangSC-Medium" size:FONTSIZE(s)]
+#define Font_Semibold(s)        [UIFont fontWithName:@"PingFangSC-Semibold" size:FONTSIZE(s)]
+
+//设备版本
+#define IOS_10_LATER    [[UIDevice currentDevice].systemVersion doubleValue] >= 10.0
+#define IOS_9_LATER     [[UIDevice currentDevice].systemVersion doubleValue] >= 9.0
+#define IOS_8_LATER     [[UIDevice currentDevice].systemVersion doubleValue] >= 8.0
+#define IPHONE_4S       (SCREEN_WIDTH == 320) && (SCREEN_HEIGHT == 480)
+#define CLIENT_VERSION  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define CLIENT_VERSION_BUILD  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+#define APP_NAME ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"])
+
+#ifdef DEBUG
+#define BCLog(...)  NSLog(@"%s Line:%d \n %@\n\n", __func__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#define BCLog(...)
+#endif
+
+#endif
