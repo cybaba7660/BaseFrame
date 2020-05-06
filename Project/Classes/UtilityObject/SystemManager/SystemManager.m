@@ -14,7 +14,7 @@
 @implementation SystemManager
 + (NSString *)getCacheSize
 {
-    NSUInteger cacheSize = [[SDImageCache sharedImageCache] getSize];
+    NSUInteger cacheSize = [[SDImageCache sharedImageCache] totalDiskSize];
     CGFloat tempSize     = cacheSize * 1.0 / 1024 / 1024;
     NSString *cacheStr   = tempSize >= 1.0 ? [NSString stringWithFormat:@"%.2f MB", tempSize] : [NSString stringWithFormat:@"%.2f KB", tempSize * 1024];
     return cacheStr;
