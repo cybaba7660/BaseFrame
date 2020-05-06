@@ -46,6 +46,13 @@
 		E5083DC72417716A00E13C03 /* MeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DC62417716A00E13C03 /* MeVC.m */; };
 		E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DE7241793D800E13C03 /* NetworkManager+User.m */; };
 		E5083DEB241793D800E13C03 /* NetworkManager+Home.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DE8241793D800E13C03 /* NetworkManager+Home.m */; };
+		E53D95B424625818000FF680 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95A624625818000FF680 /* NSMutableArray+Safe.m */; };
+		E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95A924625818000FF680 /* NSMutableDictionary+Safe.m */; };
+		E53D95B624625818000FF680 /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95AE24625818000FF680 /* NSMutableString+Safe.m */; };
+		E53D95B724625818000FF680 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95B024625818000FF680 /* NSDictionary+Safe.m */; };
+		E53D95B824625818000FF680 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95B124625818000FF680 /* NSObject+Swizzling.m */; };
+		E53D95B924625818000FF680 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95B224625818000FF680 /* NSArray+Safe.m */; };
+		E53D95BA24625818000FF680 /* NSObject+ImpChangeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95B324625818000FF680 /* NSObject+ImpChangeTool.m */; };
 		E599B953240F9CAD00C3A55F /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E599B952240F9CAD00C3A55F /* WebVC.m */; };
 		E599B95A240F9D3400C3A55F /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E599B955240F9D3400C3A55F /* NinaPagerView.m */; };
 		E599B95B240F9D3400C3A55F /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E599B956240F9D3400C3A55F /* NinaBaseView.m */; };
@@ -72,13 +79,6 @@
 		E599BD10240FA9A000C3A55F /* NSObject+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCD4240FA9A000C3A55F /* NSObject+Helper.m */; };
 		E599BD11240FA9A000C3A55F /* UITextField+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCD6240FA9A000C3A55F /* UITextField+Helper.m */; };
 		E599BD12240FA9A000C3A55F /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCD9240FA9A000C3A55F /* NSDate+Helper.m */; };
-		E599BD13240FA9A000C3A55F /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCDD240FA9A000C3A55F /* NSMutableArray+Safe.m */; };
-		E599BD14240FA9A000C3A55F /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCE0240FA9A000C3A55F /* NSMutableDictionary+Safe.m */; };
-		E599BD15240FA9A000C3A55F /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCE5240FA9A000C3A55F /* NSMutableString+Safe.m */; };
-		E599BD16240FA9A000C3A55F /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCE7240FA9A000C3A55F /* NSDictionary+Safe.m */; };
-		E599BD17240FA9A000C3A55F /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCE8240FA9A000C3A55F /* NSObject+Swizzling.m */; };
-		E599BD18240FA9A000C3A55F /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCE9240FA9A000C3A55F /* NSArray+Safe.m */; };
-		E599BD19240FA9A000C3A55F /* NSObject+ImpChangeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCEA240FA9A000C3A55F /* NSObject+ImpChangeTool.m */; };
 		E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF1240FA9A000C3A55F /* SystemManager.m */; };
 		E599BD1B240FA9A000C3A55F /* RegularExpressionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF2240FA9A000C3A55F /* RegularExpressionTool.m */; };
 		E599BD1C240FA9A000C3A55F /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF3240FA9A000C3A55F /* Encryption.m */; };
@@ -181,6 +181,21 @@
 		E5083DE7241793D800E13C03 /* NetworkManager+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+User.m"; sourceTree = "<group>"; };
 		E5083DE8241793D800E13C03 /* NetworkManager+Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Home.m"; sourceTree = "<group>"; };
 		E5083DE9241793D800E13C03 /* NetworkManager+Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkManager+Home.h"; sourceTree = "<group>"; };
+		E53D95A524625818000FF680 /* NSMutableString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Safe.h"; sourceTree = "<group>"; };
+		E53D95A624625818000FF680 /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
+		E53D95A724625818000FF680 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
+		E53D95A824625818000FF680 /* SafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeObject.h; sourceTree = "<group>"; };
+		E53D95A924625818000FF680 /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
+		E53D95AA24625818000FF680 /* NSObject+ImpChangeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ImpChangeTool.h"; sourceTree = "<group>"; };
+		E53D95AB24625818000FF680 /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		E53D95AC24625818000FF680 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		E53D95AD24625818000FF680 /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
+		E53D95AE24625818000FF680 /* NSMutableString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Safe.m"; sourceTree = "<group>"; };
+		E53D95AF24625818000FF680 /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
+		E53D95B024625818000FF680 /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
+		E53D95B124625818000FF680 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		E53D95B224625818000FF680 /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		E53D95B324625818000FF680 /* NSObject+ImpChangeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ImpChangeTool.m"; sourceTree = "<group>"; };
 		E599B951240F9CAD00C3A55F /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
 		E599B952240F9CAD00C3A55F /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
 		E599B955240F9D3400C3A55F /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
@@ -234,21 +249,6 @@
 		E599BCD7240FA9A000C3A55F /* UITextField+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Helper.h"; sourceTree = "<group>"; };
 		E599BCD9240FA9A000C3A55F /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		E599BCDA240FA9A000C3A55F /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
-		E599BCDC240FA9A000C3A55F /* NSMutableString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Safe.h"; sourceTree = "<group>"; };
-		E599BCDD240FA9A000C3A55F /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
-		E599BCDE240FA9A000C3A55F /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
-		E599BCDF240FA9A000C3A55F /* SafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeObject.h; sourceTree = "<group>"; };
-		E599BCE0240FA9A000C3A55F /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
-		E599BCE1240FA9A000C3A55F /* NSObject+ImpChangeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ImpChangeTool.h"; sourceTree = "<group>"; };
-		E599BCE2240FA9A000C3A55F /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
-		E599BCE3240FA9A000C3A55F /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
-		E599BCE4240FA9A000C3A55F /* NSMutableArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Safe.h"; sourceTree = "<group>"; };
-		E599BCE5240FA9A000C3A55F /* NSMutableString+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Safe.m"; sourceTree = "<group>"; };
-		E599BCE6240FA9A000C3A55F /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
-		E599BCE7240FA9A000C3A55F /* NSDictionary+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Safe.m"; sourceTree = "<group>"; };
-		E599BCE8240FA9A000C3A55F /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
-		E599BCE9240FA9A000C3A55F /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
-		E599BCEA240FA9A000C3A55F /* NSObject+ImpChangeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ImpChangeTool.m"; sourceTree = "<group>"; };
 		E599BCEC240FA9A000C3A55F /* RegularExpressionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpressionTool.h; sourceTree = "<group>"; };
 		E599BCED240FA9A000C3A55F /* SystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemManager.h; sourceTree = "<group>"; };
 		E599BCEE240FA9A000C3A55F /* CYFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFileManager.h; sourceTree = "<group>"; };
@@ -397,14 +397,14 @@
 			path = PYSearch;
 			sourceTree = "<group>";
 		};
-		C18C5BD7200C8CAB0024318F /* ThirdViewController */ = {
+		C18C5BD7200C8CAB0024318F /* Third */ = {
 			isa = PBXGroup;
 			children = (
 				C18C5BD8200C8CAB0024318F /* Controller */,
 				C18C5BDB200C8CAB0024318F /* Model */,
 				C18C5BDC200C8CAB0024318F /* View */,
 			);
-			path = ThirdViewController;
+			path = Third;
 			sourceTree = "<group>";
 		};
 		C18C5BD8200C8CAB0024318F /* Controller */ = {
@@ -462,11 +462,11 @@
 		C18D65CA2009E748001B5CCA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E599BD24240FB82600C3A55F /* BaseViewController */,
-				C18D6675200A0257001B5CCA /* HomeViewController */,
-				C18D6679200A026D001B5CCA /* SecondViewController */,
-				C18C5BD7200C8CAB0024318F /* ThirdViewController */,
-				C18D66502009FDF0001B5CCA /* MeViewController */,
+				E599BD24240FB82600C3A55F /* Base */,
+				C18D6675200A0257001B5CCA /* Home */,
+				C18D6679200A026D001B5CCA /* Second */,
+				C18C5BD7200C8CAB0024318F /* Third */,
+				C18D66502009FDF0001B5CCA /* Me */,
 				C18D664B2009FDB7001B5CCA /* Network */,
 				C18D661F2009FDAB001B5CCA /* CustomView */,
 				E599BCA5240FA9A000C3A55F /* UtilityObject */,
@@ -566,14 +566,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		C18D66502009FDF0001B5CCA /* MeViewController */ = {
+		C18D66502009FDF0001B5CCA /* Me */ = {
 			isa = PBXGroup;
 			children = (
 				C18D66512009FDF0001B5CCA /* Controller */,
 				C18D66602009FDF0001B5CCA /* Model */,
 				C18D66672009FDF0001B5CCA /* View */,
 			);
-			path = MeViewController;
+			path = Me;
 			sourceTree = "<group>";
 		};
 		C18D66512009FDF0001B5CCA /* Controller */ = {
@@ -602,14 +602,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C18D6675200A0257001B5CCA /* HomeViewController */ = {
+		C18D6675200A0257001B5CCA /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				C18D6676200A0257001B5CCA /* Controller */,
 				C18D6677200A0257001B5CCA /* Model */,
 				C18D6678200A0257001B5CCA /* View */,
 			);
-			path = HomeViewController;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C18D6676200A0257001B5CCA /* Controller */ = {
@@ -635,14 +635,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C18D6679200A026D001B5CCA /* SecondViewController */ = {
+		C18D6679200A026D001B5CCA /* Second */ = {
 			isa = PBXGroup;
 			children = (
 				C18D667A200A026D001B5CCA /* Controller */,
 				C18D667B200A026D001B5CCA /* Model */,
 				C18D667C200A026D001B5CCA /* View */,
 			);
-			path = SecondViewController;
+			path = Second;
 			sourceTree = "<group>";
 		};
 		C18D667A200A026D001B5CCA /* Controller */ = {
@@ -668,6 +668,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E53D95A424625818000FF680 /* SafeObject */ = {
+			isa = PBXGroup;
+			children = (
+				E53D95A824625818000FF680 /* SafeObject.h */,
+				E53D95AB24625818000FF680 /* NSArray+Safe.h */,
+				E53D95B224625818000FF680 /* NSArray+Safe.m */,
+				E53D95A724625818000FF680 /* NSDictionary+Safe.h */,
+				E53D95B024625818000FF680 /* NSDictionary+Safe.m */,
+				E53D95AC24625818000FF680 /* NSObject+Swizzling.h */,
+				E53D95B124625818000FF680 /* NSObject+Swizzling.m */,
+				E53D95AA24625818000FF680 /* NSObject+ImpChangeTool.h */,
+				E53D95B324625818000FF680 /* NSObject+ImpChangeTool.m */,
+				E53D95AD24625818000FF680 /* NSMutableArray+Safe.h */,
+				E53D95A624625818000FF680 /* NSMutableArray+Safe.m */,
+				E53D95A524625818000FF680 /* NSMutableString+Safe.h */,
+				E53D95AE24625818000FF680 /* NSMutableString+Safe.m */,
+				E53D95AF24625818000FF680 /* NSMutableDictionary+Safe.h */,
+				E53D95A924625818000FF680 /* NSMutableDictionary+Safe.m */,
+			);
+			path = SafeObject;
+			sourceTree = "<group>";
+		};
 		E599B950240F9CAD00C3A55F /* WebVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,11 +702,11 @@
 		E599B954240F9D3400C3A55F /* NinaPagerView */ = {
 			isa = PBXGroup;
 			children = (
-				E599B955240F9D3400C3A55F /* NinaPagerView.m */,
-				E599B956240F9D3400C3A55F /* NinaBaseView.m */,
-				E599B957240F9D3400C3A55F /* NinaPagerView.h */,
 				E599B958240F9D3400C3A55F /* UIParameter.h */,
 				E599B959240F9D3400C3A55F /* NinaBaseView.h */,
+				E599B956240F9D3400C3A55F /* NinaBaseView.m */,
+				E599B957240F9D3400C3A55F /* NinaPagerView.h */,
+				E599B955240F9D3400C3A55F /* NinaPagerView.m */,
 			);
 			path = NinaPagerView;
 			sourceTree = "<group>";
@@ -692,8 +714,8 @@
 		E599B95C240F9D7300C3A55F /* AbnormalView */ = {
 			isa = PBXGroup;
 			children = (
-				E599B95D240F9D7300C3A55F /* AbnormalView.m */,
 				E599B95E240F9D7300C3A55F /* AbnormalView.h */,
+				E599B95D240F9D7300C3A55F /* AbnormalView.m */,
 			);
 			path = AbnormalView;
 			sourceTree = "<group>";
@@ -733,9 +755,9 @@
 			isa = PBXGroup;
 			children = (
 				E599BCA6240FA9A000C3A55F /* Category */,
-				E599BCDB240FA9A000C3A55F /* SafeObject */,
 				E599BCEB240FA9A000C3A55F /* SystemManager */,
 				E599BCF9240FA9A000C3A55F /* NenPingManager */,
+				E53D95A424625818000FF680 /* SafeObject */,
 			);
 			path = UtilityObject;
 			sourceTree = "<group>";
@@ -764,10 +786,10 @@
 		E599BCA7240FA9A000C3A55F /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCA8240FA9A000C3A55F /* UIImage+Category.m */,
+				E599BCAB240FA9A000C3A55F /* UIImage+Helper.h */,
 				E599BCA9240FA9A000C3A55F /* UIImage+Helper.m */,
 				E599BCAA240FA9A000C3A55F /* UIImage+Category.h */,
-				E599BCAB240FA9A000C3A55F /* UIImage+Helper.h */,
+				E599BCA8240FA9A000C3A55F /* UIImage+Category.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -775,8 +797,8 @@
 		E599BCAC240FA9A000C3A55F /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCAD240FA9A000C3A55F /* UIScrollView+Helper.m */,
 				E599BCAE240FA9A000C3A55F /* UIScrollView+Helper.h */,
+				E599BCAD240FA9A000C3A55F /* UIScrollView+Helper.m */,
 			);
 			path = UIScrollView;
 			sourceTree = "<group>";
@@ -784,8 +806,8 @@
 		E599BCAF240FA9A000C3A55F /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCB0240FA9A000C3A55F /* UILabel+Helper.m */,
 				E599BCB1240FA9A000C3A55F /* UILabel+Helper.h */,
+				E599BCB0240FA9A000C3A55F /* UILabel+Helper.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -793,8 +815,8 @@
 		E599BCB2240FA9A000C3A55F /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCB3240FA9A000C3A55F /* UIButton+Category.m */,
 				E599BCB4240FA9A000C3A55F /* UIButton+Category.h */,
+				E599BCB3240FA9A000C3A55F /* UIButton+Category.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -815,8 +837,8 @@
 		E599BCBC240FA9A000C3A55F /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCBD240FA9A000C3A55F /* UIImageView+Helper.m */,
 				E599BCBE240FA9A000C3A55F /* UIImageView+Helper.h */,
+				E599BCBD240FA9A000C3A55F /* UIImageView+Helper.m */,
 			);
 			path = UIImageView;
 			sourceTree = "<group>";
@@ -824,10 +846,10 @@
 		E599BCBF240FA9A000C3A55F /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				E599BCC3240FA9A000C3A55F /* NSString+Helper.h */,
 				E599BCC0240FA9A000C3A55F /* NSString+Helper.m */,
 				E599BCC1240FA9A000C3A55F /* NSString+Category.h */,
 				E599BCC2240FA9A000C3A55F /* NSString+Category.m */,
-				E599BCC3240FA9A000C3A55F /* NSString+Helper.h */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -845,8 +867,8 @@
 			isa = PBXGroup;
 			children = (
 				E599BCC8240FA9A000C3A55F /* UINavigationController+Helper.h */,
-				E599BCC9240FA9A000C3A55F /* UINavigationController+Cloudox.h */,
 				E599BCCA240FA9A000C3A55F /* UINavigationController+Helper.m */,
+				E599BCC9240FA9A000C3A55F /* UINavigationController+Cloudox.h */,
 				E599BCCB240FA9A000C3A55F /* UINavigationController+Cloudox.m */,
 			);
 			path = UINavigationController;
@@ -864,8 +886,8 @@
 		E599BCCF240FA9A000C3A55F /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCD0240FA9A000C3A55F /* CALayer+Helper.m */,
 				E599BCD1240FA9A000C3A55F /* CALayer+Helper.h */,
+				E599BCD0240FA9A000C3A55F /* CALayer+Helper.m */,
 			);
 			path = CALayer;
 			sourceTree = "<group>";
@@ -897,28 +919,6 @@
 			path = NSDate;
 			sourceTree = "<group>";
 		};
-		E599BCDB240FA9A000C3A55F /* SafeObject */ = {
-			isa = PBXGroup;
-			children = (
-				E599BCDC240FA9A000C3A55F /* NSMutableString+Safe.h */,
-				E599BCDD240FA9A000C3A55F /* NSMutableArray+Safe.m */,
-				E599BCDE240FA9A000C3A55F /* NSDictionary+Safe.h */,
-				E599BCDF240FA9A000C3A55F /* SafeObject.h */,
-				E599BCE0240FA9A000C3A55F /* NSMutableDictionary+Safe.m */,
-				E599BCE1240FA9A000C3A55F /* NSObject+ImpChangeTool.h */,
-				E599BCE2240FA9A000C3A55F /* NSArray+Safe.h */,
-				E599BCE3240FA9A000C3A55F /* NSObject+Swizzling.h */,
-				E599BCE4240FA9A000C3A55F /* NSMutableArray+Safe.h */,
-				E599BCE5240FA9A000C3A55F /* NSMutableString+Safe.m */,
-				E599BCE6240FA9A000C3A55F /* NSMutableDictionary+Safe.h */,
-				E599BCE7240FA9A000C3A55F /* NSDictionary+Safe.m */,
-				E599BCE8240FA9A000C3A55F /* NSObject+Swizzling.m */,
-				E599BCE9240FA9A000C3A55F /* NSArray+Safe.m */,
-				E599BCEA240FA9A000C3A55F /* NSObject+ImpChangeTool.m */,
-			);
-			path = SafeObject;
-			sourceTree = "<group>";
-		};
 		E599BCEB240FA9A000C3A55F /* SystemManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,23 +939,23 @@
 		E599BCF9240FA9A000C3A55F /* NenPingManager */ = {
 			isa = PBXGroup;
 			children = (
-				E599BCFA240FA9A000C3A55F /* NENSinglePinger.m */,
 				E599BCFB240FA9A000C3A55F /* SimplePing.h */,
-				E599BCFC240FA9A000C3A55F /* NENPingManager.h */,
 				E599BCFD240FA9A000C3A55F /* SimplePing.m */,
 				E599BCFE240FA9A000C3A55F /* NENSinglePinger.h */,
+				E599BCFA240FA9A000C3A55F /* NENSinglePinger.m */,
+				E599BCFC240FA9A000C3A55F /* NENPingManager.h */,
 				E599BCFF240FA9A000C3A55F /* NENPingManager.m */,
 			);
 			path = NenPingManager;
 			sourceTree = "<group>";
 		};
-		E599BD24240FB82600C3A55F /* BaseViewController */ = {
+		E599BD24240FB82600C3A55F /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				E599BD25240FB82600C3A55F /* Controller */,
 				E599BD2C240FB82600C3A55F /* View */,
 			);
-			path = BaseViewController;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E599BD25240FB82600C3A55F /* Controller */ = {
@@ -1014,7 +1014,7 @@
 		C18D65A92009E6D7001B5CCA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Chenyi;
 				TargetAttributes = {
 					C18D65B02009E6D7001B5CCA = {
@@ -1101,7 +1101,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E599BD19240FA9A000C3A55F /* NSObject+ImpChangeTool.m in Sources */,
 				E599BD39240FB82600C3A55F /* BaseTabBarItem.m in Sources */,
 				E599BD36240FB82600C3A55F /* BaseNavigationController.m in Sources */,
 				E599B95A240F9D3400C3A55F /* NinaPagerView.m in Sources */,
@@ -1109,13 +1108,12 @@
 				C11B48AA206627FD009857D9 /* TADotView.m in Sources */,
 				C11B48C220662848009857D9 /* PYSearchViewController.m in Sources */,
 				E5083DC12417713000E13C03 /* SecondVC.m in Sources */,
-				E599BD16240FA9A000C3A55F /* NSDictionary+Safe.m in Sources */,
 				E599BD07240FA9A000C3A55F /* UIView+Helper.m in Sources */,
-				E599BD15240FA9A000C3A55F /* NSMutableString+Safe.m in Sources */,
 				C11B48AD206627FD009857D9 /* SDCycleScrollView.m in Sources */,
 				C11B487C206627C8009857D9 /* LGJSegmentHead.m in Sources */,
 				E599BD00240FA9A000C3A55F /* UIImage+Category.m in Sources */,
 				E599BD1B240FA9A000C3A55F /* RegularExpressionTool.m in Sources */,
+				E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */,
 				C11B48C020662848009857D9 /* PYSearchConst.m in Sources */,
 				E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */,
 				E599BD1C240FA9A000C3A55F /* Encryption.m in Sources */,
@@ -1124,7 +1122,6 @@
 				E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */,
 				C11B487D206627C8009857D9 /* LGJSegmentManager.m in Sources */,
 				E599BD37240FB82600C3A55F /* BaseTabBarController.m in Sources */,
-				E599BD18240FA9A000C3A55F /* NSArray+Safe.m in Sources */,
 				E5083DC42417715600E13C03 /* ThirdVC.m in Sources */,
 				E599BD02240FA9A000C3A55F /* UIScrollView+Helper.m in Sources */,
 				E599BAC9240FA1F700C3A55F /* LoginVC.m in Sources */,
@@ -1133,6 +1130,7 @@
 				E599B953240F9CAD00C3A55F /* WebVC.m in Sources */,
 				E599BD06240FA9A000C3A55F /* UIView+AbnormalView.m in Sources */,
 				E599BD12240FA9A000C3A55F /* NSDate+Helper.m in Sources */,
+				E53D95B424625818000FF680 /* NSMutableArray+Safe.m in Sources */,
 				E599BD0B240FA9A000C3A55F /* UIViewController+Helper.m in Sources */,
 				E599B95F240F9D7300C3A55F /* AbnormalView.m in Sources */,
 				C11B48BE20662848009857D9 /* NSBundle+PYSearchExtension.m in Sources */,
@@ -1141,7 +1139,6 @@
 				E599BD08240FA9A000C3A55F /* UIImageView+Helper.m in Sources */,
 				C18D664A2009FDAB001B5CCA /* XQToast.m in Sources */,
 				E5083DEB241793D800E13C03 /* NetworkManager+Home.m in Sources */,
-				E599BD14240FA9A000C3A55F /* NSMutableDictionary+Safe.m in Sources */,
 				C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */,
 				E599BD20240FA9A000C3A55F /* NENSinglePinger.m in Sources */,
 				E599BD0C240FA9A000C3A55F /* UINavigationController+Helper.m in Sources */,
@@ -1156,18 +1153,20 @@
 				E599BAC3240FA13C00C3A55F /* UserInfoModel.m in Sources */,
 				E599BD11240FA9A000C3A55F /* UITextField+Helper.m in Sources */,
 				C18D65C42009E6D7001B5CCA /* main.m in Sources */,
-				E599BD17240FA9A000C3A55F /* NSObject+Swizzling.m in Sources */,
 				E599BD05240FA9A000C3A55F /* UIView+Frame.m in Sources */,
+				E53D95B624625818000FF680 /* NSMutableString+Safe.m in Sources */,
 				C11B48ED20662B63009857D9 /* LaunchVC.m in Sources */,
 				E599BD1E240FA9A000C3A55F /* AppInfo.m in Sources */,
 				E599BACA240FA1F700C3A55F /* RegisterVC.m in Sources */,
 				C18D66452009FDAB001B5CCA /* XQAlertView.m in Sources */,
+				E53D95BA24625818000FF680 /* NSObject+ImpChangeTool.m in Sources */,
 				E599BD22240FA9A000C3A55F /* NENPingManager.m in Sources */,
 				E599BD35240FB82600C3A55F /* BaseViewController.m in Sources */,
 				C18D65B62009E6D7001B5CCA /* AppDelegate.m in Sources */,
 				C11B48EF20662BEA009857D9 /* Common.m in Sources */,
 				E599BD04240FA9A000C3A55F /* UIButton+Category.m in Sources */,
-				E599BD13240FA9A000C3A55F /* NSMutableArray+Safe.m in Sources */,
+				E53D95B924625818000FF680 /* NSArray+Safe.m in Sources */,
+				E53D95B724625818000FF680 /* NSDictionary+Safe.m in Sources */,
 				C11B48A8206627FD009857D9 /* TAAbstractDotView.m in Sources */,
 				E599BD1D240FA9A000C3A55F /* CYFileManager.m in Sources */,
 				C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */,
@@ -1183,6 +1182,7 @@
 				C11B487F206627C8009857D9 /* UIView+ViewController.m in Sources */,
 				E599BD38240FB82600C3A55F /* BaseTextField.m in Sources */,
 				C18D66412009FDAB001B5CCA /* CYPopoverView.m in Sources */,
+				E53D95B824625818000FF680 /* NSObject+Swizzling.m in Sources */,
 				E599B95B240F9D3400C3A55F /* NinaBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1223,6 +1223,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1230,6 +1231,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1278,6 +1280,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1285,6 +1288,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

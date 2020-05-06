@@ -21,7 +21,7 @@
 #define SCREEN_MIN      MIN(SCREEN_HEIGHT, SCREEN_WIDTH)
 #define SCREEN_MAX      MAX(SCREEN_HEIGHT, SCREEN_WIDTH)
 
-#define MAIN_COLOR              RGBCOLOR(180, 160, 120)
+#define MAIN_COLOR              RGBCOLOR(150, 150, 150)
 #define TABBAT_COLOR            RGBCOLOR(114, 109, 109)
 #define VC_BG_COLOR             COLOR_W(246)
 #define HEIGHT_AD_COLUMN        SCALE_FIT(110)
