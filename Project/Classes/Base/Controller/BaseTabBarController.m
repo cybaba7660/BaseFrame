@@ -36,11 +36,12 @@
         [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     }
     
+    UIColor *unselectedItemColor = UIColor.lightGrayColor;
     if (@available(iOS 10.0, *)) {
-        [[UITabBar appearance] setUnselectedItemTintColor:UIColor.lightGrayColor];
+        [[UITabBar appearance] setUnselectedItemTintColor:unselectedItemColor];
     }else {
         NSDictionary *attr       = @{
-                NSForegroundColorAttributeName : UIColor.lightGrayColor,
+                NSForegroundColorAttributeName : unselectedItemColor,
                 //NSFontAttributeName : Font_Regular(13)
             };
             NSDictionary *attrSelect = @{
