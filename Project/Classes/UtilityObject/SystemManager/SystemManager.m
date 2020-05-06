@@ -14,17 +14,27 @@
 @implementation SystemManager
 + (NSString *)getCacheSize
 {
-    NSUInteger cacheSize = [[SDImageCache sharedImageCache] totalDiskSize];
+    NSUInteger cacheSize = [YYWebImageManager sharedManager].cache.diskCache.totalCost;
+//    NSUInteger cacheSize = [[SDImageCache sharedImageCache] totalDiskSize];
     CGFloat tempSize     = cacheSize * 1.0 / 1024 / 1024;
     NSString *cacheStr   = tempSize >= 1.0 ? [NSString stringWithFormat:@"%.2f MB", tempSize] : [NSString stringWithFormat:@"%.2f KB", tempSize * 1024];
     return cacheStr;
 }
 
 + (void)clearCacheOnCompleted:(void(^)(BOOL completed))completed {
-    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+    MBProgressHUD *hud = [MBProgressHUD showHUDToView:[SystemManager currentVC].view];
+    YYImageCache *cache = [YYWebImageManager sharedManager].cache;
+    [cache.memoryCache removeAllObjects];
+    [cache.diskCache removeAllObjects];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [hud hideAnimated:YES];
         completed ? completed(YES) : nil;
-        NSLog(@"清理缓存成功");
-    }];
+    });
+    /*
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        [hud hideAnimated:YES];
+        completed ? completed(YES) : nil;
+    }];*/
 }
 
 + (UINavigationController *)currentNav {

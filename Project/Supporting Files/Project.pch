@@ -24,6 +24,8 @@
 #define MAIN_COLOR              RGBCOLOR(150, 150, 150)
 #define TABBAT_COLOR            RGBCOLOR(114, 109, 109)
 #define VC_BG_COLOR             COLOR_W(246)
+#define TEXT_COMMON_COLOR       COLOR_W(67)
+
 #define HEIGHT_AD_COLUMN        SCALE_FIT(110)
 #define PADDING_HORIZ           WIDTH(12)
 #define PADDING_WIDTH           (SCREEN_WIDTH - PADDING_HORIZ * 2)
