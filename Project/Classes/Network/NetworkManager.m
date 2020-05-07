@@ -126,12 +126,11 @@ static NetworkManager *networkInstance;
         failure ? failure(errorText) : nil;
     }];
 }
-- (void)requestAPPUpdateInfoSuccess:(void(^)(NSDictionary *dict))success failure:(void(^)(NSString *text))failure {
+- (void)requestAPPUpdateInfoSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
     NSDictionary *params = @{
-                             @"app_os" : @"IOS",
-                             @"ptname" : APP_NAME
-                             };
-    [self naturalPOST:APP_UPDATE parameters:params success:success failure:failure];
+        @"type" : @"1"
+    };
+    [self POST:APP_UPDATE parameters:params success:success failure:failure];
 }
 - (void)updateUserToken:(NSString *)token {
     [self.manager.requestSerializer setValue:token forHTTPHeaderField:@"token"];

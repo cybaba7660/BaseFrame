@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface AppInfo : NSObject
-@property (nonatomic, copy) NSString *code;
+@property (nonatomic, copy) NSString *version;
+@property (nonatomic, copy) NSString *short_version;
 @property (nonatomic, copy) NSString *content;
-@property (nonatomic, copy) NSString *create_time;
 @property (nonatomic, copy) NSString *download_url;
 @property (nonatomic, copy) NSString *is_force;
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *title;
 
 @property (nonatomic, assign) BOOL haveNewVersion;

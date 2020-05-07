@@ -36,18 +36,17 @@
     [UINavigationBar appearance].backIndicatorTransitionMaskImage = backButtonImage;
     [UINavigationBar appearance].backIndicatorImage = backButtonImage;
     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : UIColor.whiteColor};
-    self.navigationController.navigationBar.barTintColor = MAIN_COLOR;
     self.navigationController.navigationBar.translucent = NO;
 }
 - (void)setNavigationBarStyle {
 }
 
 - (UIBarStyle)statusBarStyle {
-    return UIBarStyleBlack;
+    return UIBarStyleDefault;
 }
 
 - (UIColor *)barTintColor {
-    return UIColor.whiteColor;
+    return MAIN_COLOR;
 }
 
 - (UIColor *)tintColor {

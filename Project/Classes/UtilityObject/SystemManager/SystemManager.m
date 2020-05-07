@@ -22,7 +22,7 @@
 }
 
 + (void)clearCacheOnCompleted:(void(^)(BOOL completed))completed {
-    MBProgressHUD *hud = [MBProgressHUD showHUDToView:[SystemManager currentVC].view];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[SystemManager currentVC].view animated:YES];
     YYImageCache *cache = [YYWebImageManager sharedManager].cache;
     [cache.memoryCache removeAllObjects];
     [cache.diskCache removeAllObjects];

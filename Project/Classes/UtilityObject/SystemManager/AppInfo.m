@@ -12,26 +12,25 @@
 @implementation AppInfo
 - (BOOL)haveNewVersion {
     float appVersion = [CLIENT_VERSION doubleValue];
-    float serviceVersion = [self.code integerValue];
+    float serviceVersion = [self.version integerValue];
     return appVersion < serviceVersion;
 }
 + (void)checkVersion {
     [self checkVersionWithCompleted:nil];
 }
 + (void)checkVersionWithCompleted:(void(^)(NSString *error, BOOL newVersion))completed {
-    [[NetworkManager shareManager] requestAPPUpdateInfoSuccess:^(NSDictionary *dict) {
-        NSInteger code = [dict[@"c"] integerValue];
-        if (code == 0) {
-            AppInfo *info = [AppInfo mj_objectWithKeyValues:dict[@"d"][@"version"]];
-            if (!info || [info isKindOfClass:[NSNull class]]) {
+    [[NetworkManager shareManager] requestAPPUpdateInfoSuccess:^(Result *rs) {
+        if (rs.code) {
+            AppInfo *info = [AppInfo mj_objectWithKeyValues:rs.dict];
+            if (!info) {
                 completed ? completed(@"未查询到版本信息", nil) : nil;
                 return;
             }
             [self dealInfo:info];
             completed ? completed(nil, info.haveNewVersion) : nil;
         }
-    } failure:^(NSString *text) {
-        completed ? completed(text, nil) : nil;
+    } failure:^(Result *rs) {
+         completed ? completed(rs.msg, nil) : nil;
     }];
 }
 
