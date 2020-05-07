@@ -30,7 +30,7 @@
 #define PADDING_HORIZ           WIDTH(12)
 #define PADDING_WIDTH           (SCREEN_WIDTH - PADDING_HORIZ * 2)
 
-#define KeyWindow          [UIApplication sharedApplication].keyWindow
+#define KeyWindow          [UIApplication sharedApplication].delegate.window
 #define UserDefaults       [NSUserDefaults standardUserDefaults]
 #define NotificationCenter [NSNotificationCenter defaultCenter]
 #define FileManager        [NSFileManager defaultManager]

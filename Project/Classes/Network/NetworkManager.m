@@ -93,7 +93,7 @@ static NetworkManager *networkInstance;
     [self POST:url parameters:parameters progress:nil success:success failure:failure];
 }
 - (void)POST:(NSString *)url parameters:(id _Nullable)parameters progress:(void (^ _Nullable)(NSProgress *))downloadProgress success:(SuccessBlock)success failure:(FailureBlock)failure {
-    if (![url containsString:@"http"]) {
+    if (![url hasPrefix:@"http"]) {
         url = [self.domain stringByAppendingString:url];
     }
     [self.manager POST:url parameters:parameters progress:downloadProgress

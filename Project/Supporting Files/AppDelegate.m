@@ -29,10 +29,13 @@ static NSString *channel     = @"Publish channel";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self initWindow];
+    
+    //指定根视图
+    LaunchVC *vc = [[LaunchVC alloc] init];
+    self.window.rootViewController = vc;
+    
     self.allowLandscape = NO;
     self.tabBarController = [[BaseTabBarController alloc] init];
-    //app版本信息
-    [self appInfomation];
     
     // 初始化极光推送
     [self initJPushSDKWithApplication:application options:launchOptions];
@@ -42,20 +45,6 @@ static NSString *channel     = @"Publish channel";
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    //指定根视图
-    LaunchVC *vc = [[LaunchVC alloc] init];
-    self.window.rootViewController = vc;
-    
-    if (@available(iOS 11.0, *)) {
-        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
-}
-
-#pragma mark - 获取app信息
-- (void)appInfomation
-{
-
 }
 #pragma mark - 极光推送
 - (void)initJPushSDKWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions
