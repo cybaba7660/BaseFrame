@@ -86,20 +86,25 @@
     }
 }
 + (instancetype)showHUDToView:(UIView *)view {
-    return [self showHUDToView:view text:@"加载中..."];
+    return [self showHUDToView:view text:@""];
 }
 + (instancetype)showHUDToView:(UIView *)view text:(NSString *)text {
     return [self showHUDToView:view text:text userInteractionEnabled:NO];
 }
 + (instancetype)showHUDToView:(UIView *)view userInteractionEnabled:(BOOL)enabled {
-    return [self showHUDToView:view text:@"加载中..." userInteractionEnabled:enabled];
+    return [self showHUDToView:view text:@"" userInteractionEnabled:enabled];
 }
 + (instancetype)showHUDToView:(UIView *)view text:(NSString *)text userInteractionEnabled:(BOOL)enabled {
     if (view) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-        hud.mode = MBProgressHUDModeCustomView;
         hud.userInteractionEnabled = enabled;
         hud.removeFromSuperViewOnHide = YES;
+        
+        if (text.length) {
+            hud.label.text = text;
+        }
+        /*
+        hud.mode = MBProgressHUDModeCustomView;
         hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
         hud.bezelView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.7];
         
@@ -110,11 +115,7 @@
         }
         UIImage *image = [UIImage animatedImageWithImages:images duration:0.5];
         UIImageView *animatedView = [[UIImageView alloc] initWithImage:image];
-        hud.customView = animatedView;
-        if (text.length) {
-            hud.label.text = text;
-            hud.label.textColor = UIColor.whiteColor;
-        }
+        hud.customView = animatedView;*/
         return hud;
     }
     return nil;
