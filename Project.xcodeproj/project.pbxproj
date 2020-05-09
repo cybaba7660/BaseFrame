@@ -46,6 +46,9 @@
 		E5083DC72417716A00E13C03 /* MeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DC62417716A00E13C03 /* MeVC.m */; };
 		E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DE7241793D800E13C03 /* NetworkManager+User.m */; };
 		E5083DEB241793D800E13C03 /* NetworkManager+Home.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DE8241793D800E13C03 /* NetworkManager+Home.m */; };
+		E50AE3C82466518100D93B4A /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AE3C12466518000D93B4A /* Encryption.m */; };
+		E50AE3C92466518100D93B4A /* CYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AE3C42466518100D93B4A /* CYFileManager.m */; };
+		E50AE3CA2466518100D93B4A /* RegularExpressionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E50AE3C72466518100D93B4A /* RegularExpressionTool.m */; };
 		E53D95B424625818000FF680 /* NSMutableArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95A624625818000FF680 /* NSMutableArray+Safe.m */; };
 		E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95A924625818000FF680 /* NSMutableDictionary+Safe.m */; };
 		E53D95B624625818000FF680 /* NSMutableString+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = E53D95AE24625818000FF680 /* NSMutableString+Safe.m */; };
@@ -80,9 +83,6 @@
 		E599BD11240FA9A000C3A55F /* UITextField+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCD6240FA9A000C3A55F /* UITextField+Helper.m */; };
 		E599BD12240FA9A000C3A55F /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCD9240FA9A000C3A55F /* NSDate+Helper.m */; };
 		E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF1240FA9A000C3A55F /* SystemManager.m */; };
-		E599BD1B240FA9A000C3A55F /* RegularExpressionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF2240FA9A000C3A55F /* RegularExpressionTool.m */; };
-		E599BD1C240FA9A000C3A55F /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF3240FA9A000C3A55F /* Encryption.m */; };
-		E599BD1D240FA9A000C3A55F /* CYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF4240FA9A000C3A55F /* CYFileManager.m */; };
 		E599BD1E240FA9A000C3A55F /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCF5240FA9A000C3A55F /* AppInfo.m */; };
 		E599BD20240FA9A000C3A55F /* NENSinglePinger.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCFA240FA9A000C3A55F /* NENSinglePinger.m */; };
 		E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = E599BCFD240FA9A000C3A55F /* SimplePing.m */; };
@@ -181,6 +181,12 @@
 		E5083DE7241793D800E13C03 /* NetworkManager+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+User.m"; sourceTree = "<group>"; };
 		E5083DE8241793D800E13C03 /* NetworkManager+Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Home.m"; sourceTree = "<group>"; };
 		E5083DE9241793D800E13C03 /* NetworkManager+Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkManager+Home.h"; sourceTree = "<group>"; };
+		E50AE3C02466518000D93B4A /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
+		E50AE3C12466518000D93B4A /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
+		E50AE3C32466518100D93B4A /* CYFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFileManager.h; sourceTree = "<group>"; };
+		E50AE3C42466518100D93B4A /* CYFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYFileManager.m; sourceTree = "<group>"; };
+		E50AE3C62466518100D93B4A /* RegularExpressionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpressionTool.h; sourceTree = "<group>"; };
+		E50AE3C72466518100D93B4A /* RegularExpressionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpressionTool.m; sourceTree = "<group>"; };
 		E53D95A524625818000FF680 /* NSMutableString+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Safe.h"; sourceTree = "<group>"; };
 		E53D95A624625818000FF680 /* NSMutableArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Safe.m"; sourceTree = "<group>"; };
 		E53D95A724625818000FF680 /* NSDictionary+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Safe.h"; sourceTree = "<group>"; };
@@ -249,15 +255,9 @@
 		E599BCD7240FA9A000C3A55F /* UITextField+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Helper.h"; sourceTree = "<group>"; };
 		E599BCD9240FA9A000C3A55F /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		E599BCDA240FA9A000C3A55F /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
-		E599BCEC240FA9A000C3A55F /* RegularExpressionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpressionTool.h; sourceTree = "<group>"; };
 		E599BCED240FA9A000C3A55F /* SystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemManager.h; sourceTree = "<group>"; };
-		E599BCEE240FA9A000C3A55F /* CYFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFileManager.h; sourceTree = "<group>"; };
-		E599BCEF240FA9A000C3A55F /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
 		E599BCF0240FA9A000C3A55F /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
 		E599BCF1240FA9A000C3A55F /* SystemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemManager.m; sourceTree = "<group>"; };
-		E599BCF2240FA9A000C3A55F /* RegularExpressionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpressionTool.m; sourceTree = "<group>"; };
-		E599BCF3240FA9A000C3A55F /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
-		E599BCF4240FA9A000C3A55F /* CYFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYFileManager.m; sourceTree = "<group>"; };
 		E599BCF5240FA9A000C3A55F /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 		E599BCFA240FA9A000C3A55F /* NENSinglePinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NENSinglePinger.m; sourceTree = "<group>"; };
 		E599BCFB240FA9A000C3A55F /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
@@ -579,9 +579,9 @@
 		C18D66512009FDF0001B5CCA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E599BAC4240FA1F700C3A55F /* Login&Register */,
 				E5083DC52417716A00E13C03 /* MeVC.h */,
 				E5083DC62417716A00E13C03 /* MeVC.m */,
-				E599BAC4240FA1F700C3A55F /* Login&Register */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -666,6 +666,33 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E50AE3BF2466518000D93B4A /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				E50AE3C02466518000D93B4A /* Encryption.h */,
+				E50AE3C12466518000D93B4A /* Encryption.m */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		E50AE3C22466518100D93B4A /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				E50AE3C32466518100D93B4A /* CYFileManager.h */,
+				E50AE3C42466518100D93B4A /* CYFileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		E50AE3C52466518100D93B4A /* RegularExpression */ = {
+			isa = PBXGroup;
+			children = (
+				E50AE3C62466518100D93B4A /* RegularExpressionTool.h */,
+				E50AE3C72466518100D93B4A /* RegularExpressionTool.m */,
+			);
+			path = RegularExpression;
 			sourceTree = "<group>";
 		};
 		E53D95A424625818000FF680 /* SafeObject */ = {
@@ -758,6 +785,9 @@
 				E599BCEB240FA9A000C3A55F /* SystemManager */,
 				E599BCF9240FA9A000C3A55F /* NenPingManager */,
 				E53D95A424625818000FF680 /* SafeObject */,
+				E50AE3BF2466518000D93B4A /* Encryption */,
+				E50AE3C22466518100D93B4A /* FileManager */,
+				E50AE3C52466518100D93B4A /* RegularExpression */,
 			);
 			path = UtilityObject;
 			sourceTree = "<group>";
@@ -924,12 +954,6 @@
 			children = (
 				E599BCF0240FA9A000C3A55F /* AppInfo.h */,
 				E599BCF5240FA9A000C3A55F /* AppInfo.m */,
-				E599BCEE240FA9A000C3A55F /* CYFileManager.h */,
-				E599BCF4240FA9A000C3A55F /* CYFileManager.m */,
-				E599BCEF240FA9A000C3A55F /* Encryption.h */,
-				E599BCF3240FA9A000C3A55F /* Encryption.m */,
-				E599BCEC240FA9A000C3A55F /* RegularExpressionTool.h */,
-				E599BCF2240FA9A000C3A55F /* RegularExpressionTool.m */,
 				E599BCED240FA9A000C3A55F /* SystemManager.h */,
 				E599BCF1240FA9A000C3A55F /* SystemManager.m */,
 			);
@@ -1108,15 +1132,14 @@
 				C11B48AA206627FD009857D9 /* TADotView.m in Sources */,
 				C11B48C220662848009857D9 /* PYSearchViewController.m in Sources */,
 				E5083DC12417713000E13C03 /* SecondVC.m in Sources */,
+				E50AE3C92466518100D93B4A /* CYFileManager.m in Sources */,
 				E599BD07240FA9A000C3A55F /* UIView+Helper.m in Sources */,
 				C11B48AD206627FD009857D9 /* SDCycleScrollView.m in Sources */,
 				C11B487C206627C8009857D9 /* LGJSegmentHead.m in Sources */,
 				E599BD00240FA9A000C3A55F /* UIImage+Category.m in Sources */,
-				E599BD1B240FA9A000C3A55F /* RegularExpressionTool.m in Sources */,
 				E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */,
 				C11B48C020662848009857D9 /* PYSearchConst.m in Sources */,
 				E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */,
-				E599BD1C240FA9A000C3A55F /* Encryption.m in Sources */,
 				E599BD09240FA9A000C3A55F /* NSString+Helper.m in Sources */,
 				E599BD0E240FA9A000C3A55F /* MBProgressHUD+Extension.m in Sources */,
 				E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */,
@@ -1140,6 +1163,8 @@
 				C18D664A2009FDAB001B5CCA /* XQToast.m in Sources */,
 				E5083DEB241793D800E13C03 /* NetworkManager+Home.m in Sources */,
 				C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */,
+				E50AE3C82466518100D93B4A /* Encryption.m in Sources */,
+				E50AE3CA2466518100D93B4A /* RegularExpressionTool.m in Sources */,
 				E599BD20240FA9A000C3A55F /* NENSinglePinger.m in Sources */,
 				E599BD0C240FA9A000C3A55F /* UINavigationController+Helper.m in Sources */,
 				C18D664F2009FDB7001B5CCA /* NetworkManager.m in Sources */,
@@ -1168,7 +1193,6 @@
 				E53D95B924625818000FF680 /* NSArray+Safe.m in Sources */,
 				E53D95B724625818000FF680 /* NSDictionary+Safe.m in Sources */,
 				C11B48A8206627FD009857D9 /* TAAbstractDotView.m in Sources */,
-				E599BD1D240FA9A000C3A55F /* CYFileManager.m in Sources */,
 				C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */,
 				E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */,
 				C11B487E206627C8009857D9 /* LGJSegmentScroll.m in Sources */,
