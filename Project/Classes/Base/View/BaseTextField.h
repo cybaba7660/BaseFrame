@@ -12,7 +12,7 @@
 + (instancetype)viewWithFrame:(CGRect)frame;
 + (instancetype)viewWithFrame:(CGRect)frame leftText:(NSString *)text leftColor:(UIColor *)textColor leftFont:(UIFont *)font;
 + (instancetype)viewWithFrame:(CGRect)frame leftText:(NSString *)text leftColor:(UIColor *)textColor leftFont:(UIFont *)font rightImageName:(NSString *)rightImageName;
-+ (instancetype)ViewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName;
++ (instancetype)viewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName;
 + (instancetype)viewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName rightImageName:(NSString *)rightImageName;
-+ (instancetype)ViewWithFrame:(CGRect)frame rightImageName:(NSString *)rightImageName;
++ (instancetype)viewWithFrame:(CGRect)frame rightImageName:(NSString *)rightImageName;
 @end

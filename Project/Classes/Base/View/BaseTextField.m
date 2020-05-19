@@ -22,13 +22,13 @@
 + (instancetype)viewWithFrame:(CGRect)frame leftText:(NSString *)text leftColor:(UIColor *)textColor leftFont:(UIFont *)font rightImageName:(NSString *)rightImageName {
     return [self viewWithFrame:frame leftImageName:nil leftText:text leftColor:textColor leftFont:font rightImageName:rightImageName];
 }
-+ (instancetype)ViewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName {
++ (instancetype)viewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName {
     return [self viewWithFrame:frame leftImageName:leftImageName leftText:nil leftColor:nil leftFont:nil rightImageName:nil];
 }
 + (instancetype)viewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName rightImageName:(NSString *)rightImageName {
     return [self viewWithFrame:frame leftImageName:leftImageName leftText:nil leftColor:nil leftFont:nil rightImageName:rightImageName];
 }
-+ (instancetype)ViewWithFrame:(CGRect)frame rightImageName:(NSString *)rightImageName {
++ (instancetype)viewWithFrame:(CGRect)frame rightImageName:(NSString *)rightImageName {
     return [self viewWithFrame:frame leftImageName:nil leftText:nil leftColor:nil leftFont:nil rightImageName:rightImageName];
 }
 + (instancetype)viewWithFrame:(CGRect)frame leftImageName:(NSString *)leftImageName leftText:(NSString *)text leftColor:(UIColor *)textColor leftFont:(UIFont *)font rightImageName:(NSString *)rightImageName {
