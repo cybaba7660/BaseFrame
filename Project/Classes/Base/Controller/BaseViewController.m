@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController () 
+@interface BaseViewController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
 @end
 
@@ -19,26 +19,37 @@
     }
     return self;
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    self.navigationController.delegate = self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = VC_BG_COLOR;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationBarHidden = NO;
+    
+    
     self.navigationController.navigationBar.barTintColor = [self barTintColor];
     self.navigationController.navigationBar.tintColor    = [self tintColor];
     self.navigationController.navigationBar.barStyle = [self statusBarStyle];
-    [self setNeedsStatusBarAppearanceUpdate];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setNavigationBarStyle];
+    self.navigationController.navigationBar.translucent = NO;
+    
     // 更换返回按钮的图片
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, 0) forBarMetrics:UIBarMetricsDefault];
-    UIImage *backButtonImage = [[UIImage imageNamed:@"nav_back_white"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *backButtonImage = [[UIImage imageNamed:@"nav_back_black"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [UINavigationBar appearance].backIndicatorTransitionMaskImage = backButtonImage;
     [UINavigationBar appearance].backIndicatorImage = backButtonImage;
-    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : UIColor.whiteColor};
-    self.navigationController.navigationBar.translucent = NO;
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : UIColor.blackColor};
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    [self setNavigationBarStyle];
 }
 - (void)setNavigationBarStyle {
+    
 }
 
 - (UIBarStyle)statusBarStyle {
@@ -46,12 +57,13 @@
 }
 
 - (UIColor *)barTintColor {
-    return MAIN_COLOR;
+    return COLOR_W(250);
 }
 
 - (UIColor *)tintColor {
     return UIColor.blackColor;
 }
+#pragma mark - Event
 #pragma mark - 横屏设置
 - (BOOL)shouldAutorotate {
       return NO;
@@ -83,4 +95,8 @@
     return UIStatusBarStyleDefault;
 }
 
+#pragma mark - UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:_navigationBarHidden animated:animated];
+}
 @end

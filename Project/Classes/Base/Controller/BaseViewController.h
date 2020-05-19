@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController <NavigationControllerDelegate>
-
+@property (nonatomic, assign) BOOL navigationBarHidden;
 - (instancetype)initWithHidesBottomBar:(BOOL)hide;
 /**
  *  设置导航栏
