@@ -7,7 +7,9 @@
 //
 
 #import "BaseTabBar.h"
-#define TAG_ADD_ITEMS 1100
+#define TAG_ITEM   1100
+#define TAG_ITEM_IMAGE  1200
+#define TAG_ITEM_LABEL  1300
 #define Magin 23
 @implementation TabBarItemConfig
 + (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CallBackBlock)clickedEvent {
@@ -25,7 +27,7 @@
 @interface BaseTabBar ()
 {
     NSMutableArray<TabBarItemConfig *> *customTabBarConfigs;
-    UIButton *lastSelectedCustomItem;
+    UIView *lastSelectedCustomItem;
 }
 @property (nonatomic, copy) CallBackBlock itemClickedEvent;
 @end
@@ -34,21 +36,32 @@
 #pragma mark - External
 - (void)addItemWithConfig:(TabBarItemConfig *)config {
     [customTabBarConfigs addObject:config];
-    UIButton *customTabBarItem = [UIButton buttonWithType:UIButtonTypeCustom];
-    customTabBarItem.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:13];
-    [customTabBarItem setTitle:config.title forState:UIControlStateNormal];
-    [customTabBarItem setTitleColor:TABBAT_COLOR forState:UIControlStateNormal];
-    [customTabBarItem setTitleColor:MAIN_COLOR forState:UIControlStateSelected];
-    [customTabBarItem setImage:config.image forState:UIControlStateNormal];
-    [customTabBarItem setImage:config.selectedImage forState:UIControlStateSelected];
-    [customTabBarItem addTarget:self action:@selector(customTabBarItemClickedEvent:) forControlEvents:UIControlEventTouchUpInside];
-    [customTabBarItem setAdjustsImageWhenHighlighted:NO];
+    
+    UIView *customTabBarItem = [[UIView alloc] init];
+    customTabBarItem.tag = TAG_ITEM + config.index;
+    customTabBarItem.backgroundColor = UIColor.clearColor;
     [self addSubview:customTabBarItem];
-    customTabBarItem.tag = TAG_ADD_ITEMS + config.index;
-    [customTabBarItem setImageAlignment:ButtonImageAlignmentTop interval:3];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(customTabBarItemClickedEvent:)];
+    [customTabBarItem addGestureRecognizer:tap];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.tag = TAG_ITEM_IMAGE;
+    imageView.contentMode = UIViewContentModeCenter;
+    [customTabBarItem addSubview:imageView];
+    
+    UILabel *textLabel = [[UILabel alloc] init];
+    textLabel.tag = TAG_ITEM_LABEL;
+    textLabel.textColor = TABBAT_COLOR;
+    textLabel.font = Font_Regular(13);
+    textLabel.textAlignment = NSTextAlignmentCenter;
+    [customTabBarItem addSubview:textLabel];
+    
+    imageView.normalImage = config.image;
+    imageView.selectedImage = config.selectedImage;
+    textLabel.text = config.title;
 }
 - (void)unselectedCustomItem {
-    lastSelectedCustomItem.selected = NO;
+    [(UIImageView *)[lastSelectedCustomItem viewWithTag:TAG_ITEM_IMAGE] setSelected:NO];
 }
 #pragma mark - UI
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -77,33 +90,37 @@
     NSMutableArray<TabBarItemConfig *> *arrm = [customTabBarConfigs mutableCopy];
     for (int i = 0; i < totalCount; i ++) {
         if (arrm.count && arrm.firstObject.index == i) {
-            UIButton *customItem = [self viewWithTag:TAG_ADD_ITEMS + i];
-//            [customItem setBorderWidth:2 borderColor:UIColor.redColor];
-            customItem.frame = CGRectMake(itemWidth * i, 4, itemWidth, kTabBar_H);
+            UIView *customItem = [self viewWithTag:TAG_ITEM + i];
+            customItem.frame = CGRectMake(itemWidth * i, 0, itemWidth, kTabBar_H);
+            UIImageView *imageView = [customItem viewWithTag:TAG_ITEM_IMAGE];
+            imageView.frame = CGRectMake(0, kDevice_Is_iPhoneX ? 0 : 4, itemWidth, 30);
+            UILabel *textLabel = [customItem viewWithTag:TAG_ITEM_LABEL];
+            textLabel.frame = CGRectMake(0, kDevice_Is_iPhoneX ? 30 : 29, itemWidth, kDevice_Is_iPhoneX ? 20 : 19);
             if (arrm.firstObject.raised) {
-                customItem.top = -Magin - 1;
+                customItem.top = -Magin;
                 customItem.height = kTabBar_H + Magin;
-//                [customItem setImageAlignment:ButtonImageAlignmentTop interval:5 + Magin / 2];
+                imageView.height = 30 + Magin;
             }
             [self bringSubviewToFront:customItem];
             [arrm removeObjectAtIndex:0];
         }else {
             UIView *item = systemTabBarItems.firstObject;
-//            [item setBorderWidth:2 borderColor:UIColor.redColor];
             item.frame = CGRectMake(itemWidth * i, 0, itemWidth, kTabBar_H);
             [systemTabBarItems removeObjectAtIndex:0];
         }
     }
 }
 #pragma mark - ClickedEvent
-- (void)customTabBarItemClickedEvent:(UIButton *)button {
-    if (lastSelectedCustomItem != button) {
-        lastSelectedCustomItem.selected = NO;
-        lastSelectedCustomItem = button;
+- (void)customTabBarItemClickedEvent:(UITapGestureRecognizer *)tap {
+    UIView *item = tap.view;
+    if (lastSelectedCustomItem != item) {
+        [(UIImageView *)[lastSelectedCustomItem viewWithTag:TAG_ITEM_IMAGE] setSelected:NO];
+        lastSelectedCustomItem = item;
     }
     
-    button.selected ^= 1;
-    NSInteger index = button.tag - TAG_ADD_ITEMS;
+    UIImageView *imageView = (UIImageView *)[item viewWithTag:TAG_ITEM_IMAGE];
+    imageView.selected ^= 1;
+    NSInteger index = item.tag - TAG_ITEM;
     TabBarItemConfig *itemConfig;
     for (TabBarItemConfig *config in customTabBarConfigs) {
         if (config.index == index) {
@@ -126,7 +143,7 @@
     //是的话让发布按钮自己处理点击事件，不是的话让系统去处理点击事件就可以了
     if (!self.isHidden) {
         for (TabBarItemConfig *config in customTabBarConfigs) {
-            UIButton *raisedButton = [self viewWithTag:TAG_ADD_ITEMS + config.index];
+            UIButton *raisedButton = [self viewWithTag:TAG_ITEM + config.index];
             
             //将当前tabbar的触摸点转换坐标系，转换到发布按钮的身上，生成一个新的点
             CGPoint newP = [self convertPoint:point toView:raisedButton];
