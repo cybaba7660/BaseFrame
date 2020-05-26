@@ -118,6 +118,9 @@
 }
 
 - (void)setEditable:(BOOL)editable {
+    if ([self respondsToSelector:@selector(setMenuEnable:)]) {
+        [self performSelector:@selector(setMenuEnable:) withObject:@(editable)];
+    }
     objc_setAssociatedObject(self, @selector(editable), @(editable), OBJC_ASSOCIATION_ASSIGN);
     if (!editable) {
         self.delegate = self;

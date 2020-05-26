@@ -45,9 +45,9 @@ static NetworkManager *networkInstance;
         configuration.timeoutIntervalForRequest  = 10;
         _manager = [[AFHTTPSessionManager manager] initWithSessionConfiguration:configuration];
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        if ([UserInfoModel currentUser].token.length) {
-            [_manager.requestSerializer setValue:[UserInfoModel currentUser].token forHTTPHeaderField:@"token"];
-        }
+    }
+    if ([UserInfoModel currentUser].token.length) {
+        [_manager.requestSerializer setValue:[UserInfoModel currentUser].token forHTTPHeaderField:@"token"];
     }
     return _manager;
 }

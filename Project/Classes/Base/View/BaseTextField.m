@@ -13,6 +13,26 @@
 }
 @end
 @implementation BaseTextField
+- (instancetype)initWithFrame:(CGRect)frame {
+    if ([super initWithFrame:frame]) {
+        self.menuEnable = YES;
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if ([super initWithCoder:coder]) {
+        self.menuEnable = YES;
+    }
+    return self;
+}
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    if (self.menuEnable) {
+        return [super canPerformAction:action withSender:sender];
+    }else {
+        return self.menuEnable;
+    }
+}
+
 + (instancetype)viewWithFrame:(CGRect)frame {
     return [self viewWithFrame:frame leftImageName:nil leftText:nil leftColor:nil leftFont:nil rightImageName:nil];
 }
