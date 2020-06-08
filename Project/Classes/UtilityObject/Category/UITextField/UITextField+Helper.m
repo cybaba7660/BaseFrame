@@ -163,12 +163,16 @@ static char kTextFieldCallBackBlock;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];;
     [button setImage:[UIImage imageNamed:norName] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:selName] forState:UIControlStateSelected];
-    [button addTarget:self action:@selector(buttonClickedEvent:) forControlEvents:UIControlEventTouchUpInside];
     [button setAdjustsImageWhenHighlighted:NO];
     button.size = button.currentImage.size;
     self.rightView = button;
     self.rightViewMode = viewMode;
-    objc_setAssociatedObject(self, &kTextFieldCallBackBlock, event, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    if (event) {
+        [button addTarget:self action:@selector(buttonClickedEvent:) forControlEvents:UIControlEventTouchUpInside];
+        objc_setAssociatedObject(self, &kTextFieldCallBackBlock, event, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    }else {
+        button.userInteractionEnabled = NO;
+    }
 }
 - (void)buttonClickedEvent:(UIButton *)button {
     CallBackEvent block = objc_getAssociatedObject(self, &kTextFieldCallBackBlock);
