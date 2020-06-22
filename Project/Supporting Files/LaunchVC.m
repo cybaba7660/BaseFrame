@@ -35,16 +35,12 @@
     [transition setSubtype:kCATransitionFromRight];
     [KeyWindow.layer addAnimation:transition forKey:@"animation"];
     KeyWindow.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate tabBarController];
-    
-    [AppInfo checkVersion];
-    
 //    [SystemManager autoLoginCompleted:^(bool result) {
 //
 //    }];
 }
 #pragma mark - 获取app信息
-- (void)appInfomation
-{
-
+- (void)appInfomation {
+    [AppInfo checkVersion];
 }
 @end
