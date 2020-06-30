@@ -131,7 +131,7 @@
 - (void)initUI {
     WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:self.webViewConfig];
     self.webView = webView;
-    [self refreshWebViewFrameWithIsLandscape:NO animatedDuration:0];
+    
 //    [self autoFitContent];
     webView.scrollView.showsVerticalScrollIndicator = NO;
     webView.scrollView.showsHorizontalScrollIndicator = NO;
@@ -168,6 +168,7 @@
             [bottomToolBar addSubview:btn];
         }
     }
+    [self refreshWebViewFrameWithIsLandscape:NO animatedDuration:0];
     [self loadLink];
 }
 - (void)refreshNavBarWithOrientationIsLandscape:(BOOL)isLandscape {
@@ -213,13 +214,39 @@
 }
 #pragma mark - 横竖屏设置
 - (void)refreshWebViewFrameWithIsLandscape:(BOOL)isLandscape animatedDuration:(CGFloat)animatedDuration {
-    CGFloat tabbar_H = (self.hidesBottomBarWhenPushed ? 0 : kTabBar_H) + (self.fullScreen ? 0 : kBottomMargin);
+    CGFloat navBar_H = 0;
+    if (!self.fullScreen) {
+        if (self.navigationController) {
+            navBar_H = kStatusBarAndNavBar_H;
+        }else {
+            navBar_H = kStatusBar_H;
+        }
+    }
+    
+    CGFloat tabbar_H = 0;
+    if (!self.fullScreen) {
+        tabbar_H += kBottomMargin;
+    }
+    if (!self.hidesBottomBarWhenPushed && self.tabBarController) {
+        tabbar_H += kTabBar_H;
+    }
+    
     CGFloat toolBar_H = (self.showBottomToolBar ? kTabBar_H : 0);
-    CGFloat navBar_H = (self.fullScreen ? 0 : kStatusBarAndNavBar_H);
+    
     CGFloat webView_w = isLandscape ? SCREEN_MAX : SCREEN_MIN;
     CGFloat webView_h = isLandscape ? SCREEN_MIN - tabbar_H - toolBar_H - navBar_H : SCREEN_MAX - tabbar_H - toolBar_H - navBar_H;
+    
+    CGFloat webView_y = 0;
+    if (!self.fullScreen) {
+        if (!self.navigationController) {
+            webView_y = kStatusBar_H;
+        }else {
+            webView_y = 0;
+        }
+    }
     [UIView animateWithDuration:0 animations:^{
-        self.webView.frame = CGRectMake(0, 0, webView_w, webView_h);
+        self.webView.frame = CGRectMake(0, webView_y, webView_w, webView_h);
+        self.progressView.top = self.webView.top;
     }];
 }
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -341,18 +368,8 @@
     NSString     *scheme      = request.URL.scheme;
     // decode for all URL to avoid url contains some special character so that it wasn't load.
     NSString *urlStr = [navigationAction.request.URL.absoluteString stringByRemovingPercentEncoding];
-//    NSString *urlStr = navigationAction.request.URL.absoluteString;
-    
-    NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:urlStr];
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    for (NSURLQueryItem *item in urlComponents.queryItems) {
-        [params setObject:item.value forKey:item.name];
-    }
     
     if (![scheme isEqualToString:@"https"] && ![scheme isEqualToString:@"http"] && ![scheme isEqualToString:@"about"]) {
-        NSURL *url = [NSURL URLWithString:urlStr];
-//        NSURL *url = navigationAction.request.URL;
-        
         if ([[UIApplication sharedApplication] canOpenURL:request.URL]) {
             [[UIApplication sharedApplication] openURL:request.URL];
             decisionHandler(WKNavigationActionPolicyCancel);
