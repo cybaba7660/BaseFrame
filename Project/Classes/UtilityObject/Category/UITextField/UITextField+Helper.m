@@ -88,6 +88,10 @@
             if (morePointRange.location != NSNotFound) {
                 self.text = [self.text substringToIndex:pointRange.location + pointRange.length + morePointRange.location];
             }
+        }else {
+            if (self.text.length && self.text.doubleValue == 0) {
+                self.text = @"0";
+            }
         }
     }
     if (self.inputLimit & TextFieldInputLimitLetterOrNumber) {
