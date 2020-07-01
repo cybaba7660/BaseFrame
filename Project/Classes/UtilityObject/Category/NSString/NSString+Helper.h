@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 计算文字高度*/
 - (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width;
 /** 计算文字宽度 */
-- (CGFloat)calculateWidthWithFont:(UIFont *)font limitHeight:(CGFloat)height;
+- (CGFloat)calculateWidthWithFont:(UIFont *)font;
 @end
 @interface NSString (RegEx)
 - (NSString *)justChinese;
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSAttributedString (Category)
 - (CGFloat)calculateHeightWithLimitWidth:(CGFloat)width;
-- (CGFloat)calculateWidthWithLimitHeight:(CGFloat)height;
+- (CGFloat)calculateWidth;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -245,7 +245,7 @@
         if (_tabItemsDistributionType == 0) {
             buttonWidth = (self.width - _tabContentEdgeInsets.left - _tabContentEdgeInsets.right) / _titleArray.count;
         }else if (_tabItemsDistributionType == 1) {
-            buttonWidth = [buttonTitle calculateWidthWithFont:[UIFont systemFontOfSize:_titlesFont] limitHeight:buttonHeight] + _tabItemsContentEdgeInsets.left + _tabItemsContentEdgeInsets.right;
+            buttonWidth = [buttonTitle calculateWidthWithFont:[UIFont systemFontOfSize:_titlesFont]] + _tabItemsContentEdgeInsets.left + _tabItemsContentEdgeInsets.right;
         }
         button.frame = CGRectMake(buttonLeft, buttonTop, buttonWidth, buttonHeight);
         buttonLeft += buttonWidth + _tabItemsSpacing;
