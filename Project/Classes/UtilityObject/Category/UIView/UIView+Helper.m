@@ -66,7 +66,7 @@
     dashLineLayer.lineWidth = lineWidth;
     dashLineLayer.strokeColor = lineColor.CGColor;
     dashLineLayer.fillColor = UIColor.clearColor.CGColor;
-    dashLineLayer.path = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+    dashLineLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:self.layer.cornerRadius].CGPath;
     dashLineLayer.frame = self.bounds;
     
     //设置线条的样式
