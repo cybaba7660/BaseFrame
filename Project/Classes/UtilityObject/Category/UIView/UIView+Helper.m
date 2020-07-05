@@ -70,9 +70,10 @@
     dashLineLayer.frame = self.bounds;
     
     //设置线条的样式
-//        border.lineCap = @"square";
+    dashLineLayer.lineCap = kCALineCapSquare;
     //[长，间距]
     dashLineLayer.lineDashPattern = @[@4, @2];
+    
     for (CAShapeLayer *layer in self.layer.sublayers) {
         if ([layer isKindOfClass:CAShapeLayer.class]) {
             [layer removeFromSuperlayer];
