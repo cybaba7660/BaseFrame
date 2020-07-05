@@ -72,7 +72,7 @@
     //设置线条的样式
     dashLineLayer.lineCap = kCALineCapSquare;
     //[长，间距]
-    dashLineLayer.lineDashPattern = @[@4, @2];
+    dashLineLayer.lineDashPattern = lineDashPattern;
     
     for (CAShapeLayer *layer in self.layer.sublayers) {
         if ([layer isKindOfClass:CAShapeLayer.class]) {
