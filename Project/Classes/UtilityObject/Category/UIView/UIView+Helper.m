@@ -60,6 +60,28 @@
     self.layer.borderWidth = 0;
     self.layer.shadowRadius = 0;
 }
+//dashLine
+- (void)setDashLineBorderWithLineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor lineDashPattern:(NSArray<NSNumber *> *)lineDashPattern {
+    CAShapeLayer *dashLineLayer = [CAShapeLayer layer];
+    dashLineLayer.lineWidth = lineWidth;
+    dashLineLayer.strokeColor = lineColor.CGColor;
+    dashLineLayer.fillColor = UIColor.clearColor.CGColor;
+    dashLineLayer.path = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+    dashLineLayer.frame = self.bounds;
+    
+    //设置线条的样式
+//        border.lineCap = @"square";
+    //[长，间距]
+    dashLineLayer.lineDashPattern = @[@4, @2];
+    for (CAShapeLayer *layer in self.layer.sublayers) {
+        if ([layer isKindOfClass:CAShapeLayer.class]) {
+            [layer removeFromSuperlayer];
+        }
+    }
+    [self.layer addSublayer:dashLineLayer];
+}
+
+//display&dismiss
 - (void)gradualDisplay {
     [UIView animateWithDuration:0.25 animations:^{
         self.alpha = 1;

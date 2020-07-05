@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)clean;
 
+//添加虚线
+- (void)setDashLineBorderWithLineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor lineDashPattern:(NSArray<NSNumber *> *)lineDashPattern;
+
 - (void)gradualDisplay;
 - (void)gradualDismiss;
 - (void)gradualDismissAndRemove:(BOOL)remove;
