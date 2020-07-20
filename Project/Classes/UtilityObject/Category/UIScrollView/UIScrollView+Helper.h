@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 设置偏移量移动到指定的点*/
 - (void)adjustsContentOffsetWithDestinationPoint:(CGPoint)destinationPoint originalPoint:(CGPoint)originalPoint;
+
+/** 填充下拉时顶部颜色*/
+- (void)fillColorAtTheTopWhenPullDown:(UIColor *)fillColor;
 @end
 
 NS_ASSUME_NONNULL_END

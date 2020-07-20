@@ -48,4 +48,24 @@
         [self setContentOffset:CGPointMake(0, moveLen) animated:YES];
     }
 }
+
+/** 填充下拉时顶部颜色*/
+- (void)fillColorAtTheTopWhenPullDown:(UIColor *)fillColor {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 0)];
+    view.backgroundColor = fillColor;
+    view.tag = 26798;
+    [self addSubview:view];
+    
+    __weak typeof(self) weakSelf = self;
+    [self addObserverBlockForKeyPath:@"self.contentOffset" block:^(id  _Nonnull obj, id  _Nullable oldVal, id  _Nullable newVal) {
+        CGFloat offsetY = [newVal CGPointValue].y;
+        offsetY = offsetY > 0 ? 0 : offsetY;
+        offsetY = fabs(offsetY);
+        UIView *fillView = [weakSelf viewWithTag:26798];
+        fillView.frame = CGRectMake(0, -offsetY, fillView.width, offsetY);
+    }];
+}
+- (void)dealloc {
+    [self removeObserverBlocks];
+}
 @end
