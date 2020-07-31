@@ -153,6 +153,7 @@
     progressView.progressTintColor = UIColor.lightGrayColor;
     progressView.trackTintColor = UIColor.clearColor;
     [self.view addSubview:progressView];
+    [self refreshWebViewFrameWithIsLandscape:NO animatedDuration:0];
     if (self.showBottomToolBar) {
         UIView *bottomToolBar = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(webView.frame), SCREEN_WIDTH, kTabBar_H)];
         [self.view addSubview:bottomToolBar];
@@ -168,7 +169,6 @@
             [bottomToolBar addSubview:btn];
         }
     }
-    [self refreshWebViewFrameWithIsLandscape:NO animatedDuration:0];
     [self loadLink];
 }
 - (void)refreshNavBarWithOrientationIsLandscape:(BOOL)isLandscape {
