@@ -7,6 +7,7 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import "NetworkReachabilityManager.h"
 #import "NetworkManager.h"
 #import "Encryption.h"
 #define TOKEN_EXPIRED   2
@@ -81,12 +82,11 @@ static NetworkManager *networkInstance;
         }else {
             failure ? failure(rs) : nil;
         }
-        
-        NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮DATA：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, rs.responseData]);
+        [self printSuccessLog:task parameters:parameters response:rs.responseData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         Result *rs = [Result dealWithTask:task error:error];
         failure ? failure(rs) : nil;
-        NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：❌❌❌❌❌❌❌❌❌❌❌❌❌❌\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮ERROR：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, error]);
+        [self printFailureLog:task parameters:parameters error:error];
     }];
 }
 - (void)POST:(NSString *)url parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
@@ -109,12 +109,11 @@ static NetworkManager *networkInstance;
         }else {
             failure ? failure(rs) : nil;
         }
-        
-        NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮DATA：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, rs.responseData]);
+        [self printSuccessLog:task parameters:parameters response:rs.responseData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         Result *rs = [Result dealWithTask:task error:error];
         failure ? failure(rs) : nil;
-        NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：❌❌❌❌❌❌❌❌❌❌❌❌❌❌\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮ERROR：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, error]);
+        [self printFailureLog:task parameters:parameters error:error];
     }];
 }
 - (void)naturalPOST:(NSString *)url parameters:(id)parameters success:(void(^)(id response))success failure:(void(^)(NSString *error))failure {
@@ -125,6 +124,12 @@ static NetworkManager *networkInstance;
         NSString *errorText = error.userInfo[@"NSLocalizedDescription"];
         failure ? failure(errorText) : nil;
     }];
+}
+- (void)printSuccessLog:(NSURLSessionDataTask *)task parameters:(NSDictionary *)parameters response:(id)response {
+    NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮DATA：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, response]);
+}
+- (void)printFailureLog:(NSURLSessionDataTask *)task parameters:(NSDictionary *)parameters error:(NSError *)error {
+    NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：❌❌❌❌❌❌❌❌❌❌❌❌❌❌\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮ERROR：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, error]);
 }
 - (void)requestAPPUpdateInfoSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
     NSDictionary *params = @{
