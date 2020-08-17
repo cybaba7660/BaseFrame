@@ -142,33 +142,38 @@ static NetworkManager *networkInstance;
 }
 + (void)testingDomainsWithCompleted:(void(^)(BOOL validity))completed {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSArray *domains = isProduction ? STATIC_DOMAINS_PRODUCTION : STATIC_DOMAINS_DEVELOPMENT;
-        __block NSString *enableDomain = nil;
-        
-        dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-        for (NSString *domain in domains) {
-            __block BOOL validity = NO;
-            [NetworkReachabilityManager testingDomain:domain completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                validity = !error;
-                if (error) {
-                    NSLog(@"无效地址：%@，error：%@", domain, error.userInfo[@"NSLocalizedDescription"]);
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NSArray *domains = isProduction ? STATIC_DOMAINS_PRODUCTION : STATIC_DOMAINS_DEVELOPMENT;
+            __block NSString *enableDomain = nil;
+            
+            dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+            for (NSString *domain in domains) {
+                __block BOOL validity = NO;
+                [NetworkReachabilityManager testingDomain:domain completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                    validity = !error;
+                    if (error) {
+                        NSLog(@"无效地址：%@，error：%@", domain, error.userInfo[@"NSLocalizedDescription"]);
+                    }
+                    dispatch_semaphore_signal(semaphore);
+                }];
+                dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+                if (validity) {
+                    enableDomain = domain;
+                    break;
                 }
-                dispatch_semaphore_signal(semaphore);
-            }];
-            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            if (validity) {
-                enableDomain = domain;
-                break;
             }
-        }
-        if (enableDomain) {
-            NSLog(@"检测完成，已使用有效地址: %@", enableDomain);
-            [NetworkManager shareManager].domain = enableDomain;
-            completed ? completed(YES) : nil;
-        }else {
-            completed ? completed(NO) : nil;
-        }
+            if (enableDomain) {
+                NSLog(@"检测完成，已使用有效地址: %@", enableDomain);
+                [NetworkManager shareManager].domain = enableDomain;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completed ? completed(YES) : nil;
+                });
+            }else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completed ? completed(NO) : nil;
+                });
+            }
+        });
     });
 }
 @end
