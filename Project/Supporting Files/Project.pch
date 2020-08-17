@@ -59,7 +59,7 @@ NS_INLINE CGFloat kSafeArea_H() {
         height -= kTabBar_H;
     }
     if (![(BaseViewController *)vc navigationBarHidden]) {
-        height -= (kNavBar_H + kStatusBar_H);
+        height -= kStatusBarAndNavBar_H;
     }
     return height;
 }

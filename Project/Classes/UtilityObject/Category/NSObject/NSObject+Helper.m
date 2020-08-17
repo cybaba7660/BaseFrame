@@ -20,7 +20,7 @@
 - (NSObject *)cy_obj1 {
     return objc_getAssociatedObject(self, _cmd);
 }
-- (void)setCy_obj2:(NSObject *)cy_obj2:(NSObject *)cy_obj2 {
+- (void)setCy_obj2:(NSObject *)cy_obj2 {
     objc_setAssociatedObject(self, @selector(cy_obj2), cy_obj2, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSObject *)cy_obj2 {

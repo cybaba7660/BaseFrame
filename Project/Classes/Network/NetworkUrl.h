@@ -12,7 +12,12 @@
 static BOOL const isProduction = 0;
 #define BASE_URL        @""
 #define BASE_URL_TEST   @""
-
+#define STATIC_DOMAINS_DEVELOPMENT \
+@[ \
+]
+#define STATIC_DOMAINS_PRODUCTION \
+@[ \
+]
 /********************** 应用基本 ********************************/
 #define ADVERTISEMENT_URL   @""
 #define APP_INFO_URL        @""

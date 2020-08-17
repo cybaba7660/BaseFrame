@@ -40,6 +40,9 @@ typedef void(^FailureBlock)(Result *rs);
 
 - (void)naturalPOST:(NSString *)url parameters:(id)parameters success:(void(^)(id response))success failure:(void(^)(NSString *error))failure;
 #pragma mark - start 应用相关
-//app 更新
+/** 检测更新*/
 - (void)requestAPPUpdateInfoSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/** 检测域名*/
++ (void)testingDomainsWithCompleted:(void(^)(BOOL validity))completed;
 @end

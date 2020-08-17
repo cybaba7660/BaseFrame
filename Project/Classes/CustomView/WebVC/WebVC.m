@@ -49,6 +49,7 @@
     if (self.url.length) {
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
         [self.webView loadRequest:request];
+        NSLog(@"初次加载地址:%@", self.url);
     }else if (self.HTMLString.length) {
         [self.webView loadHTMLString:self.HTMLString baseURL:nil];
     }
@@ -363,7 +364,7 @@
 }
 // 根据WebView对于即将跳转的HTTP请求头信息和相关信息来决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
+    NSLog(@"跳转地址：%@", navigationAction.request.URL);
     NSURLRequest *request        = navigationAction.request;
     NSString     *scheme      = request.URL.scheme;
     // decode for all URL to avoid url contains some special character so that it wasn't load.
