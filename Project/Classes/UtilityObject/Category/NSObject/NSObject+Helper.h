@@ -7,11 +7,13 @@
 //
 #import <Foundation/Foundation.h>
 @interface NSObject (Helper)
+@property (nonatomic, assign) BOOL cy_mark;
+@property (nonatomic, assign) BOOL cy_selected;
 @property (nonatomic, strong) NSObject *cy_obj;
 @property (nonatomic, strong) NSObject *cy_obj1;
 @property (nonatomic, strong) NSObject *cy_obj2;
 @property (nonatomic, assign) NSUInteger cy_index;
-@property (nonatomic, assign) BOOL cy_selected;
+@property (nonatomic, strong) NSIndexPath *cy_indexPath;
 @end
 
 

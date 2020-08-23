@@ -56,6 +56,8 @@ typedef void(^CallBackBlock)(id obj);
 #import "UIScrollView+Helper.h"
 #import "UIView+AbnormalView.h"
 #import "UILabel+Helper.h"
+#import "UITableView+Helper.h"
+#import "UICollectionView+Helper.h"
 
 // 通知名
 UIKIT_EXTERN NSString * const kUserLoginNotification;       //用户登录通知

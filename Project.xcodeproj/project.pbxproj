@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */; };
+		423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB524F221D100C838C0 /* UITableView+Helper.m */; };
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
@@ -101,6 +103,10 @@
 /* Begin PBXFileReference section */
 		20B5D73CF21DD949B60005FB /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		2D7898DE92EE75DB767022F2 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
+		423E2BB124F221D100C838C0 /* UICollectionView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Helper.h"; sourceTree = "<group>"; };
+		423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Helper.m"; sourceTree = "<group>"; };
+		423E2BB424F221D100C838C0 /* UITableView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Helper.h"; sourceTree = "<group>"; };
+		423E2BB524F221D100C838C0 /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Helper.m"; sourceTree = "<group>"; };
 		427F6FA024D6A7A300977AA4 /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
 		427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
 		79309685694D3A097E741DDE /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +303,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423E2BB024F221D100C838C0 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				423E2BB124F221D100C838C0 /* UICollectionView+Helper.h */,
+				423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		423E2BB324F221D100C838C0 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				423E2BB424F221D100C838C0 /* UITableView+Helper.h */,
+				423E2BB524F221D100C838C0 /* UITableView+Helper.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		6029D8093044171CD7B8B59E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +838,8 @@
 				E599BCD2240FA9A000C3A55F /* NSObject */,
 				E599BCD5240FA9A000C3A55F /* UITextField */,
 				E599BCD8240FA9A000C3A55F /* NSDate */,
+				423E2BB024F221D100C838C0 /* UICollectionView */,
+				423E2BB324F221D100C838C0 /* UITableView */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1137,6 +1163,7 @@
 				C11B48AA206627FD009857D9 /* TADotView.m in Sources */,
 				C11B48C220662848009857D9 /* PYSearchViewController.m in Sources */,
 				E5083DC12417713000E13C03 /* SecondVC.m in Sources */,
+				423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */,
 				E50AE3C92466518100D93B4A /* CYFileManager.m in Sources */,
 				E599BD07240FA9A000C3A55F /* UIView+Helper.m in Sources */,
 				C11B48AD206627FD009857D9 /* SDCycleScrollView.m in Sources */,
@@ -1150,6 +1177,7 @@
 				E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */,
 				C11B487D206627C8009857D9 /* LGJSegmentManager.m in Sources */,
 				E599BD37240FB82600C3A55F /* BaseTabBarController.m in Sources */,
+				423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */,
 				E5083DC42417715600E13C03 /* ThirdVC.m in Sources */,
 				E599BD02240FA9A000C3A55F /* UIScrollView+Helper.m in Sources */,
 				E599BAC9240FA1F700C3A55F /* LoginVC.m in Sources */,

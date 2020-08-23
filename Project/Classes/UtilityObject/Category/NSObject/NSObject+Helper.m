@@ -8,6 +8,18 @@
 
 #import "NSObject+Helper.h"
 @implementation NSObject (Helper)
+- (void)setCy_mark:(BOOL)cy_mark {
+    objc_setAssociatedObject(self, @selector(cy_mark), @(cy_mark), OBJC_ASSOCIATION_ASSIGN);
+}
+- (BOOL)cy_mark {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+- (void)setCy_selected:(BOOL)cy_selected {
+    objc_setAssociatedObject(self, @selector(cy_selected), @(cy_selected), OBJC_ASSOCIATION_ASSIGN);
+}
+- (BOOL)cy_selected {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
 - (void)setCy_obj:(NSObject *)cy_obj {
     objc_setAssociatedObject(self, @selector(cy_obj), cy_obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -32,11 +44,11 @@
 - (NSUInteger)cy_index {
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
-- (void)setCy_selected:(BOOL)cy_selected {
-    objc_setAssociatedObject(self, @selector(cy_selected), @(cy_selected), OBJC_ASSOCIATION_ASSIGN);
+- (void)setCy_indexPath:(NSIndexPath *)cy_indexPath {
+    objc_setAssociatedObject(self, @selector(cy_indexPath), cy_indexPath, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (BOOL)cy_selected {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
+- (NSIndexPath *)cy_indexPath {
+    return objc_getAssociatedObject(self, _cmd);
 }
 @end
 @implementation NSObject (Keyboard)
