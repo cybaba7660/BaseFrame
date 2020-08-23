@@ -41,6 +41,7 @@ typedef void(^CallBackBlock)(id obj);
 //类别
 #import "NSString+Category.h"
 #import "UIButton+Category.h"
+#import "UIButton+Helper.h"
 #import "UIView+Frame.h"
 #import "UIView+Helper.h"
 #import "UIImage+Category.h"

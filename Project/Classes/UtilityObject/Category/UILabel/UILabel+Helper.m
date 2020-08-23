@@ -32,4 +32,25 @@
     instance.textColor = UIColor.blackColor;
     return instance;
 }
+
+- (void)widthToFit {
+    [self widthToFitWithIncrease:0];
+}
+- (void)widthToFitWithIncrease:(CGFloat)increase {
+    if (self.text.length) {
+        self.width = [self.text calculateWidthWithFont:self.font] + increase;
+    }else {
+        self.width = [self.attributedText calculateWidth] + increase;
+    }
+}
+- (void)heightToFit {
+    [self heightToFitWithIncrease:0];
+}
+- (void)heightToFitWithIncrease:(CGFloat)increase {
+    if (self.text.length) {
+        self.height = [self.text calculateHeightWithFont:self.font limitWidth:self.width] + increase;
+    }else {
+        self.height = [self.attributedText calculateHeightWithLimitWidth:self.width] + increase;
+    }
+}
 @end

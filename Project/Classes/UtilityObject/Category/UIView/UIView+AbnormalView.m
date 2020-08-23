@@ -16,12 +16,10 @@
     return objc_getAssociatedObject(self, _cmd);
 }
 - (void)showAbnormalViewWithType:(AbnormalType)type tips:(NSString *)tips refreshEvent:(CallBackBlock)refreshEvent {
-    if (self.abnormalView) {
-        [self.abnormalView refreshTips:tips];
-        return;
-    }
     if (type == AbnormalTypeNetWorkError) {
-        self.abnormalView = [AbnormalView showNetworkErrorInView:self tips:tips refreshEvent:refreshEvent];
+        [AbnormalView showInView:self imageName:@"network_error" tips:tips refreshText:NSLocalizedString(@"重新加载", nil) refreshEvent:refreshEvent];
+    }else if (type == AbnormalTypeNoData) {
+        [AbnormalView showInView:self imageName:@"error_no_data" tips:tips refreshText:nil refreshEvent:nil];
     }
 }
 - (void)dismissAbnormalView {

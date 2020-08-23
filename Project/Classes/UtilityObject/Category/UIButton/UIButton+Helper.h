@@ -1,15 +1,16 @@
 //
-//  UILabel+Helper.h
+//  UIButton+Helper.h
 //  Project
 //
-//  Created by Chenyi on 2019/11/19.
-//  Copyright © 2019 Chenyi. All rights reserved.
+//  Created by CC on 2020/8/23.
+//  Copyright © 2020 Chenyi. All rights reserved.
 //
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UILabel (Helper)
+@interface UIButton (Helper)
 - (void)widthToFit;
 - (void)widthToFitWithIncrease:(CGFloat)increase;
 - (void)heightToFit;

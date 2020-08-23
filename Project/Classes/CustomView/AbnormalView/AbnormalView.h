@@ -11,8 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AbnormalView : UIView
-+ (instancetype)showNetworkErrorInView:(UIView *)inView tips:(NSString *)tips refreshEvent:(CallBackBlock)refreshEvent;
-- (void)refreshTips:(NSString *)tips;
++ (void)showInView:(UIView *)inView imageName:(NSString *)imageName tips:(NSString *)tips refreshText:(NSString * __nullable)refreshText refreshEvent:(CallBackBlock __nullable)refreshEvent;
 - (void)dismiss;
 @end
 

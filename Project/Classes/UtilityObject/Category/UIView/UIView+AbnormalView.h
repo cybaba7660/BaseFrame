@@ -8,10 +8,11 @@
 #import <UIKit/UIKit.h>
 #import "AbnormalView.h"
 typedef NS_ENUM(NSUInteger, AbnormalType) {
-    AbnormalTypeNetWorkError
+    AbnormalTypeNetWorkError,
+    AbnormalTypeNoData
 };
 @interface UIView (AbnormalView)
 @property (nonatomic, weak) AbnormalView *abnormalView;
 - (void)showAbnormalViewWithType:(AbnormalType)type tips:(NSString *)tips refreshEvent:(CallBackBlock)refreshEvent;
-//- (void)dismissAbnormalView;
+- (void)dismissAbnormalView;
 @end

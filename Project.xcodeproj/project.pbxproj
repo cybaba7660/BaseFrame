@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */; };
 		423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB524F221D100C838C0 /* UITableView+Helper.m */; };
+		423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */; };
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
@@ -107,6 +108,8 @@
 		423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Helper.m"; sourceTree = "<group>"; };
 		423E2BB424F221D100C838C0 /* UITableView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Helper.h"; sourceTree = "<group>"; };
 		423E2BB524F221D100C838C0 /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Helper.m"; sourceTree = "<group>"; };
+		423E2BBB24F24F1400C838C0 /* UIButton+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helper.h"; sourceTree = "<group>"; };
+		423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Helper.m"; sourceTree = "<group>"; };
 		427F6FA024D6A7A300977AA4 /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
 		427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
 		79309685694D3A097E741DDE /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -876,6 +879,8 @@
 		E599BCB2240FA9A000C3A55F /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
+				423E2BBB24F24F1400C838C0 /* UIButton+Helper.h */,
+				423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */,
 				E599BCB4240FA9A000C3A55F /* UIButton+Category.h */,
 				E599BCB3240FA9A000C3A55F /* UIButton+Category.m */,
 			);
@@ -1169,6 +1174,7 @@
 				C11B48AD206627FD009857D9 /* SDCycleScrollView.m in Sources */,
 				C11B487C206627C8009857D9 /* LGJSegmentHead.m in Sources */,
 				E599BD00240FA9A000C3A55F /* UIImage+Category.m in Sources */,
+				423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */,
 				E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */,
 				C11B48C020662848009857D9 /* PYSearchConst.m in Sources */,
 				E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */,
