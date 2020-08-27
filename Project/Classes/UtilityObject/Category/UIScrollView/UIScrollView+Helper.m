@@ -36,12 +36,18 @@
     CGFloat minOffset = 0;
     if (self.contentSize.width > self.contentSize.height) {
         CGFloat maxOffset = self.contentSize.width - self.width;
+        if (maxOffset <= 0) {
+            return;
+        }
         CGFloat moveLen = originalPoint.x - destinationPoint.x;
         moveLen = moveLen > minOffset ? moveLen : minOffset;
         moveLen = moveLen < maxOffset ? moveLen : maxOffset;
         [self setContentOffset:CGPointMake(moveLen, 0) animated:YES];
     }else {
         CGFloat maxOffset = self.contentSize.height - self.height;
+        if (maxOffset < 0) {
+            return;
+        }
         CGFloat moveLen = originalPoint.y - destinationPoint.y;
         moveLen = moveLen > minOffset ? moveLen : minOffset;
         moveLen = moveLen < maxOffset ? moveLen : maxOffset;
