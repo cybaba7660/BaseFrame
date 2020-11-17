@@ -59,32 +59,21 @@
     ThirdVC  *vc3    = [[ThirdVC alloc] init];
     MeVC     *vc4    = [[MeVC alloc] init];
     
-    UIImage *normalImage_1 = [[UIImage imageNamed:@"tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *selImage_1 = [[UIImage imageNamed:@"tabbar_home_press"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *tabbarItem_1 = [[UITabBarItem alloc] initWithTitle:@"首页" image:normalImage_1 selectedImage:selImage_1];
+    NSArray *normalImagesName = @[@"tabbar_home", @"tabbar_second", @"tabbar_third", @"tabbar_me"];
+    NSArray *selectedImagesName = @[@"tabbar_home_press", @"tabbar_second_press", @"tabbar_third_press", @"tabbar_me_press"];
+    NSArray *tabbarTitles = @[@"首页", @"活动", @"发现", @"我的"];
+    NSArray<UIViewController *> *vcs = @[vc1, vc2, vc3, vc4];
+    NSMutableArray *navs = @[].mutableCopy;
+    for (int i = 0; i < tabbarTitles.count; i ++) {
+        UIImage *normalImage = [[UIImage imageNamed:normalImagesName[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *selImage = [[UIImage imageNamed:selectedImagesName[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UITabBarItem *tabbarItem = [[UITabBarItem alloc] initWithTitle:tabbarTitles[i] image:normalImage selectedImage:selImage];
+        vcs[i].tabBarItem = tabbarItem;
+        UINavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vcs[i]];
+        [navs addObject:nav];
+    }
+    self.viewControllers = navs;
     
-    UIImage *normalImage_2 = [[UIImage imageNamed:@"tabbar_second"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *selImage_2 = [[UIImage imageNamed:@"tabbar_second_press"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *tabbarItem_2 = [[UITabBarItem alloc] initWithTitle:@"活动" image:normalImage_2 selectedImage:selImage_2];
-    
-    UIImage *normalImage_3 = [[UIImage imageNamed:@"tabbar_third"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *selImage_3 = [[UIImage imageNamed:@"tabbar_third_press"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *tabbarItem_3 = [[UITabBarItem alloc] initWithTitle:@"发现" image:normalImage_3 selectedImage:selImage_3];
-    
-    UIImage *normalImage_4 = [[UIImage imageNamed:@"tabbar_me"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *selImage_4 = [[UIImage imageNamed:@"tabbar_me_press"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UITabBarItem *tabbarItem_4 = [[UITabBarItem alloc] initWithTitle:@"我的" image:normalImage_4 selectedImage:selImage_4];
-    
-    vc1.tabBarItem = tabbarItem_1;
-    vc2.tabBarItem = tabbarItem_2;
-    vc3.tabBarItem = tabbarItem_3;
-    vc4.tabBarItem = tabbarItem_4;
-    
-    UINavigationController *nav1 = [[BaseNavigationController alloc] initWithRootViewController:vc1];
-    UINavigationController *nav2 = [[BaseNavigationController alloc] initWithRootViewController:vc2];
-    UINavigationController *nav3 = [[BaseNavigationController alloc] initWithRootViewController:vc3];
-    UINavigationController *nav4 = [[BaseNavigationController alloc] initWithRootViewController:vc4];
-    self.viewControllers = @[nav1, nav2, nav3, nav4];
 //    self.selectedIndex = 0;
 }
 
