@@ -54,22 +54,18 @@
     [[UITabBar appearance] setTintColor:MAIN_COLOR];
     //[[UITabBar appearance] setBarTintColor:COLOR_W(69)];
     
-    HomeVC   *vc1    = [[HomeVC alloc] init];
-    SecondVC *vc2    = [[SecondVC alloc] init];
-    ThirdVC  *vc3    = [[ThirdVC alloc] init];
-    MeVC     *vc4    = [[MeVC alloc] init];
-    
     NSArray *normalImagesName = @[@"tabbar_home", @"tabbar_second", @"tabbar_third", @"tabbar_me"];
     NSArray *selectedImagesName = @[@"tabbar_home_press", @"tabbar_second_press", @"tabbar_third_press", @"tabbar_me_press"];
     NSArray *tabbarTitles = @[@"首页", @"活动", @"发现", @"我的"];
-    NSArray<UIViewController *> *vcs = @[vc1, vc2, vc3, vc4];
+    NSArray *vcClasses = @[[HomeVC class], [SecondVC class], [ThirdVC class], [MeVC class]];
     NSMutableArray *navs = @[].mutableCopy;
     for (int i = 0; i < tabbarTitles.count; i ++) {
         UIImage *normalImage = [[UIImage imageNamed:normalImagesName[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage *selImage = [[UIImage imageNamed:selectedImagesName[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UITabBarItem *tabbarItem = [[UITabBarItem alloc] initWithTitle:tabbarTitles[i] image:normalImage selectedImage:selImage];
-        vcs[i].tabBarItem = tabbarItem;
-        UINavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vcs[i]];
+        UIViewController *vc    = [[vcClasses[i] alloc] init];
+        vc.tabBarItem = tabbarItem;
+        UINavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:vc];
         [navs addObject:nav];
     }
     self.viewControllers = navs;
