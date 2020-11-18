@@ -28,6 +28,8 @@ typedef void(^KeyboardWillChangeFrameBlock)(CGFloat keyboardY, CGFloat duration)
 - (void)saveToSandbox;
 + (instancetype)objectFromSandbox;
 + (BOOL)removeObjectFromSandbox;
++ (NSString *)filePath;
++ (NSString *)filePathWithName:(NSString *)name;
 @end
 
 @interface NSObject (Runtime)

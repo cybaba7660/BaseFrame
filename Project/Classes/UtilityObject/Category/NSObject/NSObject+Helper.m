@@ -112,8 +112,11 @@
     }
 }
 + (NSString *)filePath {
+    return [self filePathWithName:NSStringFromClass(self.class)];
+}
++ (NSString *)filePathWithName:(NSString *)name {
     NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *fileName = [NSString stringWithFormat:@"%@.plist", NSStringFromClass(self.class)];
+    NSString *fileName = [NSString stringWithFormat:@"%@.plist", name];
     NSString *plistPath = [rootPath stringByAppendingPathComponent:fileName];
     return plistPath;
 }
