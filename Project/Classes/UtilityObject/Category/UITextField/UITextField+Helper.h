@@ -10,6 +10,8 @@
 typedef NS_ENUM(NSUInteger, TextFieldInputType) {
     TextFieldInputTypeAccount = 0,
     TextFieldInputTypePassword,
+    TextFieldInputTypeNick,
+    TextFieldInputTypeName,
     TextFieldInputTypePhone,
     TextFieldInputTypeVerificationCode
 };
