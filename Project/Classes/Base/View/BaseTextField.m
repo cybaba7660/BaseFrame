@@ -16,12 +16,16 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if ([super initWithFrame:frame]) {
         self.menuEnable = YES;
+        self.horizContentOffset = 10;
+        self.leftViewAndRightViewOffset = 10;
     }
     return self;
 }
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if ([super initWithCoder:coder]) {
         self.menuEnable = YES;
+        self.horizContentOffset = 10;
+        self.leftViewAndRightViewOffset = 10;
     }
     return self;
 }
@@ -83,7 +87,7 @@
 - (CGRect)leftViewRectForBounds:(CGRect)bounds {
     CGRect iconRect = [super leftViewRectForBounds:bounds];
     if (self.leftView) {
-        UIEdgeInsets insets = UIEdgeInsetsMake(0, 10, 0, -10);
+        UIEdgeInsets insets = UIEdgeInsetsMake(0, _leftViewAndRightViewOffset, 0, -_leftViewAndRightViewOffset);
         iconRect = UIEdgeInsetsInsetRect(iconRect, insets);
     }
     return iconRect;
@@ -91,7 +95,7 @@
 - (CGRect)rightViewRectForBounds:(CGRect)bounds {
     CGRect iconRect = [super rightViewRectForBounds:bounds];
     if (self.rightView) {
-        UIEdgeInsets insets = UIEdgeInsetsMake(0, -10, 0, 10);
+        UIEdgeInsets insets = UIEdgeInsetsMake(0, -_leftViewAndRightViewOffset, 0, _leftViewAndRightViewOffset);
         iconRect = UIEdgeInsetsInsetRect(iconRect, insets);
     }
     return iconRect;
@@ -99,7 +103,7 @@
 //UITextField 文字与输入框的距离
 - (CGRect)textRectForBounds:(CGRect)bounds {
     CGRect rect = [super textRectForBounds:bounds];
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, 10, 0, 10);
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, _horizContentOffset, 0, _horizContentOffset);
     rect = UIEdgeInsetsInsetRect(rect, insets);
     return rect;
 }
@@ -107,9 +111,8 @@
 //控制文本的位置
 - (CGRect)editingRectForBounds:(CGRect)bounds {
     CGRect rect = [super textRectForBounds:bounds];
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, 10, 0, 10);
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, _horizContentOffset, 0, _horizContentOffset);
     rect = UIEdgeInsetsInsetRect(rect, insets);
     return rect;
 }
-
 @end

@@ -10,6 +10,8 @@
 
 @interface BaseTextField : UITextField
 @property (nonatomic, assign) BOOL menuEnable;
+@property (nonatomic, assign) CGFloat horizContentOffset;
+@property (nonatomic, assign) CGFloat leftViewAndRightViewOffset;
 + (instancetype)viewWithFrame:(CGRect)frame;
 + (instancetype)viewWithFrame:(CGRect)frame leftText:(NSString *)text leftColor:(UIColor *)textColor leftFont:(UIFont *)font;
 + (instancetype)viewWithFrame:(CGRect)frame leftText:(NSString *)text leftColor:(UIColor *)textColor leftFont:(UIFont *)font rightImageName:(NSString *)rightImageName;
