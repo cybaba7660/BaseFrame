@@ -35,8 +35,6 @@ typedef void(^CallBackBlock)(id obj);
 #import <YYKit.h>
 
 //自定义UI
-#import "XQToast.h"
-#import "XQAlertView.h"
 
 //类别
 #import "NSString+Category.h"

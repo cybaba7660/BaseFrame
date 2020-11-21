@@ -11,6 +11,7 @@
 		423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB524F221D100C838C0 /* UITableView+Helper.m */; };
 		423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */; };
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
+		42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
 		C11B487C206627C8009857D9 /* LGJSegmentHead.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483D206627C8009857D9 /* LGJSegmentHead.m */; };
@@ -40,9 +41,6 @@
 		C18D65C42009E6D7001B5CCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D65C32009E6D7001B5CCA /* main.m */; };
 		C18D66412009FDAB001B5CCA /* CYPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D66242009FDAB001B5CCA /* CYPopoverView.m */; };
 		C18D66432009FDAB001B5CCA /* GuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D662A2009FDAB001B5CCA /* GuidanceViewController.m */; };
-		C18D66442009FDAB001B5CCA /* XQActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D662D2009FDAB001B5CCA /* XQActionSheet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C18D66452009FDAB001B5CCA /* XQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D66302009FDAB001B5CCA /* XQAlertView.m */; };
-		C18D664A2009FDAB001B5CCA /* XQToast.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D663F2009FDAB001B5CCA /* XQToast.m */; };
 		C18D664F2009FDB7001B5CCA /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D664D2009FDB7001B5CCA /* NetworkManager.m */; };
 		E5083DBE2417712000E13C03 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DBD2417712000E13C03 /* HomeVC.m */; };
 		E5083DC12417713000E13C03 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DC02417713000E13C03 /* SecondVC.m */; };
@@ -112,6 +110,8 @@
 		423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Helper.m"; sourceTree = "<group>"; };
 		427F6FA024D6A7A300977AA4 /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
 		427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
+		42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeButton.m; sourceTree = "<group>"; };
+		42810A3B2568F42C0056E4A9 /* VerificationCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationCodeButton.h; sourceTree = "<group>"; };
 		79309685694D3A097E741DDE /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA68AC9A1EF23F570A6DC9D6 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C11B4836206627C8009857D9 /* CYStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStarRateView.h; sourceTree = "<group>"; };
@@ -172,12 +172,6 @@
 		C18D66242009FDAB001B5CCA /* CYPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPopoverView.m; sourceTree = "<group>"; };
 		C18D66292009FDAB001B5CCA /* GuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidanceViewController.h; sourceTree = "<group>"; };
 		C18D662A2009FDAB001B5CCA /* GuidanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidanceViewController.m; sourceTree = "<group>"; };
-		C18D662C2009FDAB001B5CCA /* XQActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQActionSheet.h; sourceTree = "<group>"; };
-		C18D662D2009FDAB001B5CCA /* XQActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQActionSheet.m; sourceTree = "<group>"; };
-		C18D662F2009FDAB001B5CCA /* XQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQAlertView.h; sourceTree = "<group>"; };
-		C18D66302009FDAB001B5CCA /* XQAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQAlertView.m; sourceTree = "<group>"; };
-		C18D663E2009FDAB001B5CCA /* XQToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQToast.h; sourceTree = "<group>"; };
-		C18D663F2009FDAB001B5CCA /* XQToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQToast.m; sourceTree = "<group>"; };
 		C18D664C2009FDB7001B5CCA /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		C18D664D2009FDB7001B5CCA /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		C18D664E2009FDB7001B5CCA /* NetworkUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkUrl.h; sourceTree = "<group>"; };
@@ -322,6 +316,15 @@
 				423E2BB524F221D100C838C0 /* UITableView+Helper.m */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		42810A392568F42C0056E4A9 /* VerificationCodeButton */ = {
+			isa = PBXGroup;
+			children = (
+				42810A3B2568F42C0056E4A9 /* VerificationCodeButton.h */,
+				42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */,
+			);
+			path = VerificationCodeButton;
 			sourceTree = "<group>";
 		};
 		6029D8093044171CD7B8B59E /* Pods */ = {
@@ -532,6 +535,7 @@
 				C11B4835206627C8009857D9 /* CYStarRateView */,
 				C18D66222009FDAB001B5CCA /* CYPopoverView */,
 				C18D66282009FDAB001B5CCA /* GuidancePage */,
+				42810A392568F42C0056E4A9 /* VerificationCodeButton */,
 				E599B960240F9E4000C3A55F /* Other */,
 			);
 			path = CustomView;
@@ -553,33 +557,6 @@
 				C18D662A2009FDAB001B5CCA /* GuidanceViewController.m */,
 			);
 			path = GuidancePage;
-			sourceTree = "<group>";
-		};
-		C18D662B2009FDAB001B5CCA /* XQActionSheet */ = {
-			isa = PBXGroup;
-			children = (
-				C18D662C2009FDAB001B5CCA /* XQActionSheet.h */,
-				C18D662D2009FDAB001B5CCA /* XQActionSheet.m */,
-			);
-			path = XQActionSheet;
-			sourceTree = "<group>";
-		};
-		C18D662E2009FDAB001B5CCA /* XQAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				C18D662F2009FDAB001B5CCA /* XQAlertView.h */,
-				C18D66302009FDAB001B5CCA /* XQAlertView.m */,
-			);
-			path = XQAlertView;
-			sourceTree = "<group>";
-		};
-		C18D663D2009FDAB001B5CCA /* XQToast */ = {
-			isa = PBXGroup;
-			children = (
-				C18D663E2009FDAB001B5CCA /* XQToast.h */,
-				C18D663F2009FDAB001B5CCA /* XQToast.m */,
-			);
-			path = XQToast;
 			sourceTree = "<group>";
 		};
 		C18D664B2009FDB7001B5CCA /* Network */ = {
@@ -782,9 +759,6 @@
 		E599B960240F9E4000C3A55F /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				C18D662B2009FDAB001B5CCA /* XQActionSheet */,
-				C18D662E2009FDAB001B5CCA /* XQAlertView */,
-				C18D663D2009FDAB001B5CCA /* XQToast */,
 				C11B4898206627FC009857D9 /* SDCycleScrollView */,
 				C11B483B206627C8009857D9 /* LGJSegmentPageView */,
 				C11B48AF20662848009857D9 /* PYSearch */,
@@ -1196,11 +1170,11 @@
 				E599BD0B240FA9A000C3A55F /* UIViewController+Helper.m in Sources */,
 				E599B95F240F9D7300C3A55F /* AbnormalView.m in Sources */,
 				C11B48BE20662848009857D9 /* NSBundle+PYSearchExtension.m in Sources */,
+				42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */,
 				E599BD0D240FA9A000C3A55F /* UINavigationController+Cloudox.m in Sources */,
 				427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */,
 				C11B48C120662848009857D9 /* PYSearchSuggestionViewController.m in Sources */,
 				E599BD08240FA9A000C3A55F /* UIImageView+Helper.m in Sources */,
-				C18D664A2009FDAB001B5CCA /* XQToast.m in Sources */,
 				E5083DEB241793D800E13C03 /* NetworkManager+Home.m in Sources */,
 				C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */,
 				E50AE3C82466518100D93B4A /* Encryption.m in Sources */,
@@ -1212,7 +1186,6 @@
 				E599BD0A240FA9A000C3A55F /* NSString+Category.m in Sources */,
 				C18D66432009FDAB001B5CCA /* GuidanceViewController.m in Sources */,
 				C11B48C420662848009857D9 /* UIView+PYSearchExtension.m in Sources */,
-				C18D66442009FDAB001B5CCA /* XQActionSheet.m in Sources */,
 				E5083DC72417716A00E13C03 /* MeVC.m in Sources */,
 				E599BD10240FA9A000C3A55F /* NSObject+Helper.m in Sources */,
 				E599BAC3240FA13C00C3A55F /* UserInfoModel.m in Sources */,
@@ -1223,7 +1196,6 @@
 				C11B48ED20662B63009857D9 /* LaunchVC.m in Sources */,
 				E599BD1E240FA9A000C3A55F /* AppInfo.m in Sources */,
 				E599BACA240FA1F700C3A55F /* RegisterVC.m in Sources */,
-				C18D66452009FDAB001B5CCA /* XQAlertView.m in Sources */,
 				E53D95BA24625818000FF680 /* NSObject+ImpChangeTool.m in Sources */,
 				E599BD22240FA9A000C3A55F /* NENPingManager.m in Sources */,
 				E599BD35240FB82600C3A55F /* BaseViewController.m in Sources */,

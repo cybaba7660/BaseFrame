@@ -15,11 +15,17 @@
         self.maxLength = 11;
     }else if (inputType == TextFieldInputTypeAccount) {
         self.inputLimit = TextFieldInputLimitLetterOrNumber;
-        self.maxLength = 16;
+        self.maxLength = 15;
     }else if (inputType == TextFieldInputTypePassword) {
         self.secureTextEntry = YES;
         self.inputLimit = TextFieldInputLimitLetterOrNumber;
-        self.maxLength = 16;
+        self.maxLength = 20;
+    }else if (inputType == TextFieldInputTypeNick) {
+        self.inputLimit = TextFieldInputLimitNotSymbol;
+        self.maxLength = 8;
+    }else if (inputType == TextFieldInputTypeName) {
+        self.inputLimit = TextFieldInputLimitChinese;
+        self.maxLength = 6;
     }else if (inputType == TextFieldInputTypeVerificationCode) {
         self.inputLimit = TextFieldInputLimitLetterOrNumber;
         self.maxLength = 6;
@@ -30,14 +36,17 @@
 }
 - (void)setInputLimit:(TextFieldInputLimit)inputLimit {
     objc_setAssociatedObject(self, @selector(inputLimit), @(inputLimit), OBJC_ASSOCIATION_ASSIGN);
-    if (inputLimit & TextFieldInputLimitNumber) {
+    if (inputLimit == TextFieldInputLimitNumber) {
         self.keyboardType = UIKeyboardTypeNumberPad;
-    }else if (inputLimit & TextFieldInputLimitChinese) {
-    }else if (inputLimit & TextFieldInputLimitDecimal) {
+    }else if (inputLimit == TextFieldInputLimitChinese) {
+        self.keyboardType = UIKeyboardTypeDefault;
+    }else if (inputLimit == TextFieldInputLimitDecimal) {
         self.keyboardType = UIKeyboardTypeDecimalPad;
         self.limitDecimalLenght = 2;
-    }else if (inputLimit & TextFieldInputLimitLetterOrNumber) {
-        self.keyboardType = UIKeyboardTypeNamePhonePad;
+    }else if (inputLimit == TextFieldInputLimitLetterOrNumber) {
+        self.keyboardType = UIKeyboardTypeDefault;
+    }else if (inputLimit == TextFieldInputLimitNotSymbol) {
+        self.keyboardType = UIKeyboardTypeDefault;
     }
     [self addTarget:self action:@selector(handleTextFieldTextDidChangeAction) forControlEvents:UIControlEventEditingChanged];
 }
@@ -69,10 +78,15 @@
     if (self.textDidChangeEvent) {
         self.textDidChangeEvent(self);
     }
-    if (self.inputLimit & TextFieldInputLimitNumber) {
+    
+    UITextRange *selectRange = [self markedTextRange];
+    UITextPosition *position = [self positionFromPosition:selectRange.start offset:0];
+    
+    if (!position && self.inputLimit == TextFieldInputLimitChinese) {
+        self.text = [self.text justChinese];
+    }else if (self.inputLimit == TextFieldInputLimitNumber) {
         self.text = [self.text justNumber];
-    }
-    if (self.inputLimit & TextFieldInputLimitDecimal) {
+    }else if (self.inputLimit == TextFieldInputLimitDecimal) {
         self.text = [self.text justDecimal];
         NSRange pointRange = [self.text rangeOfString:@"."];
         if (pointRange.location != NSNotFound) {
@@ -93,16 +107,12 @@
                 self.text = @"0";
             }
         }
-    }
-    if (self.inputLimit & TextFieldInputLimitLetterOrNumber) {
+    }else if (self.inputLimit == TextFieldInputLimitLetterOrNumber) {
         self.text = [self.text justLetterOrNumber];
+    }else if (self.inputLimit == TextFieldInputLimitNotSymbol) {
+        self.text = [self.text justNotSymbol];
     }
-    UITextRange *selectRange = [self markedTextRange];
-    UITextPosition *position = [self positionFromPosition:selectRange.start offset:0];
     
-    if (!position && self.inputLimit & TextFieldInputLimitChinese) {
-        self.text = [self.text justChinese];
-    }
     
     if (!position && self.maxLength > 0 && self.text.length > self.maxLength) {
         NSRange rangeIndex = [self.text rangeOfComposedCharacterSequenceAtIndex:self.maxLength];
@@ -134,9 +144,6 @@
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 #pragma mark - UITextFieldDelegate
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-//    return textField.editable;
-//}
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
   return textField.editable;
 }

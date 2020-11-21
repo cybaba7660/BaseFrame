@@ -15,11 +15,12 @@ typedef NS_ENUM(NSUInteger, TextFieldInputType) {
     TextFieldInputTypePhone,
     TextFieldInputTypeVerificationCode
 };
-typedef NS_OPTIONS(NSUInteger, TextFieldInputLimit) {
-    TextFieldInputLimitChinese = 1 << 0,
-    TextFieldInputLimitNumber = 1 << 1,
-    TextFieldInputLimitDecimal = 1 << 2,
-    TextFieldInputLimitLetterOrNumber = 1 << 3,
+typedef NS_ENUM(NSUInteger, TextFieldInputLimit) {
+    TextFieldInputLimitChinese,
+    TextFieldInputLimitNumber,
+    TextFieldInputLimitDecimal,
+    TextFieldInputLimitLetterOrNumber,
+    TextFieldInputLimitNotSymbol,
 };
 @property(nonatomic, assign) NSUInteger maxLength;
 @property(nonatomic, assign) BOOL editable;

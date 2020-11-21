@@ -8,9 +8,8 @@
 
 #import "SystemManager.h"
 #import <SDWebImage/SDImageCache.h>
+
 #define APP_VERSION_INFO @"APP_VERSION_INFO.plist"
-//记录验证码获取时间戳
-#define VERIFICATION_CODE_TIME_LAST @"VERIFICATION_CODE_TIME_LAST"
 @implementation SystemManager
 + (NSString *)getCacheSize
 {
@@ -124,14 +123,28 @@
     }
 }
 
-+ (BOOL)verificationCodeGotTimeMarking {
-    [UserDefaults setDouble:[NSDate currentTimestamp] forKey:VERIFICATION_CODE_TIME_LAST];
++ (BOOL)verificationCodeGotTimeMarking:(CoolingTimeType)type {
+    [UserDefaults setDouble:[NSDate currentTimestamp] forKey:[self coolingTimeTypeKeys:type]];
     return [UserDefaults synchronize];
 }
-+ (int)verificationCodeCoolingTime {
-    NSTimeInterval lastTimestamp = [UserDefaults doubleForKey:VERIFICATION_CODE_TIME_LAST];
++ (int)verificationCodeCoolingTime:(CoolingTimeType)type {
+    NSTimeInterval lastTimestamp = [UserDefaults doubleForKey:[self coolingTimeTypeKeys:type]];
     NSTimeInterval now = [NSDate currentTimestamp];
     NSTimeInterval interval = now - lastTimestamp;
-    return 60 - interval;
+    return [self coolingTimes:type] - interval;
+}
++ (NSString *)coolingTimeTypeKeys:(CoolingTimeType)type {
+    NSArray *keys = @[
+        @"kCoolingTimeVerificationCode",
+        @"kCoolingTimeOther"
+    ];
+    return keys[type];
+}
++ (NSInteger)coolingTimes:(CoolingTimeType)type {
+    NSArray *times = @[
+        @60,
+        @999
+    ];
+    return [times[type] integerValue];
 }
 @end

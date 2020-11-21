@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)justNumber;
 - (NSString *)justDecimal;
 - (NSString *)justLetterOrNumber;
+- (NSString *)justNotSymbol;
 @end
 
 @interface NSAttributedString (Category)

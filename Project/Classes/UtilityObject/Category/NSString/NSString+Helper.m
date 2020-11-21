@@ -33,6 +33,9 @@
 - (NSString *)justLetterOrNumber {
     return [RegularExpressionTool filterCharactor:self withRegex:@"[^a-zA-Z0-9]"];
 }
+- (NSString *)justNotSymbol {
+    return [RegularExpressionTool filterCharactor:self withRegex:@"[\u4e00-\u9fa5_a-zA-Z0-9]"];
+}
 @end
 @implementation NSAttributedString (Category)
 - (CGFloat)calculateHeightWithLimitWidth:(CGFloat)width {
