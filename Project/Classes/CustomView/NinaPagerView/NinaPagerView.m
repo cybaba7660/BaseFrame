@@ -147,11 +147,7 @@ static NSString *const kObserverPage = @"currentPage";
     self.ninaBaseView.tabItemsBorderWidth = self.tabItemsBorderWidth;
     self.ninaBaseView.tabsAlignmentCenter = self.tabsAlignmentCenter;
     self.ninaBaseView.titleArray = titlesArray;
-    if (_nina_navigationBarHidden == YES) {
-        self.viewController.automaticallyAdjustsScrollViewInsets = NO;
-        self.ninaBaseView.topTab.frame = CGRectMake(0, 20, self.ninaBaseView.width, tabHeight);
-        self.ninaBaseView.scrollView.frame = CGRectMake(0, tabHeight + 20, self.ninaBaseView.width, self.frame.size.height - tabHeight);
-    }
+
     if (_ninaDefaultPage > 0) {
         self.ninaBaseView.scrollView.contentOffset = CGPointMake(self.ninaBaseView.scrollView.width * _ninaDefaultPage, 0);
     }

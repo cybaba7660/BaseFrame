@@ -15,7 +15,7 @@
 //    float serviceVersion = [self.version.name integerValue];
 //    return appVersion < serviceVersion;
     NSString *appVersion = CLIENT_VERSION;
-    NSString *serviceVersion = self.version.name;
+    NSString *serviceVersion = self.version;
     return ![appVersion isEqualToString:serviceVersion];
 }
 + (void)checkVersion {

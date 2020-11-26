@@ -118,57 +118,6 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if (scrollView.tag == 318) {
-        NSInteger currentPage = (NSInteger)((scrollView.contentOffset.x + 1) / scrollView.width);
-        self.currentPage = currentPage;
-        UIButton *button = [_topTab viewWithTag:self.currentPage];
-        if (_topTab.contentSize.width > _topTab.width) {
-            CGFloat offset_x = button.centerX - _topTab.width / 2;
-            if (offset_x < 0) {
-                offset_x = 0;
-            }else if (offset_x > _topTab.contentSize.width - _topTab.width) {
-                offset_x = _topTab.contentSize.width - _topTab.width;
-            }
-            [_topTab setContentOffset:CGPointMake(offset_x, 0) animated:YES];
-        }
-        
-        if (topTabType == 0 || topTabType == 2) {
-            if (_btnSelectColor) {
-                [btnArray[currentPage] setTitleColor:_btnSelectColor forState:UIControlStateNormal];
-            }else {
-                [btnArray[currentPage] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            }
-            
-            if (_topArray.count == _titleArray.count && _changeTopArray.count == _titleArray.count) {
-                UIButton *customTopButton = btnArray[currentPage];
-                for (UIView *view in customTopButton.subviews) {
-                    if ([view isKindOfClass:[UIView class]]) {
-                        [view removeFromSuperview];
-                    }
-                }
-                if (![customTopButton.subviews isKindOfClass:[UIView class]]) {
-                    UIView *whites = _changeTopArray[currentPage];
-                    whites.frame = customTopButton.bounds;
-                    whites.userInteractionEnabled = NO;
-                    whites.exclusiveTouch = NO;
-                    [btnArray[currentPage] addSubview:whites];
-                }
-            }
-            UIButton *changeButton = btnArray[currentPage];
-            if (_titleScale > 0) {
-                [UIView animateWithDuration:0.3 animations:^{
-                    changeButton.transform = CGAffineTransformMakeScale(_titleScale, _titleScale);
-                }];
-            }else {
-                [UIView animateWithDuration:0.3 animations:^{
-                    changeButton.transform = CGAffineTransformMakeScale(1.15, 1.15);
-                }];
-            }
-        }
-    }
-}
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.tag == 318) {
         CGFloat currentPage = scrollView.contentOffset.x / scrollView.width;
@@ -213,7 +162,64 @@
         }
     }
 }
-
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (scrollView.tag == 318) {
+        [self refreshScrollView:scrollView];
+    }
+}
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    if (scrollView.tag == 318) {
+        [self refreshScrollView:scrollView];
+    }
+}
+- (void)refreshScrollView:(UIScrollView *)scrollView {
+    NSInteger currentPage = (NSInteger)((scrollView.contentOffset.x + 1) / scrollView.width);
+    self.currentPage = currentPage;
+    UIButton *button = [_topTab viewWithTag:self.currentPage];
+    if (_topTab.contentSize.width > _topTab.width) {
+        CGFloat offset_x = button.centerX - _topTab.width / 2;
+        if (offset_x < 0) {
+            offset_x = 0;
+        }else if (offset_x > _topTab.contentSize.width - _topTab.width) {
+            offset_x = _topTab.contentSize.width - _topTab.width;
+        }
+        [_topTab setContentOffset:CGPointMake(offset_x, 0) animated:YES];
+    }
+    
+    if (topTabType == 0 || topTabType == 2) {
+        if (_btnSelectColor) {
+            [btnArray[currentPage] setTitleColor:_btnSelectColor forState:UIControlStateNormal];
+        }else {
+            [btnArray[currentPage] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        }
+        
+        if (_topArray.count == _titleArray.count && _changeTopArray.count == _titleArray.count) {
+            UIButton *customTopButton = btnArray[currentPage];
+            for (UIView *view in customTopButton.subviews) {
+                if ([view isKindOfClass:[UIView class]]) {
+                    [view removeFromSuperview];
+                }
+            }
+            if (![customTopButton.subviews isKindOfClass:[UIView class]]) {
+                UIView *whites = _changeTopArray[currentPage];
+                whites.frame = customTopButton.bounds;
+                whites.userInteractionEnabled = NO;
+                whites.exclusiveTouch = NO;
+                [btnArray[currentPage] addSubview:whites];
+            }
+        }
+        UIButton *changeButton = btnArray[currentPage];
+        if (_titleScale > 0) {
+            [UIView animateWithDuration:0.3 animations:^{
+                changeButton.transform = CGAffineTransformMakeScale(_titleScale, _titleScale);
+            }];
+        }else {
+            [UIView animateWithDuration:0.3 animations:^{
+                changeButton.transform = CGAffineTransformMakeScale(1.15, 1.15);
+            }];
+        }
+    }
+}
 #pragma mark - Load scrollview and toptab
 - (void)updateScrollViewUI {
     _scrollView.contentSize = CGSizeMake(_scrollView.width * _titleArray.count, 0);
