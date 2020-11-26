@@ -11,9 +11,12 @@
 
 @implementation AppInfo
 - (BOOL)haveNewVersion {
-    float appVersion = [CLIENT_VERSION doubleValue];
-    float serviceVersion = [self.version integerValue];
-    return appVersion < serviceVersion;
+//    float appVersion = [CLIENT_VERSION doubleValue];
+//    float serviceVersion = [self.version.name integerValue];
+//    return appVersion < serviceVersion;
+    NSString *appVersion = CLIENT_VERSION;
+    NSString *serviceVersion = self.version.name;
+    return ![appVersion isEqualToString:serviceVersion];
 }
 + (void)checkVersion {
     [self checkVersionWithCompleted:nil];
@@ -53,5 +56,8 @@
         [alert addAction:confirmAction];
         [SystemManager.currentVC presentViewController:alert animated:YES completion:nil];
     }
+}
++ (instancetype)info {
+    return [AppInfo objectFromSandbox];
 }
 @end

@@ -21,4 +21,5 @@
 /** 检查版本*/
 + (void)checkVersion;
 + (void)checkVersionWithCompleted:(void(^)(NSString *error, BOOL newVersion))completed;
++ (instancetype)info;
 @end
