@@ -28,7 +28,7 @@ static NSString * const REMEMBER_PSW = @"rememberPsw"; /**< 是否记住密码 *
         if ([FileManager fileExistsAtPath:plistPath]) {
             NSDictionary *dict  = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
             if (dict) {
-                currentUser  = [self mj_objectWithKeyValues:dict];
+                currentUser  = [self modelWithDictionary:dict];
             }
         }
     }

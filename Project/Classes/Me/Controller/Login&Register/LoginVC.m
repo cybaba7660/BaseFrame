@@ -47,7 +47,7 @@
 #pragma mark - CommonMethods
 - (void)dealUserInfo:(NSDictionary *)info psw:(NSString *)psw {
     NSDictionary *user = info[@"user"];
-    UserInfoModel *model = [UserInfoModel mj_objectWithKeyValues:user];
+    UserInfoModel *model = [UserInfoModel modelWithDictionary:user];
     [model saveUserInfoWithUserName:@"" psw:psw];
     [UserInfoModel setRememberPswStatus:YES];
     [NotificationCenter postNotificationName:kUserLoginNotification object:model];

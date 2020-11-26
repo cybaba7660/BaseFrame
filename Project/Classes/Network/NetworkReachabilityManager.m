@@ -11,11 +11,11 @@
 @interface NetworkReachabilityManager ()
 
 @end
-
+#define TIME_OUT_INTERVAL 8
 @implementation NetworkReachabilityManager
 + (void)testingDomain:(NSString *)domain completionHandler:(void(^)(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error))completionHandler {
     NSURL *url = [NSURL URLWithString:domain];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:TIME_OUT_INTERVAL];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         completionHandler ? completionHandler(data, response, error) : nil;

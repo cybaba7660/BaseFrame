@@ -90,7 +90,7 @@
 //        [[NetworkManager shareManager] userLoginWithUsername:userName password:password success:^(Result * _Nonnull rs) {
 //            NSLog(@"自动登录成功");
 //            NSDictionary *user = rs.dict[@"user"];
-//            UserInfoModel *model = [UserInfoModel mj_objectWithKeyValues:user];
+//            UserInfoModel *model = [UserInfoModel modelWithDictionary:user];
 //            [model saveUserInfo];
 //            [NotificationCenter postNotificationName:kUserLoginNotification object:model];
 //            completed ? completed(YES) : nil;

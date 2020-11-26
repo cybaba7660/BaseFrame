@@ -17,6 +17,7 @@
 }
 + (BOOL)judgePasswordLegal:(NSString *)string {
     NSString *regex = @"^(?![\\d]+$)(?![\\D]+$).{6,16}$";
+//    NSString *regex1 = @"^((?=.*[a-z])(?=.*\\d)|(?=[a-z])(?=.*[#@!~%^&*])|(?=.*\\d)(?=.*[#@!~%^&*]))[a-z\\d#@!~%^&*]{8,16}$";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     BOOL result = [pred evaluateWithObject:string];
     return result;

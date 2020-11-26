@@ -91,7 +91,7 @@
     NSString *plistPath = [self filePath];
     if ([FileManager fileExistsAtPath:plistPath]) {
         NSDictionary *dict  = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-        NSObject *obj = [self mj_objectWithKeyValues:dict];
+        NSObject *obj = [self modelWithDictionary:dict];
         return obj;
     }else {
         return nil;
