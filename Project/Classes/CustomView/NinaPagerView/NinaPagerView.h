@@ -164,6 +164,11 @@ typedef NS_ENUM(NSUInteger, TabItemsDistributionType) {
  **/
 @property (assign, nonatomic) CGFloat sliderCornerRadius;
 /**<
+ *  是否隐藏了导航栏，您的导航栏如果隐藏或者没有，需要将此属性设置为YES。
+ *  Hide NavigationBar or not,if you wanna set this to YES,you must hide your NavigationBar first.
+ **/
+@property (assign, nonatomic) BOOL nina_navigationBarHidden;
+/**<
  *  是否一次性加载全部页面或控制器，默认为否。
  *  Load whole viewcontrollers or views,default is NO.
  **/

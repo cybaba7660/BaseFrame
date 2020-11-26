@@ -132,8 +132,10 @@
         if (topTabType == 1) {
             ninaMaskView.left = - lineBottomLeft;
         }
-        lineBottom.left = lineBottomLeft;
-        lineBottom.width = lineBottomWidth;
+        CGFloat lineBottomW = lineBottomWidth * _bottomLinePer;
+        CGFloat lineBottomL = lineBottomLeft + (lineBottomWidth - lineBottomW) / 2;
+        lineBottom.left = lineBottomL;
+        lineBottom.width = lineBottomW;
         for (NSInteger i = 0;  i < btnArray.count; i++) {
             if (topTabType == 0 || topTabType == 2) {
                 if (_btnUnSelectColor) {
@@ -158,6 +160,7 @@
             UIButton *changeButton = btnArray[i];
             [UIView animateWithDuration:0.3 animations:^{
                 changeButton.transform = CGAffineTransformMakeScale(1, 1);
+                changeButton.titleLabel.font = [UIFont systemFontOfSize:self.titlesFont weight:UIFontWeightRegular];
             }];
         }
     }
@@ -209,15 +212,11 @@
             }
         }
         UIButton *changeButton = btnArray[currentPage];
-        if (_titleScale > 0) {
-            [UIView animateWithDuration:0.3 animations:^{
-                changeButton.transform = CGAffineTransformMakeScale(_titleScale, _titleScale);
-            }];
-        }else {
-            [UIView animateWithDuration:0.3 animations:^{
-                changeButton.transform = CGAffineTransformMakeScale(1.15, 1.15);
-            }];
-        }
+        CGFloat scale = _titleScale > 0 ? _titleScale : 1.15;
+        [UIView animateWithDuration:0.3 animations:^{
+            changeButton.transform = CGAffineTransformMakeScale(scale, scale);
+            changeButton.titleLabel.font = [UIFont systemFontOfSize:self.titlesFont weight:UIFontWeightBold];
+        }];
     }
 }
 #pragma mark - Load scrollview and toptab
@@ -284,6 +283,7 @@
             }
             if (_titleScale > 0) {
                 button.transform = CGAffineTransformMakeScale(_titleScale, _titleScale);
+                button.titleLabel.font = [UIFont systemFontOfSize:_titlesFont weight:UIFontWeightBold];
             }
             if (_topArray.count == _titleArray.count && _changeTopArray.count == _titleArray.count) {
                 for (NSInteger i = [button.subviews count] - 1; i >= 0; i--) {
@@ -363,7 +363,9 @@
     NSInteger defaultPage = (_baseDefaultPage < _titleArray.count)?_baseDefaultPage:0;
     UIButton *button = [_topTab viewWithTag:defaultPage];
     if (topTabType == 0) {
-        lineBottom.frame = CGRectMake(button.left, _topHeight - _bottomLineHeight, button.width, _bottomLineHeight);
+        CGFloat lineBottomWidth = button.width * _bottomLinePer;
+        CGFloat lineBottomLeft = button.left + (button.width - lineBottomWidth) / 2;
+        lineBottom.frame = CGRectMake(lineBottomLeft, _topHeight - _bottomLineHeight, lineBottomWidth, _bottomLineHeight);
     }else if (topTabType == 1) {
         lineBottom.frame = button.frame;
         if (_cornerRadius > 0) {
