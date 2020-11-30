@@ -10,6 +10,11 @@
 		423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */; };
 		423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB524F221D100C838C0 /* UITableView+Helper.m */; };
 		423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */; };
+		427733AC2574C88D00A96A82 /* CustomPopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733A42574C88D00A96A82 /* CustomPopOverView.m */; };
+		427733B52574C8F500A96A82 /* LinkageSubScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733B22574C8F500A96A82 /* LinkageSubScrollView.m */; };
+		427733B62574C8F500A96A82 /* LinkageRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733B42574C8F500A96A82 /* LinkageRootScrollView.m */; };
+		427733BC2574C95F00A96A82 /* TXScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733BA2574C95E00A96A82 /* TXScrollLabelView.m */; };
+		427733BD2574C95F00A96A82 /* UIView+TXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733BB2574C95E00A96A82 /* UIView+TXFrame.m */; };
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
 		42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
@@ -39,7 +44,6 @@
 		C18D65BE2009E6D7001B5CCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18D65BD2009E6D7001B5CCA /* Assets.xcassets */; };
 		C18D65C12009E6D7001B5CCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18D65BF2009E6D7001B5CCA /* LaunchScreen.storyboard */; };
 		C18D65C42009E6D7001B5CCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D65C32009E6D7001B5CCA /* main.m */; };
-		C18D66412009FDAB001B5CCA /* CYPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D66242009FDAB001B5CCA /* CYPopoverView.m */; };
 		C18D66432009FDAB001B5CCA /* GuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D662A2009FDAB001B5CCA /* GuidanceViewController.m */; };
 		C18D664F2009FDB7001B5CCA /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C18D664D2009FDB7001B5CCA /* NetworkManager.m */; };
 		E5083DBE2417712000E13C03 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5083DBD2417712000E13C03 /* HomeVC.m */; };
@@ -108,6 +112,16 @@
 		423E2BB524F221D100C838C0 /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Helper.m"; sourceTree = "<group>"; };
 		423E2BBB24F24F1400C838C0 /* UIButton+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helper.h"; sourceTree = "<group>"; };
 		423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Helper.m"; sourceTree = "<group>"; };
+		427733A32574C88D00A96A82 /* CustomPopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopOverView.h; sourceTree = "<group>"; };
+		427733A42574C88D00A96A82 /* CustomPopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopOverView.m; sourceTree = "<group>"; };
+		427733B12574C8F500A96A82 /* LinkageRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageRootScrollView.h; sourceTree = "<group>"; };
+		427733B22574C8F500A96A82 /* LinkageSubScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageSubScrollView.m; sourceTree = "<group>"; };
+		427733B32574C8F500A96A82 /* LinkageSubScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageSubScrollView.h; sourceTree = "<group>"; };
+		427733B42574C8F500A96A82 /* LinkageRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageRootScrollView.m; sourceTree = "<group>"; };
+		427733B82574C95E00A96A82 /* TXScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXScrollLabelView.h; sourceTree = "<group>"; };
+		427733B92574C95E00A96A82 /* UIView+TXFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TXFrame.h"; sourceTree = "<group>"; };
+		427733BA2574C95E00A96A82 /* TXScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXScrollLabelView.m; sourceTree = "<group>"; };
+		427733BB2574C95E00A96A82 /* UIView+TXFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TXFrame.m"; sourceTree = "<group>"; };
 		427F6FA024D6A7A300977AA4 /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
 		427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
 		42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeButton.m; sourceTree = "<group>"; };
@@ -168,8 +182,6 @@
 		C18D65C32009E6D7001B5CCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C18D65F32009ECCE001B5CCA /* Project.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.pch; sourceTree = "<group>"; };
 		C18D65F82009F145001B5CCA /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		C18D66232009FDAB001B5CCA /* CYPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPopoverView.h; sourceTree = "<group>"; };
-		C18D66242009FDAB001B5CCA /* CYPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPopoverView.m; sourceTree = "<group>"; };
 		C18D66292009FDAB001B5CCA /* GuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidanceViewController.h; sourceTree = "<group>"; };
 		C18D662A2009FDAB001B5CCA /* GuidanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidanceViewController.m; sourceTree = "<group>"; };
 		C18D664C2009FDB7001B5CCA /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -316,6 +328,37 @@
 				423E2BB524F221D100C838C0 /* UITableView+Helper.m */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		427733A22574C88D00A96A82 /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				427733A32574C88D00A96A82 /* CustomPopOverView.h */,
+				427733A42574C88D00A96A82 /* CustomPopOverView.m */,
+			);
+			path = PopoverView;
+			sourceTree = "<group>";
+		};
+		427733B02574C8F500A96A82 /* LinkageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				427733B12574C8F500A96A82 /* LinkageRootScrollView.h */,
+				427733B22574C8F500A96A82 /* LinkageSubScrollView.m */,
+				427733B32574C8F500A96A82 /* LinkageSubScrollView.h */,
+				427733B42574C8F500A96A82 /* LinkageRootScrollView.m */,
+			);
+			path = LinkageScrollView;
+			sourceTree = "<group>";
+		};
+		427733B72574C95E00A96A82 /* TXScrollLabelView */ = {
+			isa = PBXGroup;
+			children = (
+				427733B82574C95E00A96A82 /* TXScrollLabelView.h */,
+				427733B92574C95E00A96A82 /* UIView+TXFrame.h */,
+				427733BA2574C95E00A96A82 /* TXScrollLabelView.m */,
+				427733BB2574C95E00A96A82 /* UIView+TXFrame.m */,
+			);
+			path = TXScrollLabelView;
 			sourceTree = "<group>";
 		};
 		42810A392568F42C0056E4A9 /* VerificationCodeButton */ = {
@@ -528,26 +571,16 @@
 		C18D661F2009FDAB001B5CCA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				E599B954240F9D3400C3A55F /* NinaPagerView */,
+				427733B02574C8F500A96A82 /* LinkageScrollView */,
 				E599B950240F9CAD00C3A55F /* WebVC */,
 				E599B95C240F9D7300C3A55F /* AbnormalView */,
 				C11B4838206627C8009857D9 /* CYNavigationBarView */,
 				C11B4835206627C8009857D9 /* CYStarRateView */,
-				C18D66222009FDAB001B5CCA /* CYPopoverView */,
 				C18D66282009FDAB001B5CCA /* GuidancePage */,
 				42810A392568F42C0056E4A9 /* VerificationCodeButton */,
 				E599B960240F9E4000C3A55F /* Other */,
 			);
 			path = CustomView;
-			sourceTree = "<group>";
-		};
-		C18D66222009FDAB001B5CCA /* CYPopoverView */ = {
-			isa = PBXGroup;
-			children = (
-				C18D66232009FDAB001B5CCA /* CYPopoverView.h */,
-				C18D66242009FDAB001B5CCA /* CYPopoverView.m */,
-			);
-			path = CYPopoverView;
 			sourceTree = "<group>";
 		};
 		C18D66282009FDAB001B5CCA /* GuidancePage */ = {
@@ -759,6 +792,9 @@
 		E599B960240F9E4000C3A55F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				427733A22574C88D00A96A82 /* PopoverView */,
+				427733B72574C95E00A96A82 /* TXScrollLabelView */,
+				E599B954240F9D3400C3A55F /* NinaPagerView */,
 				C11B4898206627FC009857D9 /* SDCycleScrollView */,
 				C11B483B206627C8009857D9 /* LGJSegmentPageView */,
 				C11B48AF20662848009857D9 /* PYSearch */,
@@ -1158,6 +1194,7 @@
 				C11B487D206627C8009857D9 /* LGJSegmentManager.m in Sources */,
 				E599BD37240FB82600C3A55F /* BaseTabBarController.m in Sources */,
 				423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */,
+				427733AC2574C88D00A96A82 /* CustomPopOverView.m in Sources */,
 				E5083DC42417715600E13C03 /* ThirdVC.m in Sources */,
 				E599BD02240FA9A000C3A55F /* UIScrollView+Helper.m in Sources */,
 				E599BAC9240FA1F700C3A55F /* LoginVC.m in Sources */,
@@ -1179,11 +1216,13 @@
 				C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */,
 				E50AE3C82466518100D93B4A /* Encryption.m in Sources */,
 				E50AE3CA2466518100D93B4A /* RegularExpressionTool.m in Sources */,
+				427733B62574C8F500A96A82 /* LinkageRootScrollView.m in Sources */,
 				E599BD20240FA9A000C3A55F /* NENSinglePinger.m in Sources */,
 				E599BD0C240FA9A000C3A55F /* UINavigationController+Helper.m in Sources */,
 				C18D664F2009FDB7001B5CCA /* NetworkManager.m in Sources */,
 				C11B48AB206627FD009857D9 /* TAPageControl.m in Sources */,
 				E599BD0A240FA9A000C3A55F /* NSString+Category.m in Sources */,
+				427733BC2574C95F00A96A82 /* TXScrollLabelView.m in Sources */,
 				C18D66432009FDAB001B5CCA /* GuidanceViewController.m in Sources */,
 				C11B48C420662848009857D9 /* UIView+PYSearchExtension.m in Sources */,
 				E5083DC72417716A00E13C03 /* MeVC.m in Sources */,
@@ -1208,8 +1247,10 @@
 				C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */,
 				E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */,
 				C11B487E206627C8009857D9 /* LGJSegmentScroll.m in Sources */,
+				427733B52574C8F500A96A82 /* LinkageSubScrollView.m in Sources */,
 				E599BD01240FA9A000C3A55F /* UIImage+Helper.m in Sources */,
 				C11B48AC206627FD009857D9 /* SDCollectionViewCell.m in Sources */,
+				427733BD2574C95F00A96A82 /* UIView+TXFrame.m in Sources */,
 				E599BD0F240FA9A000C3A55F /* CALayer+Helper.m in Sources */,
 				E599BD03240FA9A000C3A55F /* UILabel+Helper.m in Sources */,
 				E599BD3A240FB82600C3A55F /* BaseTabBar.m in Sources */,
@@ -1217,7 +1258,6 @@
 				C11B48C320662848009857D9 /* UIColor+PYSearchExtension.m in Sources */,
 				C11B487F206627C8009857D9 /* UIView+ViewController.m in Sources */,
 				E599BD38240FB82600C3A55F /* BaseTextField.m in Sources */,
-				C18D66412009FDAB001B5CCA /* CYPopoverView.m in Sources */,
 				E53D95B824625818000FF680 /* NSObject+Swizzling.m in Sources */,
 				E599B95B240F9D3400C3A55F /* NinaBaseView.m in Sources */,
 			);
