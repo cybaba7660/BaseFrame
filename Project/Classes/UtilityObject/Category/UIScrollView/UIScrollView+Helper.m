@@ -9,6 +9,9 @@
 #import "UIScrollView+Helper.h"
 #define ResponseListCount 20
 @implementation UIScrollView (Helper)
+- (void)dealloc {
+    [self removeObserverBlocks];
+}
 - (void)endRefresh {
     [self.mj_header endRefreshing];
     [self.mj_footer endRefreshing];
@@ -36,7 +39,7 @@
     CGFloat minOffset = 0;
     if (self.contentSize.width > self.contentSize.height) {
         CGFloat maxOffset = self.contentSize.width - self.width;
-        if (maxOffset <= 0) {
+        if (maxOffset < 0) {
             return;
         }
         CGFloat moveLen = originalPoint.x - destinationPoint.x;
@@ -54,8 +57,6 @@
         [self setContentOffset:CGPointMake(0, moveLen) animated:YES];
     }
 }
-
-/** 填充下拉时顶部颜色*/
 - (void)fillColorAtTheTopWhenPullDown:(UIColor *)fillColor {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 0)];
     view.backgroundColor = fillColor;
@@ -71,7 +72,19 @@
         fillView.frame = CGRectMake(0, -offsetY, fillView.width, offsetY);
     }];
 }
-- (void)dealloc {
-    [self removeObserverBlocks];
+
+//Linkage
+- (void)setLinkage_ScrollEnable:(BOOL)linkage_ScrollEnable {
+    objc_setAssociatedObject(self, @selector(linkage_ScrollEnable), @(linkage_ScrollEnable), OBJC_ASSOCIATION_ASSIGN);
+}
+- (BOOL)linkage_ScrollEnable {
+    id value = objc_getAssociatedObject(self, _cmd);
+    return [value boolValue];
+}
+- (void)setLinkage_ScrollView:(UIScrollView *)linkage_ScrollView {
+    objc_setAssociatedObject(self, @selector(linkage_ScrollView), linkage_ScrollView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (UIScrollView *)linkage_ScrollView {
+    return objc_getAssociatedObject(self, _cmd);
 }
 @end

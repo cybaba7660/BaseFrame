@@ -20,6 +20,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 填充下拉时顶部颜色*/
 - (void)fillColorAtTheTopWhenPullDown:(UIColor *)fillColor;
+
+/** 联动*/
+typedef NS_ENUM(NSUInteger, LinkageOffset) {
+    LinkageOffsetCeil,
+    LinkageOffsetMiddle,
+    LinkageOffsetFloor
+};
+@property (nonatomic, assign) BOOL linkage_ScrollEnable;
+@property (nonatomic, retain) UIScrollView *linkage_ScrollView;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,7 +10,8 @@
 @implementation UIImage (Helper)
 - (UIImage *)scaleToWidth:(CGFloat)width {
     CGFloat imageHeight = self.size.height / self.size.width * width;
-    UIGraphicsBeginImageContext(CGSizeMake(width, imageHeight));
+    CGSize scaleSize = CGSizeMake(width, imageHeight);
+    UIGraphicsBeginImageContextWithOptions(scaleSize, NO, [[UIScreen mainScreen] scale]);
     [self drawInRect:CGRectMake(0, 0, width, imageHeight)];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -18,7 +19,8 @@
 }
 - (UIImage *)scaleToHeight:(CGFloat)height {
     CGFloat imageWidth = self.size.width / self.size.height * height;
-    UIGraphicsBeginImageContext(CGSizeMake(imageWidth, height));
+    CGSize scaleSize = CGSizeMake(imageWidth, height);
+    UIGraphicsBeginImageContextWithOptions(scaleSize, NO, [[UIScreen mainScreen] scale]);
     [self drawInRect:CGRectMake(0, 0, imageWidth, height)];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
