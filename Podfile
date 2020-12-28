@@ -3,8 +3,6 @@ platform :ios, '9.0'
 target 'Project' do
 
 pod 'AFNetworking'
-pod 'SDWebImage'
-pod 'FLAnimatedImage'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'MJExtension'

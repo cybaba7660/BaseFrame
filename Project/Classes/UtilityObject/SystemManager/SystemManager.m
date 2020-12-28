@@ -7,7 +7,6 @@
 //
 
 #import "SystemManager.h"
-#import <SDWebImage/SDImageCache.h>
 
 #define APP_VERSION_INFO @"APP_VERSION_INFO.plist"
 @implementation SystemManager

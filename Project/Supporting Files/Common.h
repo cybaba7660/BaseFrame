@@ -26,10 +26,8 @@ typedef void(^CallBackBlock)(id obj);
 #import "NetworkManager+User.h"
 
 //第三方
-#import <UIImageView+WebCache.h>
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
-#import <FLAnimatedImageView.h>
 #import <Masonry.h>
 #import <SAMKeychain.h>
 #import <YYKit.h>
