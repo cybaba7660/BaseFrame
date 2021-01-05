@@ -15,14 +15,15 @@
 		427733B62574C8F500A96A82 /* LinkageRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733B42574C8F500A96A82 /* LinkageRootScrollView.m */; };
 		427733BC2574C95F00A96A82 /* TXScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733BA2574C95E00A96A82 /* TXScrollLabelView.m */; };
 		427733BD2574C95F00A96A82 /* UIView+TXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733BB2574C95E00A96A82 /* UIView+TXFrame.m */; };
+		427DCB7D259C6841009A5ABE /* MLMSegmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DCB72259C6841009A5ABE /* MLMSegmentManager.m */; };
+		427DCB7E259C6841009A5ABE /* MLMSegmentHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DCB73259C6841009A5ABE /* MLMSegmentHead.m */; };
+		427DCB7F259C6841009A5ABE /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DCB74259C6841009A5ABE /* UIView+ViewController.m */; };
+		427DCB80259C6841009A5ABE /* MLMSegmentScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DCB75259C6841009A5ABE /* MLMSegmentScroll.m */; };
+		427DCB81259C6841009A5ABE /* UIView+EasyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DCB76259C6841009A5ABE /* UIView+EasyFrame.m */; };
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
 		42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
-		C11B487C206627C8009857D9 /* LGJSegmentHead.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483D206627C8009857D9 /* LGJSegmentHead.m */; };
-		C11B487D206627C8009857D9 /* LGJSegmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483F206627C8009857D9 /* LGJSegmentManager.m */; };
-		C11B487E206627C8009857D9 /* LGJSegmentScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4842206627C8009857D9 /* LGJSegmentScroll.m */; };
-		C11B487F206627C8009857D9 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4844206627C8009857D9 /* UIView+ViewController.m */; };
 		C11B48BE20662848009857D9 /* NSBundle+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B48B120662848009857D9 /* NSBundle+PYSearchExtension.m */; };
 		C11B48BF20662848009857D9 /* PYSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C11B48B220662848009857D9 /* PYSearch.bundle */; };
 		C11B48C020662848009857D9 /* PYSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B48B520662848009857D9 /* PYSearchConst.m */; };
@@ -115,6 +116,17 @@
 		427733B92574C95E00A96A82 /* UIView+TXFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TXFrame.h"; sourceTree = "<group>"; };
 		427733BA2574C95E00A96A82 /* TXScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXScrollLabelView.m; sourceTree = "<group>"; };
 		427733BB2574C95E00A96A82 /* UIView+TXFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TXFrame.m"; sourceTree = "<group>"; };
+		427DCB72259C6841009A5ABE /* MLMSegmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentManager.m; sourceTree = "<group>"; };
+		427DCB73259C6841009A5ABE /* MLMSegmentHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentHead.m; sourceTree = "<group>"; };
+		427DCB74259C6841009A5ABE /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		427DCB75259C6841009A5ABE /* MLMSegmentScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentScroll.m; sourceTree = "<group>"; };
+		427DCB76259C6841009A5ABE /* UIView+EasyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyFrame.m"; sourceTree = "<group>"; };
+		427DCB77259C6841009A5ABE /* SegmentPageHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentPageHead.h; sourceTree = "<group>"; };
+		427DCB78259C6841009A5ABE /* MLMSegmentHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentHead.h; sourceTree = "<group>"; };
+		427DCB79259C6841009A5ABE /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		427DCB7A259C6841009A5ABE /* MLMSegmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentManager.h; sourceTree = "<group>"; };
+		427DCB7B259C6841009A5ABE /* UIView+EasyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyFrame.h"; sourceTree = "<group>"; };
+		427DCB7C259C6841009A5ABE /* MLMSegmentScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentScroll.h; sourceTree = "<group>"; };
 		427F6FA024D6A7A300977AA4 /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
 		427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
 		42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeButton.m; sourceTree = "<group>"; };
@@ -125,15 +137,6 @@
 		C11B4837206627C8009857D9 /* CYStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYStarRateView.m; sourceTree = "<group>"; };
 		C11B4839206627C8009857D9 /* CYNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNavBarView.h; sourceTree = "<group>"; };
 		C11B483A206627C8009857D9 /* CYNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNavBarView.m; sourceTree = "<group>"; };
-		C11B483C206627C8009857D9 /* LGJSegmentHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGJSegmentHead.h; sourceTree = "<group>"; };
-		C11B483D206627C8009857D9 /* LGJSegmentHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGJSegmentHead.m; sourceTree = "<group>"; };
-		C11B483E206627C8009857D9 /* LGJSegmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGJSegmentManager.h; sourceTree = "<group>"; };
-		C11B483F206627C8009857D9 /* LGJSegmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGJSegmentManager.m; sourceTree = "<group>"; };
-		C11B4840206627C8009857D9 /* LGJSegmentPageH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGJSegmentPageH.h; sourceTree = "<group>"; };
-		C11B4841206627C8009857D9 /* LGJSegmentScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGJSegmentScroll.h; sourceTree = "<group>"; };
-		C11B4842206627C8009857D9 /* LGJSegmentScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGJSegmentScroll.m; sourceTree = "<group>"; };
-		C11B4843206627C8009857D9 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
-		C11B4844206627C8009857D9 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
 		C11B48B020662848009857D9 /* NSBundle+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PYSearchExtension.h"; sourceTree = "<group>"; };
 		C11B48B120662848009857D9 /* NSBundle+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PYSearchExtension.m"; sourceTree = "<group>"; };
 		C11B48B220662848009857D9 /* PYSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PYSearch.bundle; sourceTree = "<group>"; };
@@ -340,6 +343,24 @@
 			path = TXScrollLabelView;
 			sourceTree = "<group>";
 		};
+		427DCB71259C6841009A5ABE /* MLMSegmentPageView */ = {
+			isa = PBXGroup;
+			children = (
+				427DCB77259C6841009A5ABE /* SegmentPageHead.h */,
+				427DCB78259C6841009A5ABE /* MLMSegmentHead.h */,
+				427DCB73259C6841009A5ABE /* MLMSegmentHead.m */,
+				427DCB7C259C6841009A5ABE /* MLMSegmentScroll.h */,
+				427DCB75259C6841009A5ABE /* MLMSegmentScroll.m */,
+				427DCB7A259C6841009A5ABE /* MLMSegmentManager.h */,
+				427DCB72259C6841009A5ABE /* MLMSegmentManager.m */,
+				427DCB7B259C6841009A5ABE /* UIView+EasyFrame.h */,
+				427DCB76259C6841009A5ABE /* UIView+EasyFrame.m */,
+				427DCB79259C6841009A5ABE /* UIView+ViewController.h */,
+				427DCB74259C6841009A5ABE /* UIView+ViewController.m */,
+			);
+			path = MLMSegmentPageView;
+			sourceTree = "<group>";
+		};
 		42810A392568F42C0056E4A9 /* VerificationCodeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,22 +405,6 @@
 				C11B483A206627C8009857D9 /* CYNavBarView.m */,
 			);
 			path = CYNavigationBarView;
-			sourceTree = "<group>";
-		};
-		C11B483B206627C8009857D9 /* LGJSegmentPageView */ = {
-			isa = PBXGroup;
-			children = (
-				C11B483C206627C8009857D9 /* LGJSegmentHead.h */,
-				C11B483D206627C8009857D9 /* LGJSegmentHead.m */,
-				C11B483E206627C8009857D9 /* LGJSegmentManager.h */,
-				C11B483F206627C8009857D9 /* LGJSegmentManager.m */,
-				C11B4840206627C8009857D9 /* LGJSegmentPageH.h */,
-				C11B4841206627C8009857D9 /* LGJSegmentScroll.h */,
-				C11B4842206627C8009857D9 /* LGJSegmentScroll.m */,
-				C11B4843206627C8009857D9 /* UIView+ViewController.h */,
-				C11B4844206627C8009857D9 /* UIView+ViewController.m */,
-			);
-			path = LGJSegmentPageView;
 			sourceTree = "<group>";
 		};
 		C11B48AF20662848009857D9 /* PYSearch */ = {
@@ -742,10 +747,10 @@
 		E599B960240F9E4000C3A55F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				427DCB71259C6841009A5ABE /* MLMSegmentPageView */,
 				427733A22574C88D00A96A82 /* PopoverView */,
 				427733B72574C95E00A96A82 /* TXScrollLabelView */,
 				E599B954240F9D3400C3A55F /* NinaPagerView */,
-				C11B483B206627C8009857D9 /* LGJSegmentPageView */,
 				C11B48AF20662848009857D9 /* PYSearch */,
 			);
 			path = Other;
@@ -1124,11 +1129,11 @@
 				E599BD36240FB82600C3A55F /* BaseNavigationController.m in Sources */,
 				E599B95A240F9D3400C3A55F /* NinaPagerView.m in Sources */,
 				C11B48C220662848009857D9 /* PYSearchViewController.m in Sources */,
+				427DCB81259C6841009A5ABE /* UIView+EasyFrame.m in Sources */,
 				E5083DC12417713000E13C03 /* SecondVC.m in Sources */,
 				423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */,
 				E50AE3C92466518100D93B4A /* CYFileManager.m in Sources */,
 				E599BD07240FA9A000C3A55F /* UIView+Helper.m in Sources */,
-				C11B487C206627C8009857D9 /* LGJSegmentHead.m in Sources */,
 				E599BD00240FA9A000C3A55F /* UIImage+Category.m in Sources */,
 				423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */,
 				E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */,
@@ -1137,7 +1142,6 @@
 				E599BD09240FA9A000C3A55F /* NSString+Helper.m in Sources */,
 				E599BD0E240FA9A000C3A55F /* MBProgressHUD+Extension.m in Sources */,
 				E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */,
-				C11B487D206627C8009857D9 /* LGJSegmentManager.m in Sources */,
 				E599BD37240FB82600C3A55F /* BaseTabBarController.m in Sources */,
 				423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */,
 				427733AC2574C88D00A96A82 /* CustomPopOverView.m in Sources */,
@@ -1145,6 +1149,7 @@
 				E599BD02240FA9A000C3A55F /* UIScrollView+Helper.m in Sources */,
 				E599BAC9240FA1F700C3A55F /* LoginVC.m in Sources */,
 				E599BD3B240FB82600C3A55F /* BackButton.m in Sources */,
+				427DCB80259C6841009A5ABE /* MLMSegmentScroll.m in Sources */,
 				E599B953240F9CAD00C3A55F /* WebVC.m in Sources */,
 				E599BD06240FA9A000C3A55F /* UIView+AbnormalView.m in Sources */,
 				E599BD12240FA9A000C3A55F /* NSDate+Helper.m in Sources */,
@@ -1176,11 +1181,13 @@
 				C18D65C42009E6D7001B5CCA /* main.m in Sources */,
 				E599BD05240FA9A000C3A55F /* UIView+Frame.m in Sources */,
 				E53D95B624625818000FF680 /* NSMutableString+Safe.m in Sources */,
+				427DCB7E259C6841009A5ABE /* MLMSegmentHead.m in Sources */,
 				C11B48ED20662B63009857D9 /* LaunchVC.m in Sources */,
 				E599BD1E240FA9A000C3A55F /* AppInfo.m in Sources */,
 				E599BACA240FA1F700C3A55F /* RegisterVC.m in Sources */,
 				E53D95BA24625818000FF680 /* NSObject+ImpChangeTool.m in Sources */,
 				E599BD22240FA9A000C3A55F /* NENPingManager.m in Sources */,
+				427DCB7F259C6841009A5ABE /* UIView+ViewController.m in Sources */,
 				E599BD35240FB82600C3A55F /* BaseViewController.m in Sources */,
 				C18D65B62009E6D7001B5CCA /* AppDelegate.m in Sources */,
 				C11B48EF20662BEA009857D9 /* Common.m in Sources */,
@@ -1189,7 +1196,6 @@
 				E53D95B724625818000FF680 /* NSDictionary+Safe.m in Sources */,
 				C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */,
 				E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */,
-				C11B487E206627C8009857D9 /* LGJSegmentScroll.m in Sources */,
 				427733B52574C8F500A96A82 /* LinkageSubScrollView.m in Sources */,
 				E599BD01240FA9A000C3A55F /* UIImage+Helper.m in Sources */,
 				427733BD2574C95F00A96A82 /* UIView+TXFrame.m in Sources */,
@@ -1198,9 +1204,9 @@
 				E599BD3A240FB82600C3A55F /* BaseTabBar.m in Sources */,
 				E5083DBE2417712000E13C03 /* HomeVC.m in Sources */,
 				C11B48C320662848009857D9 /* UIColor+PYSearchExtension.m in Sources */,
-				C11B487F206627C8009857D9 /* UIView+ViewController.m in Sources */,
 				E599BD38240FB82600C3A55F /* BaseTextField.m in Sources */,
 				E53D95B824625818000FF680 /* NSObject+Swizzling.m in Sources */,
+				427DCB7D259C6841009A5ABE /* MLMSegmentManager.m in Sources */,
 				E599B95B240F9D3400C3A55F /* NinaBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
