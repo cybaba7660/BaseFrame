@@ -45,7 +45,6 @@ static NSString * const REMEMBER_PSW = @"rememberPsw"; /**< 是否记住密码 *
     [UserDefaults removeObjectForKey:REMEMBER_PSW];
     if (!err) {
         [[SystemManager currentNav] popToRootViewControllerAnimated:NO];
-        [SystemManager currentVC].tabBarController.selectedIndex = 0;
         [self presentLoginVC];
     }
     [NotificationCenter postNotificationName:kUserLogoutNotification object:nil];

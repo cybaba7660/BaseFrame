@@ -21,6 +21,7 @@
 #pragma mark - dealloc
 - (void)dealloc {
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self.webView removeObserver:self forKeyPath:@"title"];
     [NotificationCenter removeObserver:self];
 }
 #pragma mark - Set/Get
@@ -147,6 +148,7 @@
     webView.allowsBackForwardNavigationGestures = YES;
     [self.view addSubview:webView];
     [webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
     
     UIProgressView *progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
     self.progressView = progressView;
@@ -292,9 +294,9 @@
         [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:&errors];
     }
 }
-// 计算wkWebView进度条
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
+//监听
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    //进度条
     if (object == self.webView && [keyPath isEqualToString:@"estimatedProgress"]) {
         CGFloat newprogress = [[change objectForKey:NSKeyValueChangeNewKey] doubleValue];
         self.progressView.alpha = 1.0f;
@@ -310,8 +312,11 @@
                                  [self.progressView setProgress:0 animated:NO];
                              }];
         }
-        
-    } else {
+    //标题
+    }else if (object == self.webView && [keyPath isEqualToString:@"title"]) {
+        NSString *title = [change objectForKey:NSKeyValueChangeNewKey];
+        self.navigationItem.title = title;
+    }else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
