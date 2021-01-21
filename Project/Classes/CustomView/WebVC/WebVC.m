@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 
 #define TAG_ITEM 1000
+#define KEY_OBSERVER_PROGRESS   @"estimatedProgress"
+#define KEY_OBSERVER_TITLE      @"title"
 @interface WebVC () <WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate> {
     
 }
@@ -20,8 +22,8 @@
 @implementation WebVC
 #pragma mark - dealloc
 - (void)dealloc {
-    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
-    [self.webView removeObserver:self forKeyPath:@"title"];
+    [self.webView removeObserver:self forKeyPath:KEY_OBSERVER_PROGRESS];
+    [self.webView removeObserver:self forKeyPath:KEY_OBSERVER_TITLE];
     [NotificationCenter removeObserver:self];
 }
 #pragma mark - Set/Get
@@ -147,8 +149,8 @@
     webView.scrollView.bounces = self.allowBounces;
     webView.allowsBackForwardNavigationGestures = YES;
     [self.view addSubview:webView];
-    [webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
-    [webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
+    [webView addObserver:self forKeyPath:KEY_OBSERVER_PROGRESS options:NSKeyValueObservingOptionNew context:nil];
+    [webView addObserver:self forKeyPath:KEY_OBSERVER_TITLE options:NSKeyValueObservingOptionNew context:nil];
     
     UIProgressView *progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
     self.progressView = progressView;
@@ -297,7 +299,7 @@
 //监听
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     //进度条
-    if (object == self.webView && [keyPath isEqualToString:@"estimatedProgress"]) {
+    if (object == self.webView && [keyPath isEqualToString:KEY_OBSERVER_PROGRESS]) {
         CGFloat newprogress = [[change objectForKey:NSKeyValueChangeNewKey] doubleValue];
         self.progressView.alpha = 1.0f;
         [self.progressView setProgress:newprogress animated:YES];
@@ -313,7 +315,7 @@
                              }];
         }
     //标题
-    }else if (object == self.webView && [keyPath isEqualToString:@"title"]) {
+    }else if (object == self.webView && [keyPath isEqualToString:KEY_OBSERVER_TITLE]) {
         NSString *title = [change objectForKey:NSKeyValueChangeNewKey];
         self.navigationItem.title = title;
     }else {
