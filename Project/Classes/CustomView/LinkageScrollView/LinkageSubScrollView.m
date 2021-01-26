@@ -7,7 +7,6 @@
 //
 
 #import "LinkageSubScrollView.h"
-#import "LinkageRootScrollView.h"
 @interface LinkageSubScrollView () <UIScrollViewDelegate> {
     LinkageOffset offset;
 }
@@ -36,19 +35,12 @@
     CGFloat maxOffsetY = scrollView.contentSize.height - scrollView.height;
     if (offsetY <= 0) {
         offset = LinkageOffsetCeil;
+        self.linkage_ScrollEnable = NO;
+        self.linkage_ScrollView.linkage_ScrollEnable = YES;
     }else if (offsetY >= maxOffsetY) {
         offset = LinkageOffsetFloor;
     }else {
         offset = LinkageOffsetMiddle;
-    }
-    
-    if (offset == LinkageOffsetCeil) {
-        self.linkage_ScrollEnable = NO;
-        self.linkage_ScrollView.linkage_ScrollEnable = YES;
-    }else if (offset == LinkageOffsetFloor) {
-        
-    }else {
-        
     }
 }
 @end

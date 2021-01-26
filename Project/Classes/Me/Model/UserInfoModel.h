@@ -64,6 +64,9 @@
  */
 + (BOOL)checkingLoginStatusAndShowTipsIfNeeded:(BOOL)show;
 
-/** 直接跳转到注册界面*/
+/** 跳转登录界面*/
++ (void)presentLoginVC;
+
+/** 跳转注册界面*/
 + (void)presentRegisterVC;
 @end

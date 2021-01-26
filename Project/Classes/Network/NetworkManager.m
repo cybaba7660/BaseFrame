@@ -187,7 +187,7 @@ static NetworkManager *networkInstance;
     return rs;
 }
 + (instancetype)dealWithData:(id)responseObj {
-    id responseData = [NSJSONSerialization JSONObjectWithData:responseObj options:NSJSONReadingMutableContainers error:nil];
+    id responseData = [NSJSONSerialization JSONObjectWithData:responseObj options:NSJSONReadingMutableContainers | NSJSONReadingAllowFragments error:nil];
     Result *rs = [[self alloc] init];
     [self stringValue:responseData];
     rs.responseData = responseData;

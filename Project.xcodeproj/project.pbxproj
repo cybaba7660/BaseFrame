@@ -337,9 +337,9 @@
 			isa = PBXGroup;
 			children = (
 				427733B12574C8F500A96A82 /* LinkageRootScrollView.h */,
-				427733B22574C8F500A96A82 /* LinkageSubScrollView.m */,
-				427733B32574C8F500A96A82 /* LinkageSubScrollView.h */,
 				427733B42574C8F500A96A82 /* LinkageRootScrollView.m */,
+				427733B32574C8F500A96A82 /* LinkageSubScrollView.h */,
+				427733B22574C8F500A96A82 /* LinkageSubScrollView.m */,
 			);
 			path = LinkageScrollView;
 			sourceTree = "<group>";

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@class LinkageRootScrollView;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface LinkageSubScrollView : UIScrollView

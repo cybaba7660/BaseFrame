@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (Helper)
 - (UIImage *)scaleToWidth:(CGFloat)width;
 - (UIImage *)scaleToHeight:(CGFloat)height;
+
+- (float)calculateClearPercent;
 @end
 
 @interface UIImage (RenderMode)
