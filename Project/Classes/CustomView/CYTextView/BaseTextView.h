@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseTextView : UIView
 
-@property (nonatomic, copy) NSString *placehold;
-@property (nonatomic, strong) UIColor *placeholdColor;
+@property (nonatomic, copy) NSString *placeholder;
+@property (nonatomic, strong) UIColor *placeholderColor;
 @property (nonatomic, assign) NSInteger limitLength;
 @property (nonatomic, copy) NSString *limitLengthLabelAppendText;
 

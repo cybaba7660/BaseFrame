@@ -11,7 +11,7 @@
     
 }
 @property (nonatomic, weak) UITextView *textView;
-@property (nonatomic, weak) UILabel *placeholdLabel;
+@property (nonatomic, weak) UILabel *placeholderLabel;
 @end
 @implementation BaseTextView
 - (void)dealloc {
@@ -22,10 +22,10 @@
     _text = text;
     self.textView.text = text;
 }
-- (void)setPlacehold:(NSString *)placehold {
-    _placehold = placehold;
-    self.placeholdLabel.text = placehold;
-    [self.placeholdLabel sizeToFit];
+- (void)setPlaceholder:(NSString *)placeholder {
+    _placeholder = placeholder;
+    self.placeholderLabel.text = placeholder;
+    [self.placeholderLabel sizeToFit];
 }
 - (void)setLimitLength:(NSInteger)limitLength {
     _limitLength = limitLength;
@@ -38,11 +38,11 @@
 - (void)setFont:(UIFont *)font {
     _font = font;
     self.textView.font = font;
-    self.placeholdLabel.font = font;
+    self.placeholderLabel.font = font;
 }
-- (void)setPlaceholdColor:(UIColor *)placeholdColor {
-    _placeholdColor = placeholdColor;
-    self.placeholdLabel.textColor = placeholdColor;
+- (void)setPlaceholderColor:(UIColor *)placeholderColor {
+    _placeholderColor = placeholderColor;
+    self.placeholderLabel.textColor = placeholderColor;
 }
 #pragma mark - External
 #pragma mark - Init
@@ -78,7 +78,7 @@
     textView.textContainerInset = UIEdgeInsetsMake(10, 4, 10, 4);
     
     UILabel *placeholdLabel = [[UILabel alloc] initWithFrame:CGRectMake(textView.textContainerInset.left + 4, textView.textContainerInset.top, 0, 0)];
-    self.placeholdLabel = placeholdLabel;
+    self.placeholderLabel = placeholdLabel;
     placeholdLabel.font = textView.font;
     placeholdLabel.textColor = COLOR_W(200);
     [textView addSubview:placeholdLabel];
@@ -105,7 +105,7 @@
         }
     }
     _text = textView.text;
-    self.placeholdLabel.hidden = textView.text.length;
+    self.placeholderLabel.hidden = textView.text.length;
     self.limitLengthLabel.text = [NSString stringWithFormat:@"%zd/%zd%@", textView.text.length, _limitLength, _limitLengthLabelAppendText];
     [self setNeedsLayout];
     self.maxLengthEvent ? self.maxLengthEvent(textView) : nil;

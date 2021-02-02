@@ -49,6 +49,7 @@
 		4284EA7525C93A9F00AF1A15 /* LinkageRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5625C93A9F00AF1A15 /* LinkageRootScrollView.m */; };
 		4284EA7625C93A9F00AF1A15 /* GuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5825C93A9F00AF1A15 /* GuidanceViewController.m */; };
 		4284EA7725C93A9F00AF1A15 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5D25C93A9F00AF1A15 /* CYNavBarView.m */; };
+		4284EA7F25C93F3300AF1A15 /* BaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA7E25C93F3300AF1A15 /* BaseTextView.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
 		C11B48BE20662848009857D9 /* NSBundle+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B48B120662848009857D9 /* NSBundle+PYSearchExtension.m */; };
@@ -214,6 +215,8 @@
 		4284EA5925C93A9F00AF1A15 /* GuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidanceViewController.h; sourceTree = "<group>"; };
 		4284EA5C25C93A9F00AF1A15 /* CYNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNavBarView.h; sourceTree = "<group>"; };
 		4284EA5D25C93A9F00AF1A15 /* CYNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNavBarView.m; sourceTree = "<group>"; };
+		4284EA7D25C93F3300AF1A15 /* BaseTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextView.h; sourceTree = "<group>"; };
+		4284EA7E25C93F3300AF1A15 /* BaseTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextView.m; sourceTree = "<group>"; };
 		79309685694D3A097E741DDE /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA68AC9A1EF23F570A6DC9D6 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C11B4836206627C8009857D9 /* CYStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStarRateView.h; sourceTree = "<group>"; };
@@ -643,6 +646,15 @@
 			path = CYNavigationBarView;
 			sourceTree = "<group>";
 		};
+		4284EA7C25C93F3300AF1A15 /* CYTextView */ = {
+			isa = PBXGroup;
+			children = (
+				4284EA7D25C93F3300AF1A15 /* BaseTextView.h */,
+				4284EA7E25C93F3300AF1A15 /* BaseTextView.m */,
+			);
+			path = CYTextView;
+			sourceTree = "<group>";
+		};
 		6029D8093044171CD7B8B59E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +811,7 @@
 		C18D661F2009FDAB001B5CCA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				4284EA7C25C93F3300AF1A15 /* CYTextView */,
 				E599B950240F9CAD00C3A55F /* WebVC */,
 				E599B95C240F9D7300C3A55F /* AbnormalView */,
 				C18D66282009FDAB001B5CCA /* GuidancePage */,
@@ -1465,6 +1478,7 @@
 				C18D66432009FDAB001B5CCA /* GuidanceViewController.m in Sources */,
 				C11B48C420662848009857D9 /* UIView+PYSearchExtension.m in Sources */,
 				E5083DC72417716A00E13C03 /* MeVC.m in Sources */,
+				4284EA7F25C93F3300AF1A15 /* BaseTextView.m in Sources */,
 				4284EA6025C93A9F00AF1A15 /* BaseTextView.m in Sources */,
 				E599BD10240FA9A000C3A55F /* NSObject+Helper.m in Sources */,
 				4284EA6D25C93A9F00AF1A15 /* UIView+ViewController.m in Sources */,
