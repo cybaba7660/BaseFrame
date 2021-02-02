@@ -64,24 +64,26 @@
 }
 #pragma mark - UI
 - (void)setupUI {
-    UILabel *limitLengthLabel = [[UILabel alloc] init];
-    self.limitLengthLabel = limitLengthLabel;
-    limitLengthLabel.font = Font_Medium(12);
-    limitLengthLabel.textColor = COLOR_W(150);
-    limitLengthLabel.textAlignment = NSTextAlignmentRight;
-    [self addSubview:limitLengthLabel];
-    
     UITextView *textView = [[UITextView alloc] init];
     textView.font = [UIFont systemFontOfSize:15];
     self.textView = textView;
     [self addSubview:textView];
     textView.textContainerInset = UIEdgeInsetsMake(10, 4, 10, 4);
+    textView.backgroundColor = UIColor.clearColor;
     
     UILabel *placeholdLabel = [[UILabel alloc] initWithFrame:CGRectMake(textView.textContainerInset.left + 4, textView.textContainerInset.top, 0, 0)];
     self.placeholderLabel = placeholdLabel;
     placeholdLabel.font = textView.font;
     placeholdLabel.textColor = COLOR_W(200);
     [textView addSubview:placeholdLabel];
+    
+    UILabel *limitLengthLabel = [[UILabel alloc] init];
+    self.limitLengthLabel = limitLengthLabel;
+    limitLengthLabel.font = Font_Medium(12);
+    limitLengthLabel.textColor = COLOR_W(150);
+    limitLengthLabel.textAlignment = NSTextAlignmentRight;
+    [self addSubview:limitLengthLabel];
+    [self refreshLimitLengthLabelText];
 }
 #pragma mark - EventMethods
 - (void)textViewTextDidChangeEvent:(NSNotification *)noti {
@@ -106,9 +108,19 @@
     }
     _text = textView.text;
     self.placeholderLabel.hidden = textView.text.length;
-    self.limitLengthLabel.text = [NSString stringWithFormat:@"%zd/%zd%@", textView.text.length, _limitLength, _limitLengthLabelAppendText];
+    [self refreshLimitLengthLabelText];
     [self setNeedsLayout];
     self.maxLengthEvent ? self.maxLengthEvent(textView) : nil;
+}
+- (void)refreshLimitLengthLabelText {
+    NSString *text = @(self.textView.text.length).stringValue;
+    if (_limitLength > 0) {
+        text = [text stringByAppendingFormat:@"/%zd", _limitLength];
+    }
+    if (_limitLengthLabelAppendText.length) {
+        text = [text stringByAppendingFormat:@" %@", _limitLengthLabelAppendText];
+    }
+    self.limitLengthLabel.text = text;
 }
 #pragma mark - CommonMethods
 

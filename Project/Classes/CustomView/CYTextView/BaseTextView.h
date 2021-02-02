@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *placeholder;
 @property (nonatomic, strong) UIColor *placeholderColor;
-@property (nonatomic, assign) NSInteger limitLength;
+@property (nonatomic, assign) NSUInteger limitLength;
 @property (nonatomic, copy) NSString *limitLengthLabelAppendText;
 
 @property (nonatomic, copy) NSString *text;
