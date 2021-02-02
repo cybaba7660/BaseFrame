@@ -18,30 +18,6 @@
 @implementation AbnormalView
 #pragma mark - Set/Get
 #pragma mark - External
-- (void)refreshIcon:(NSString *)icon {
-    CGFloat top = self.height / 10 * 3;
-    CGFloat iconScale = self.superview.height / kSafeArea_H();
-    UIImage *image = [UIImage imageNamed:icon];
-    CGFloat iconX = (self.width - image.size.width * iconScale) / 2;
-    self.tipsImageView.frame = CGRectMake(iconX, top, image.size.width * iconScale, image.size.height * iconScale);
-    self.tipsImageView.image = image;
-    [self refreshOrigin];
-}
-- (void)refreshTips:(NSString *)tips {
-    self.tipsLabel.text = tips;
-    [self.tipsLabel heightToFit];
-    [self refreshOrigin];
-}
-- (void)refreshReloadText:(NSString *)text {
-    [self.reloadButton setTitle:text forState:UIControlStateNormal];
-    CGFloat width = [text calculateWidthWithFont:self.reloadButton.titleLabel.font];
-    self.reloadButton.width = width ? width + WIDTH(18) : 0;
-    self.reloadButton.left = (self.width - self.reloadButton.width) / 2;
-}
-- (void)refreshOrigin {
-    self.tipsLabel.top = self.tipsImageView.bottom + HEIGHT_NT(12);
-    self.reloadButton.top = self.tipsLabel.bottom + HEIGHT_NT(18);
-}
 + (void)showInView:(UIView *)inView imageName:(NSString *)imageName tips:(NSString *)tips refreshText:(NSString *)refreshText refreshEvent:(CallBackBlock)refreshEvent {
     if (!inView) {
         return;
@@ -71,14 +47,14 @@
         
         UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
         view.reloadButton = reloadButton;
-        reloadButton.frame = CGRectMake(0, 0, 0, WIDTH(30));
+        reloadButton.frame = CGRectMake(0, 0, 0, WIDTH(36));
         [reloadButton setBackgroundColor:MAIN_COLOR];
-        reloadButton.titleLabel.font = Font_Regular(14);
+        reloadButton.titleLabel.font = Font_Regular(15);
         [reloadButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
         [reloadButton addTarget:view action:@selector(reloadButtonClickedEvent) forControlEvents:UIControlEventTouchUpInside];
         [reloadButton setAdjustsImageWhenHighlighted:NO];
         [view addSubview:reloadButton];
-        [reloadButton setCornerRadius:2];
+        [reloadButton setCornerRadius:5];
         [reloadButton setClipsToBounds:YES];
     }
     
@@ -109,10 +85,33 @@
 - (void)setupUI {
     
 }
+- (void)refreshIcon:(NSString *)icon {
+    CGFloat top = self.height / 10 * 3;
+    CGFloat iconScale = self.superview.height / kSafeArea_H();
+    UIImage *image = [UIImage imageNamed:icon];
+    CGFloat iconX = (self.width - image.size.width * iconScale) / 2;
+    self.tipsImageView.frame = CGRectMake(iconX, top, image.size.width * iconScale, image.size.height * iconScale);
+    self.tipsImageView.image = image;
+    [self refreshOrigin];
+}
+- (void)refreshTips:(NSString *)tips {
+    self.tipsLabel.text = tips;
+    [self.tipsLabel heightToFit];
+    [self refreshOrigin];
+}
+- (void)refreshReloadText:(NSString *)text {
+    [self.reloadButton setTitle:text forState:UIControlStateNormal];
+    CGFloat width = [text calculateWidthWithFont:self.reloadButton.titleLabel.font];
+    self.reloadButton.width = width ? width + WIDTH(68) : 0;
+    self.reloadButton.left = (self.width - self.reloadButton.width) / 2;
+}
+- (void)refreshOrigin {
+    self.tipsLabel.top = self.tipsImageView.bottom;
+    self.reloadButton.top = self.tipsLabel.bottom + HEIGHT_NT(12);
+}
 #pragma mark - EventMethods
 - (void)reloadButtonClickedEvent {
     _refreshBlock ? _refreshBlock(nil) : nil;
-    [self dismiss];
 }
 - (void)panGestureEvent {
     

@@ -31,6 +31,7 @@
     }
 }
 - (void)switchLinkageIndex:(NSInteger)index {
+    self.linkage_ScrollView.contentOffset = CGPointZero;
     self.linkage_ScrollView = linkedScrollViews[index];
 }
 #pragma mark - Init
