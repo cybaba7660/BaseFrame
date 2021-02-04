@@ -189,31 +189,49 @@ static char adsorbedKey;
         
     }
 }
+
+#pragma mark - 事件
+- (void)addGestureRecognizer:(Class)class event:(gestureRecognizerEvent)event {
+    id object = [class alloc];
+    if (![object isKindOfClass:UIGestureRecognizer.class]) {
+        return;
+    }
+    objc_setAssociatedObject(self, @selector(invoke:), event, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    UIGestureRecognizer *gesture = [(UIGestureRecognizer *)object initWithTarget:self action:@selector(invoke:)];
+    [self addGestureRecognizer:gesture];
+}
+- (void)invoke:(id)sender {
+    gestureRecognizerEvent event = objc_getAssociatedObject(self, _cmd);
+    event ? event(sender) : nil;
+}
 @end
 @implementation UIView (ViewController)
 - (UINavigationController *)navigationController {
-    for (UIView *next = [self superview]; next; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UINavigationController class]]) {
-            return (UINavigationController*)nextResponder;
+    UIResponder *next = self.nextResponder;
+    do {
+        if ([next isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *nav = (UINavigationController *)next;
+            next = nav.viewControllers.lastObject;
+            return (UINavigationController *)next;
         }
-    }
+        next = next.nextResponder;
+    }while (next != nil);
     return nil;
 }
 - (UIViewController *)viewController {
-    for (UIView *next = [self superview]; next; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            if ([nextResponder isKindOfClass:[UINavigationController class]]) {
-                nextResponder = [(UINavigationController *)nextResponder visibleViewController];
+    UIResponder *next = self.nextResponder;
+    do {
+        if ([next isKindOfClass:[UIViewController class]]) {
+            if ([next isKindOfClass:[UINavigationController class]]) {
+                UINavigationController *nav = (UINavigationController *)next;
+                next = nav.viewControllers.lastObject;
             }
-            return (UIViewController *)nextResponder;
+            return (UIViewController *)next;
         }
-        
-    }
+        next = next.nextResponder;
+    }while (next != nil);
     return nil;
 }
-
 @end
 
 @implementation UIView (Screenshot)

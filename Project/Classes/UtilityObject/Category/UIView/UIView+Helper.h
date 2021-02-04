@@ -36,6 +36,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setAllowableDrag:(BOOL)allowableDrag adsorbed:(BOOL)adsorbed;
 - (void)setAllowableDrag:(BOOL)allowableDrag invalidArea:(UIEdgeInsets)invalidArea;
 - (void)setAllowableDrag:(BOOL)allowableDrag invalidArea:(UIEdgeInsets)invalidArea adsorbed:(BOOL)adsorbed;
+
+typedef void(^gestureRecognizerEvent)(UIGestureRecognizer *sender);
+/** 添加手势*/
+- (void)addGestureRecognizer:(Class)class event:(gestureRecognizerEvent __nullable)event;
 @end
 
 @interface UIView (Screenshot)
