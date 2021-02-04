@@ -19,6 +19,7 @@ typedef void(^CallBackBlock)(id obj);
 #import "AppInfo.h"
 #import "RegularExpressionTool.h"
 #import "WebVC.h"
+#import "ShadeView.h"
 
 //网络
 #import "NetworkManager.h"

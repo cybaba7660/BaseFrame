@@ -11,6 +11,7 @@
 		423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB524F221D100C838C0 /* UITableView+Helper.m */; };
 		423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */; };
 		4262EC0725ABFEAC001C0C95 /* HomeCyCleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262EC0525ABFEAC001C0C95 /* HomeCyCleViewCell.m */; };
+		4266F51A25CBD5ED00B9EF0B /* ShadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266F51825CBD5ED00B9EF0B /* ShadeView.m */; };
 		427733AC2574C88D00A96A82 /* CustomPopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733A42574C88D00A96A82 /* CustomPopOverView.m */; };
 		427733B52574C8F500A96A82 /* LinkageSubScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733B22574C8F500A96A82 /* LinkageSubScrollView.m */; };
 		427733B62574C8F500A96A82 /* LinkageRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733B42574C8F500A96A82 /* LinkageRootScrollView.m */; };
@@ -23,32 +24,6 @@
 		427DCB81259C6841009A5ABE /* UIView+EasyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DCB76259C6841009A5ABE /* UIView+EasyFrame.m */; };
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
 		42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */; };
-		4284EA5E25C93A9F00AF1A15 /* AbnormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA1A25C93A9F00AF1A15 /* AbnormalView.m */; };
-		4284EA5F25C93A9F00AF1A15 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA1D25C93A9F00AF1A15 /* CYStarRateView.m */; };
-		4284EA6025C93A9F00AF1A15 /* BaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2125C93A9F00AF1A15 /* BaseTextView.m */; };
-		4284EA6125C93A9F00AF1A15 /* VerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2325C93A9F00AF1A15 /* VerificationCodeButton.m */; };
-		4284EA6225C93A9F00AF1A15 /* UIColor+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2825C93A9F00AF1A15 /* UIColor+PYSearchExtension.m */; };
-		4284EA6325C93A9F00AF1A15 /* PYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2925C93A9F00AF1A15 /* PYSearchViewController.m */; };
-		4284EA6425C93A9F00AF1A15 /* PYSearchSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2A25C93A9F00AF1A15 /* PYSearchSuggestionViewController.m */; };
-		4284EA6525C93A9F00AF1A15 /* PYSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2C25C93A9F00AF1A15 /* PYSearchConst.m */; };
-		4284EA6625C93A9F00AF1A15 /* PYSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4284EA2D25C93A9F00AF1A15 /* PYSearch.bundle */; };
-		4284EA6725C93A9F00AF1A15 /* NSBundle+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA2E25C93A9F00AF1A15 /* NSBundle+PYSearchExtension.m */; };
-		4284EA6825C93A9F00AF1A15 /* UIView+PYSearchExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3425C93A9F00AF1A15 /* UIView+PYSearchExtension.m */; };
-		4284EA6925C93A9F00AF1A15 /* NinaPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3625C93A9F00AF1A15 /* NinaPagerView.m */; };
-		4284EA6A25C93A9F00AF1A15 /* NinaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3725C93A9F00AF1A15 /* NinaBaseView.m */; };
-		4284EA6B25C93A9F00AF1A15 /* MLMSegmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3C25C93A9F00AF1A15 /* MLMSegmentManager.m */; };
-		4284EA6C25C93A9F00AF1A15 /* MLMSegmentHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3D25C93A9F00AF1A15 /* MLMSegmentHead.m */; };
-		4284EA6D25C93A9F00AF1A15 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3E25C93A9F00AF1A15 /* UIView+ViewController.m */; };
-		4284EA6E25C93A9F00AF1A15 /* MLMSegmentScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA3F25C93A9F00AF1A15 /* MLMSegmentScroll.m */; };
-		4284EA6F25C93A9F00AF1A15 /* UIView+EasyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA4025C93A9F00AF1A15 /* UIView+EasyFrame.m */; };
-		4284EA7025C93A9F00AF1A15 /* TXScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA4A25C93A9F00AF1A15 /* TXScrollLabelView.m */; };
-		4284EA7125C93A9F00AF1A15 /* UIView+TXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA4B25C93A9F00AF1A15 /* UIView+TXFrame.m */; };
-		4284EA7225C93A9F00AF1A15 /* CustomPopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA4E25C93A9F00AF1A15 /* CustomPopOverView.m */; };
-		4284EA7325C93A9F00AF1A15 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5125C93A9F00AF1A15 /* WebVC.m */; };
-		4284EA7425C93A9F00AF1A15 /* LinkageSubScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5425C93A9F00AF1A15 /* LinkageSubScrollView.m */; };
-		4284EA7525C93A9F00AF1A15 /* LinkageRootScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5625C93A9F00AF1A15 /* LinkageRootScrollView.m */; };
-		4284EA7625C93A9F00AF1A15 /* GuidanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5825C93A9F00AF1A15 /* GuidanceViewController.m */; };
-		4284EA7725C93A9F00AF1A15 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA5D25C93A9F00AF1A15 /* CYNavBarView.m */; };
 		4284EA7F25C93F3300AF1A15 /* BaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA7E25C93F3300AF1A15 /* BaseTextView.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
@@ -136,6 +111,8 @@
 		423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Helper.m"; sourceTree = "<group>"; };
 		4262EC0525ABFEAC001C0C95 /* HomeCyCleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCyCleViewCell.m; sourceTree = "<group>"; };
 		4262EC0625ABFEAC001C0C95 /* HomeCyCleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCyCleViewCell.h; sourceTree = "<group>"; };
+		4266F51825CBD5ED00B9EF0B /* ShadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadeView.m; sourceTree = "<group>"; };
+		4266F51925CBD5ED00B9EF0B /* ShadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadeView.h; sourceTree = "<group>"; };
 		427733A32574C88D00A96A82 /* CustomPopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopOverView.h; sourceTree = "<group>"; };
 		427733A42574C88D00A96A82 /* CustomPopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopOverView.m; sourceTree = "<group>"; };
 		427733B12574C8F500A96A82 /* LinkageRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageRootScrollView.h; sourceTree = "<group>"; };
@@ -161,60 +138,6 @@
 		427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
 		42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeButton.m; sourceTree = "<group>"; };
 		42810A3B2568F42C0056E4A9 /* VerificationCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationCodeButton.h; sourceTree = "<group>"; };
-		4284EA1A25C93A9F00AF1A15 /* AbnormalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbnormalView.m; sourceTree = "<group>"; };
-		4284EA1B25C93A9F00AF1A15 /* AbnormalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbnormalView.h; sourceTree = "<group>"; };
-		4284EA1D25C93A9F00AF1A15 /* CYStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYStarRateView.m; sourceTree = "<group>"; };
-		4284EA1E25C93A9F00AF1A15 /* CYStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStarRateView.h; sourceTree = "<group>"; };
-		4284EA2025C93A9F00AF1A15 /* BaseTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextView.h; sourceTree = "<group>"; };
-		4284EA2125C93A9F00AF1A15 /* BaseTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextView.m; sourceTree = "<group>"; };
-		4284EA2325C93A9F00AF1A15 /* VerificationCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeButton.m; sourceTree = "<group>"; };
-		4284EA2425C93A9F00AF1A15 /* VerificationCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationCodeButton.h; sourceTree = "<group>"; };
-		4284EA2725C93A9F00AF1A15 /* NSBundle+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PYSearchExtension.h"; sourceTree = "<group>"; };
-		4284EA2825C93A9F00AF1A15 /* UIColor+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PYSearchExtension.m"; sourceTree = "<group>"; };
-		4284EA2925C93A9F00AF1A15 /* PYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchViewController.m; sourceTree = "<group>"; };
-		4284EA2A25C93A9F00AF1A15 /* PYSearchSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchSuggestionViewController.m; sourceTree = "<group>"; };
-		4284EA2B25C93A9F00AF1A15 /* UIView+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYSearchExtension.h"; sourceTree = "<group>"; };
-		4284EA2C25C93A9F00AF1A15 /* PYSearchConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchConst.m; sourceTree = "<group>"; };
-		4284EA2D25C93A9F00AF1A15 /* PYSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PYSearch.bundle; sourceTree = "<group>"; };
-		4284EA2E25C93A9F00AF1A15 /* NSBundle+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PYSearchExtension.m"; sourceTree = "<group>"; };
-		4284EA2F25C93A9F00AF1A15 /* PYSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearch.h; sourceTree = "<group>"; };
-		4284EA3025C93A9F00AF1A15 /* PYSearchSuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchSuggestionViewController.h; sourceTree = "<group>"; };
-		4284EA3125C93A9F00AF1A15 /* PYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchViewController.h; sourceTree = "<group>"; };
-		4284EA3225C93A9F00AF1A15 /* UIColor+PYSearchExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PYSearchExtension.h"; sourceTree = "<group>"; };
-		4284EA3325C93A9F00AF1A15 /* PYSearchConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchConst.h; sourceTree = "<group>"; };
-		4284EA3425C93A9F00AF1A15 /* UIView+PYSearchExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYSearchExtension.m"; sourceTree = "<group>"; };
-		4284EA3625C93A9F00AF1A15 /* NinaPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaPagerView.m; sourceTree = "<group>"; };
-		4284EA3725C93A9F00AF1A15 /* NinaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinaBaseView.m; sourceTree = "<group>"; };
-		4284EA3825C93A9F00AF1A15 /* NinaPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaPagerView.h; sourceTree = "<group>"; };
-		4284EA3925C93A9F00AF1A15 /* UIParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIParameter.h; sourceTree = "<group>"; };
-		4284EA3A25C93A9F00AF1A15 /* NinaBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinaBaseView.h; sourceTree = "<group>"; };
-		4284EA3C25C93A9F00AF1A15 /* MLMSegmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentManager.m; sourceTree = "<group>"; };
-		4284EA3D25C93A9F00AF1A15 /* MLMSegmentHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentHead.m; sourceTree = "<group>"; };
-		4284EA3E25C93A9F00AF1A15 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
-		4284EA3F25C93A9F00AF1A15 /* MLMSegmentScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentScroll.m; sourceTree = "<group>"; };
-		4284EA4025C93A9F00AF1A15 /* UIView+EasyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyFrame.m"; sourceTree = "<group>"; };
-		4284EA4125C93A9F00AF1A15 /* SegmentPageHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentPageHead.h; sourceTree = "<group>"; };
-		4284EA4225C93A9F00AF1A15 /* MLMSegmentHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentHead.h; sourceTree = "<group>"; };
-		4284EA4325C93A9F00AF1A15 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
-		4284EA4425C93A9F00AF1A15 /* MLMSegmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentManager.h; sourceTree = "<group>"; };
-		4284EA4525C93A9F00AF1A15 /* UIView+EasyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyFrame.h"; sourceTree = "<group>"; };
-		4284EA4625C93A9F00AF1A15 /* MLMSegmentScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentScroll.h; sourceTree = "<group>"; };
-		4284EA4825C93A9F00AF1A15 /* TXScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXScrollLabelView.h; sourceTree = "<group>"; };
-		4284EA4925C93A9F00AF1A15 /* UIView+TXFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TXFrame.h"; sourceTree = "<group>"; };
-		4284EA4A25C93A9F00AF1A15 /* TXScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXScrollLabelView.m; sourceTree = "<group>"; };
-		4284EA4B25C93A9F00AF1A15 /* UIView+TXFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TXFrame.m"; sourceTree = "<group>"; };
-		4284EA4D25C93A9F00AF1A15 /* CustomPopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopOverView.h; sourceTree = "<group>"; };
-		4284EA4E25C93A9F00AF1A15 /* CustomPopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopOverView.m; sourceTree = "<group>"; };
-		4284EA5025C93A9F00AF1A15 /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
-		4284EA5125C93A9F00AF1A15 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
-		4284EA5325C93A9F00AF1A15 /* LinkageRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageRootScrollView.h; sourceTree = "<group>"; };
-		4284EA5425C93A9F00AF1A15 /* LinkageSubScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageSubScrollView.m; sourceTree = "<group>"; };
-		4284EA5525C93A9F00AF1A15 /* LinkageSubScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageSubScrollView.h; sourceTree = "<group>"; };
-		4284EA5625C93A9F00AF1A15 /* LinkageRootScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkageRootScrollView.m; sourceTree = "<group>"; };
-		4284EA5825C93A9F00AF1A15 /* GuidanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidanceViewController.m; sourceTree = "<group>"; };
-		4284EA5925C93A9F00AF1A15 /* GuidanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidanceViewController.h; sourceTree = "<group>"; };
-		4284EA5C25C93A9F00AF1A15 /* CYNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNavBarView.h; sourceTree = "<group>"; };
-		4284EA5D25C93A9F00AF1A15 /* CYNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNavBarView.m; sourceTree = "<group>"; };
 		4284EA7D25C93F3300AF1A15 /* BaseTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextView.h; sourceTree = "<group>"; };
 		4284EA7E25C93F3300AF1A15 /* BaseTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextView.m; sourceTree = "<group>"; };
 		79309685694D3A097E741DDE /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +330,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4266F51725CBD5ED00B9EF0B /* ShadeView */ = {
+			isa = PBXGroup;
+			children = (
+				4266F51825CBD5ED00B9EF0B /* ShadeView.m */,
+				4266F51925CBD5ED00B9EF0B /* ShadeView.h */,
+			);
+			path = ShadeView;
+			sourceTree = "<group>";
+		};
 		427733A22574C88D00A96A82 /* PopoverView */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,187 +395,6 @@
 				42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */,
 			);
 			path = VerificationCodeButton;
-			sourceTree = "<group>";
-		};
-		4284EA1825C93A9F00AF1A15 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA1925C93A9F00AF1A15 /* AbnormalView */,
-				4284EA1C25C93A9F00AF1A15 /* CYStarRateView */,
-				4284EA1F25C93A9F00AF1A15 /* CYTextView */,
-				4284EA2225C93A9F00AF1A15 /* VerificationCodeButton */,
-				4284EA2525C93A9F00AF1A15 /* Other */,
-				4284EA4F25C93A9F00AF1A15 /* WebVC */,
-				4284EA5225C93A9F00AF1A15 /* LinkageScrollView */,
-				4284EA5725C93A9F00AF1A15 /* GuidancePage */,
-				4284EA5A25C93A9F00AF1A15 /* TYCyclePagerView */,
-				4284EA5B25C93A9F00AF1A15 /* CYNavigationBarView */,
-			);
-			name = CustomView;
-			sourceTree = "<group>";
-		};
-		4284EA1925C93A9F00AF1A15 /* AbnormalView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA1A25C93A9F00AF1A15 /* AbnormalView.m */,
-				4284EA1B25C93A9F00AF1A15 /* AbnormalView.h */,
-			);
-			path = AbnormalView;
-			sourceTree = "<group>";
-		};
-		4284EA1C25C93A9F00AF1A15 /* CYStarRateView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA1D25C93A9F00AF1A15 /* CYStarRateView.m */,
-				4284EA1E25C93A9F00AF1A15 /* CYStarRateView.h */,
-			);
-			path = CYStarRateView;
-			sourceTree = "<group>";
-		};
-		4284EA1F25C93A9F00AF1A15 /* CYTextView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA2025C93A9F00AF1A15 /* BaseTextView.h */,
-				4284EA2125C93A9F00AF1A15 /* BaseTextView.m */,
-			);
-			path = CYTextView;
-			sourceTree = "<group>";
-		};
-		4284EA2225C93A9F00AF1A15 /* VerificationCodeButton */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA2325C93A9F00AF1A15 /* VerificationCodeButton.m */,
-				4284EA2425C93A9F00AF1A15 /* VerificationCodeButton.h */,
-			);
-			path = VerificationCodeButton;
-			sourceTree = "<group>";
-		};
-		4284EA2525C93A9F00AF1A15 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA2625C93A9F00AF1A15 /* PYSearch */,
-				4284EA3525C93A9F00AF1A15 /* NinaPagerView */,
-				4284EA3B25C93A9F00AF1A15 /* MLMSegmentPageView */,
-				4284EA4725C93A9F00AF1A15 /* TXScrollLabelView */,
-				4284EA4C25C93A9F00AF1A15 /* PopoverView */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		4284EA2625C93A9F00AF1A15 /* PYSearch */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA2725C93A9F00AF1A15 /* NSBundle+PYSearchExtension.h */,
-				4284EA2825C93A9F00AF1A15 /* UIColor+PYSearchExtension.m */,
-				4284EA2925C93A9F00AF1A15 /* PYSearchViewController.m */,
-				4284EA2A25C93A9F00AF1A15 /* PYSearchSuggestionViewController.m */,
-				4284EA2B25C93A9F00AF1A15 /* UIView+PYSearchExtension.h */,
-				4284EA2C25C93A9F00AF1A15 /* PYSearchConst.m */,
-				4284EA2D25C93A9F00AF1A15 /* PYSearch.bundle */,
-				4284EA2E25C93A9F00AF1A15 /* NSBundle+PYSearchExtension.m */,
-				4284EA2F25C93A9F00AF1A15 /* PYSearch.h */,
-				4284EA3025C93A9F00AF1A15 /* PYSearchSuggestionViewController.h */,
-				4284EA3125C93A9F00AF1A15 /* PYSearchViewController.h */,
-				4284EA3225C93A9F00AF1A15 /* UIColor+PYSearchExtension.h */,
-				4284EA3325C93A9F00AF1A15 /* PYSearchConst.h */,
-				4284EA3425C93A9F00AF1A15 /* UIView+PYSearchExtension.m */,
-			);
-			path = PYSearch;
-			sourceTree = "<group>";
-		};
-		4284EA3525C93A9F00AF1A15 /* NinaPagerView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA3625C93A9F00AF1A15 /* NinaPagerView.m */,
-				4284EA3725C93A9F00AF1A15 /* NinaBaseView.m */,
-				4284EA3825C93A9F00AF1A15 /* NinaPagerView.h */,
-				4284EA3925C93A9F00AF1A15 /* UIParameter.h */,
-				4284EA3A25C93A9F00AF1A15 /* NinaBaseView.h */,
-			);
-			path = NinaPagerView;
-			sourceTree = "<group>";
-		};
-		4284EA3B25C93A9F00AF1A15 /* MLMSegmentPageView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA3C25C93A9F00AF1A15 /* MLMSegmentManager.m */,
-				4284EA3D25C93A9F00AF1A15 /* MLMSegmentHead.m */,
-				4284EA3E25C93A9F00AF1A15 /* UIView+ViewController.m */,
-				4284EA3F25C93A9F00AF1A15 /* MLMSegmentScroll.m */,
-				4284EA4025C93A9F00AF1A15 /* UIView+EasyFrame.m */,
-				4284EA4125C93A9F00AF1A15 /* SegmentPageHead.h */,
-				4284EA4225C93A9F00AF1A15 /* MLMSegmentHead.h */,
-				4284EA4325C93A9F00AF1A15 /* UIView+ViewController.h */,
-				4284EA4425C93A9F00AF1A15 /* MLMSegmentManager.h */,
-				4284EA4525C93A9F00AF1A15 /* UIView+EasyFrame.h */,
-				4284EA4625C93A9F00AF1A15 /* MLMSegmentScroll.h */,
-			);
-			path = MLMSegmentPageView;
-			sourceTree = "<group>";
-		};
-		4284EA4725C93A9F00AF1A15 /* TXScrollLabelView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA4825C93A9F00AF1A15 /* TXScrollLabelView.h */,
-				4284EA4925C93A9F00AF1A15 /* UIView+TXFrame.h */,
-				4284EA4A25C93A9F00AF1A15 /* TXScrollLabelView.m */,
-				4284EA4B25C93A9F00AF1A15 /* UIView+TXFrame.m */,
-			);
-			path = TXScrollLabelView;
-			sourceTree = "<group>";
-		};
-		4284EA4C25C93A9F00AF1A15 /* PopoverView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA4D25C93A9F00AF1A15 /* CustomPopOverView.h */,
-				4284EA4E25C93A9F00AF1A15 /* CustomPopOverView.m */,
-			);
-			path = PopoverView;
-			sourceTree = "<group>";
-		};
-		4284EA4F25C93A9F00AF1A15 /* WebVC */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA5025C93A9F00AF1A15 /* WebVC.h */,
-				4284EA5125C93A9F00AF1A15 /* WebVC.m */,
-			);
-			path = WebVC;
-			sourceTree = "<group>";
-		};
-		4284EA5225C93A9F00AF1A15 /* LinkageScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA5325C93A9F00AF1A15 /* LinkageRootScrollView.h */,
-				4284EA5425C93A9F00AF1A15 /* LinkageSubScrollView.m */,
-				4284EA5525C93A9F00AF1A15 /* LinkageSubScrollView.h */,
-				4284EA5625C93A9F00AF1A15 /* LinkageRootScrollView.m */,
-			);
-			path = LinkageScrollView;
-			sourceTree = "<group>";
-		};
-		4284EA5725C93A9F00AF1A15 /* GuidancePage */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA5825C93A9F00AF1A15 /* GuidanceViewController.m */,
-				4284EA5925C93A9F00AF1A15 /* GuidanceViewController.h */,
-			);
-			path = GuidancePage;
-			sourceTree = "<group>";
-		};
-		4284EA5A25C93A9F00AF1A15 /* TYCyclePagerView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TYCyclePagerView;
-			sourceTree = "<group>";
-		};
-		4284EA5B25C93A9F00AF1A15 /* CYNavigationBarView */ = {
-			isa = PBXGroup;
-			children = (
-				4284EA5C25C93A9F00AF1A15 /* CYNavBarView.h */,
-				4284EA5D25C93A9F00AF1A15 /* CYNavBarView.m */,
-			);
-			path = CYNavigationBarView;
 			sourceTree = "<group>";
 		};
 		4284EA7C25C93F3300AF1A15 /* CYTextView */ = {
@@ -811,12 +562,12 @@
 		C18D661F2009FDAB001B5CCA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				4284EA7C25C93F3300AF1A15 /* CYTextView */,
 				E599B950240F9CAD00C3A55F /* WebVC */,
+				4266F51725CBD5ED00B9EF0B /* ShadeView */,
 				E599B95C240F9D7300C3A55F /* AbnormalView */,
 				C18D66282009FDAB001B5CCA /* GuidancePage */,
 				427733B02574C8F500A96A82 /* LinkageScrollView */,
-				4284EA1825C93A9F00AF1A15 /* CustomView */,
+				4284EA7C25C93F3300AF1A15 /* CYTextView */,
 				C11B4835206627C8009857D9 /* CYStarRateView */,
 				C11B4838206627C8009857D9 /* CYNavigationBarView */,
 				42810A392568F42C0056E4A9 /* VerificationCodeButton */,
@@ -1359,7 +1110,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18D65C12009E6D7001B5CCA /* LaunchScreen.storyboard in Resources */,
-				4284EA6625C93A9F00AF1A15 /* PYSearch.bundle in Resources */,
 				C18D65BE2009E6D7001B5CCA /* Assets.xcassets in Resources */,
 				C11B48BF20662848009857D9 /* PYSearch.bundle in Resources */,
 				C18D65BC2009E6D7001B5CCA /* Main.storyboard in Resources */,
@@ -1421,33 +1171,24 @@
 				427DCB81259C6841009A5ABE /* UIView+EasyFrame.m in Sources */,
 				E5083DC12417713000E13C03 /* SecondVC.m in Sources */,
 				423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */,
-				4284EA7125C93A9F00AF1A15 /* UIView+TXFrame.m in Sources */,
 				E50AE3C92466518100D93B4A /* CYFileManager.m in Sources */,
 				E599BD07240FA9A000C3A55F /* UIView+Helper.m in Sources */,
 				E599BD00240FA9A000C3A55F /* UIImage+Category.m in Sources */,
 				423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */,
-				4284EA7525C93A9F00AF1A15 /* LinkageRootScrollView.m in Sources */,
 				E53D95B524625818000FF680 /* NSMutableDictionary+Safe.m in Sources */,
-				4284EA6525C93A9F00AF1A15 /* PYSearchConst.m in Sources */,
 				C11B48C020662848009857D9 /* PYSearchConst.m in Sources */,
-				4284EA6125C93A9F00AF1A15 /* VerificationCodeButton.m in Sources */,
 				E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */,
 				E599BD09240FA9A000C3A55F /* NSString+Helper.m in Sources */,
 				E599BD0E240FA9A000C3A55F /* MBProgressHUD+Extension.m in Sources */,
 				E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */,
-				4284EA6725C93A9F00AF1A15 /* NSBundle+PYSearchExtension.m in Sources */,
 				E599BD37240FB82600C3A55F /* BaseTabBarController.m in Sources */,
 				423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */,
-				4284EA7025C93A9F00AF1A15 /* TXScrollLabelView.m in Sources */,
 				427733AC2574C88D00A96A82 /* CustomPopOverView.m in Sources */,
-				4284EA6325C93A9F00AF1A15 /* PYSearchViewController.m in Sources */,
 				E5083DC42417715600E13C03 /* ThirdVC.m in Sources */,
 				E599BD02240FA9A000C3A55F /* UIScrollView+Helper.m in Sources */,
-				4284EA6F25C93A9F00AF1A15 /* UIView+EasyFrame.m in Sources */,
 				E599BAC9240FA1F700C3A55F /* LoginVC.m in Sources */,
 				E599BD3B240FB82600C3A55F /* BackButton.m in Sources */,
 				427DCB80259C6841009A5ABE /* MLMSegmentScroll.m in Sources */,
-				4284EA6825C93A9F00AF1A15 /* UIView+PYSearchExtension.m in Sources */,
 				E599B953240F9CAD00C3A55F /* WebVC.m in Sources */,
 				E599BD06240FA9A000C3A55F /* UIView+AbnormalView.m in Sources */,
 				E599BD12240FA9A000C3A55F /* NSDate+Helper.m in Sources */,
@@ -1455,23 +1196,18 @@
 				E599BD0B240FA9A000C3A55F /* UIViewController+Helper.m in Sources */,
 				E599B95F240F9D7300C3A55F /* AbnormalView.m in Sources */,
 				C11B48BE20662848009857D9 /* NSBundle+PYSearchExtension.m in Sources */,
-				4284EA6A25C93A9F00AF1A15 /* NinaBaseView.m in Sources */,
-				4284EA7625C93A9F00AF1A15 /* GuidanceViewController.m in Sources */,
 				42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */,
 				E599BD0D240FA9A000C3A55F /* UINavigationController+Cloudox.m in Sources */,
 				427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */,
 				C11B48C120662848009857D9 /* PYSearchSuggestionViewController.m in Sources */,
-				4284EA7325C93A9F00AF1A15 /* WebVC.m in Sources */,
 				E599BD08240FA9A000C3A55F /* UIImageView+Helper.m in Sources */,
 				E5083DEB241793D800E13C03 /* NetworkManager+Home.m in Sources */,
 				C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */,
-				4284EA6425C93A9F00AF1A15 /* PYSearchSuggestionViewController.m in Sources */,
 				E50AE3C82466518100D93B4A /* Encryption.m in Sources */,
 				E50AE3CA2466518100D93B4A /* RegularExpressionTool.m in Sources */,
 				427733B62574C8F500A96A82 /* LinkageRootScrollView.m in Sources */,
 				E599BD20240FA9A000C3A55F /* NENSinglePinger.m in Sources */,
 				E599BD0C240FA9A000C3A55F /* UINavigationController+Helper.m in Sources */,
-				4284EA5F25C93A9F00AF1A15 /* CYStarRateView.m in Sources */,
 				C18D664F2009FDB7001B5CCA /* NetworkManager.m in Sources */,
 				E599BD0A240FA9A000C3A55F /* NSString+Category.m in Sources */,
 				427733BC2574C95F00A96A82 /* TXScrollLabelView.m in Sources */,
@@ -1479,48 +1215,38 @@
 				C11B48C420662848009857D9 /* UIView+PYSearchExtension.m in Sources */,
 				E5083DC72417716A00E13C03 /* MeVC.m in Sources */,
 				4284EA7F25C93F3300AF1A15 /* BaseTextView.m in Sources */,
-				4284EA6025C93A9F00AF1A15 /* BaseTextView.m in Sources */,
+				4266F51A25CBD5ED00B9EF0B /* ShadeView.m in Sources */,
 				E599BD10240FA9A000C3A55F /* NSObject+Helper.m in Sources */,
-				4284EA6D25C93A9F00AF1A15 /* UIView+ViewController.m in Sources */,
 				E599BAC3240FA13C00C3A55F /* UserInfoModel.m in Sources */,
 				E599BD11240FA9A000C3A55F /* UITextField+Helper.m in Sources */,
 				C18D65C42009E6D7001B5CCA /* main.m in Sources */,
 				E599BD05240FA9A000C3A55F /* UIView+Frame.m in Sources */,
-				4284EA6E25C93A9F00AF1A15 /* MLMSegmentScroll.m in Sources */,
 				E53D95B624625818000FF680 /* NSMutableString+Safe.m in Sources */,
 				427DCB7E259C6841009A5ABE /* MLMSegmentHead.m in Sources */,
-				4284EA7225C93A9F00AF1A15 /* CustomPopOverView.m in Sources */,
 				C11B48ED20662B63009857D9 /* LaunchVC.m in Sources */,
 				E599BD1E240FA9A000C3A55F /* AppInfo.m in Sources */,
 				E599BACA240FA1F700C3A55F /* RegisterVC.m in Sources */,
-				4284EA5E25C93A9F00AF1A15 /* AbnormalView.m in Sources */,
 				E53D95BA24625818000FF680 /* NSObject+ImpChangeTool.m in Sources */,
 				E599BD22240FA9A000C3A55F /* NENPingManager.m in Sources */,
 				427DCB7F259C6841009A5ABE /* UIView+ViewController.m in Sources */,
 				E599BD35240FB82600C3A55F /* BaseViewController.m in Sources */,
-				4284EA6C25C93A9F00AF1A15 /* MLMSegmentHead.m in Sources */,
 				C18D65B62009E6D7001B5CCA /* AppDelegate.m in Sources */,
-				4284EA7725C93A9F00AF1A15 /* CYNavBarView.m in Sources */,
 				C11B48EF20662BEA009857D9 /* Common.m in Sources */,
 				E599BD04240FA9A000C3A55F /* UIButton+Category.m in Sources */,
 				E53D95B924625818000FF680 /* NSArray+Safe.m in Sources */,
 				E53D95B724625818000FF680 /* NSDictionary+Safe.m in Sources */,
 				C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */,
 				4262EC0725ABFEAC001C0C95 /* HomeCyCleViewCell.m in Sources */,
-				4284EA6925C93A9F00AF1A15 /* NinaPagerView.m in Sources */,
 				E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */,
 				427733B52574C8F500A96A82 /* LinkageSubScrollView.m in Sources */,
 				E599BD01240FA9A000C3A55F /* UIImage+Helper.m in Sources */,
 				427733BD2574C95F00A96A82 /* UIView+TXFrame.m in Sources */,
-				4284EA7425C93A9F00AF1A15 /* LinkageSubScrollView.m in Sources */,
 				E599BD0F240FA9A000C3A55F /* CALayer+Helper.m in Sources */,
 				E599BD03240FA9A000C3A55F /* UILabel+Helper.m in Sources */,
 				E599BD3A240FB82600C3A55F /* BaseTabBar.m in Sources */,
 				E5083DBE2417712000E13C03 /* HomeVC.m in Sources */,
 				C11B48C320662848009857D9 /* UIColor+PYSearchExtension.m in Sources */,
-				4284EA6225C93A9F00AF1A15 /* UIColor+PYSearchExtension.m in Sources */,
 				E599BD38240FB82600C3A55F /* BaseTextField.m in Sources */,
-				4284EA6B25C93A9F00AF1A15 /* MLMSegmentManager.m in Sources */,
 				E53D95B824625818000FF680 /* NSObject+Swizzling.m in Sources */,
 				427DCB7D259C6841009A5ABE /* MLMSegmentManager.m in Sources */,
 				E599B95B240F9D3400C3A55F /* NinaBaseView.m in Sources */,

@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width;
 /** 计算文字宽度 */
 - (CGFloat)calculateWidthWithFont:(UIFont *)font;
+
+/** 字符串转化成 HTML 格式内容*/
+- (NSAttributedString *)HTMLAttributedString;
+- (NSAttributedString *)HTMLAttributedStringWithFont:(UIFont * __nullable)font;
 @end
 @interface NSString (RegEx)
 - (NSString *)justChinese;

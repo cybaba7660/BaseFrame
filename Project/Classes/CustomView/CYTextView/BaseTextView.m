@@ -27,13 +27,13 @@
     self.placeholderLabel.text = placeholder;
     [self.placeholderLabel sizeToFit];
 }
-- (void)setLimitLength:(NSInteger)limitLength {
+- (void)setLimitLength:(NSUInteger)limitLength {
     _limitLength = limitLength;
-    self.limitLengthLabel.text = [NSString stringWithFormat:@"%zd/%zd%@", self.textView.text.length, _limitLength, _limitLengthLabelAppendText];
+    [self refreshLimitLengthLabelText];
 }
 - (void)setLimitLengthLabelAppendText:(NSString *)limitLengthLabelAppendText {
     _limitLengthLabelAppendText = limitLengthLabelAppendText;
-    self.limitLengthLabel.text = [NSString stringWithFormat:@"%zd/%zd%@", self.textView.text.length, _limitLength, _limitLengthLabelAppendText];
+    [self refreshLimitLengthLabelText];
 }
 - (void)setFont:(UIFont *)font {
     _font = font;

@@ -18,6 +18,31 @@
     NSDictionary *attrs = @{NSFontAttributeName:font};
     return [self boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attrs context:nil].size.width;
 }
+
+- (NSAttributedString *)HTMLAttributedString {
+    return [self HTMLAttributedStringWithFont:nil];
+}
+- (NSAttributedString *)HTMLAttributedStringWithFont:(UIFont *)font {
+    NSDictionary *attrs = @{
+        NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
+        NSCharacterEncodingDocumentAttribute :@(NSUTF8StringEncoding),
+    };
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithData:data options:attrs documentAttributes:nil error:nil];
+    
+    /*
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.firstLineHeadIndent = WIDTH(8);
+    paragraph.headIndent = WIDTH(8);
+    [attr addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, attr.length)];
+     */
+    
+    if (!font) {
+        font = Font_Regular(15);
+    }
+    [attr addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attr.length)];
+    return attr.copy;
+}
 @end
 
 @implementation NSString (RegEx)
