@@ -33,24 +33,31 @@
     return instance;
 }
 
+//Text
 - (void)widthToFit {
     [self widthToFitWithIncrease:0];
 }
 - (void)widthToFitWithIncrease:(CGFloat)increase {
-    if (self.attributedText.length) {
-        self.width = [self.attributedText calculateWidth] + increase;
-    }else {
-        self.width = [self.text calculateWidthWithFont:self.font] + increase;
-    }
+    self.width = [self.text calculateWidthWithFont:self.font] + increase;
 }
 - (void)heightToFit {
     [self heightToFitWithIncrease:0];
 }
 - (void)heightToFitWithIncrease:(CGFloat)increase {
-    if (self.attributedText.length) {
-        self.height = [self.attributedText calculateHeightWithLimitWidth:self.width] + increase;
-    }else {
-        self.height = [self.text calculateHeightWithFont:self.font limitWidth:self.width] + increase;
-    }
+    self.height = [self.text calculateHeightWithFont:self.font limitWidth:self.width] + increase;
+}
+
+//AttributedText
+- (void)widthToFitByAttributedText {
+    [self widthToFitByAttributedTextWithIncrease:0];
+}
+- (void)widthToFitByAttributedTextWithIncrease:(CGFloat)increase {
+    self.width = [self.attributedText calculateWidth] + increase;
+}
+- (void)heightToFitByAttributedText {
+    [self heightToFitByAttributedTextWithIncrease:0];
+}
+- (void)heightToFitByAttributedTextWithIncrease:(CGFloat)increase {
+    self.height = [self.attributedText calculateHeightWithLimitWidth:self.width] + increase;
 }
 @end
