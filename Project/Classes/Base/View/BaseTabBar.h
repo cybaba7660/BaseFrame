@@ -14,8 +14,8 @@
 @property (nonatomic, strong) UIImage *selectedImage;
 @property (nonatomic, assign) BOOL raised;
 @property (nonatomic, assign) NSInteger index;
-@property (nonatomic, copy) CallBackBlock callBack;
-+ (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CallBackBlock)clickedEvent;
+@property (nonatomic, copy) CommonBlock callBack;
++ (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CommonBlock)clickedEvent;
 @end
 
 @class BaseTabBar;

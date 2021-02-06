@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL showCloseItemIfNeeded;
 @property (nonatomic, strong) WKWebViewConfiguration *webViewConfig;
 //@property (nonatomic, copy) NSDictionary *formData;
-@property (nonatomic, copy) CallBackBlock callBack;
+@property (nonatomic, copy) CommonBlock callBack;
 - (instancetype)initWithHidesBottomBar:(BOOL)hide;
 - (void)refreshNavBarWithOrientationIsLandscape:(BOOL)isLandscape;
 - (void)loadLink;

@@ -9,8 +9,7 @@
 #ifndef Common_h
 #define Common_h
 
-typedef void(^CallBackBlock)(id obj);
-
+#import "Macro.h"
 #import "BaseTextField.h"
 #import "BaseNavigationController.h"
 #import "SystemManager.h"

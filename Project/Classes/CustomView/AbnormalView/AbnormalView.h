@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AbnormalView : UIView
-+ (void)showInView:(UIView *)inView imageName:(NSString *)imageName tips:(NSString *)tips refreshText:(NSString * __nullable)refreshText refreshEvent:(CallBackBlock __nullable)refreshEvent;
++ (void)showInView:(UIView *)inView imageName:(NSString *)imageName tips:(NSString *)tips refreshText:(NSString * __nullable)refreshText refreshEvent:(CommonBlock __nullable)refreshEvent;
 - (void)dismiss;
 @end
 

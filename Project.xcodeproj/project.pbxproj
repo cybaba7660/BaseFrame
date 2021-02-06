@@ -113,6 +113,7 @@
 		4262EC0625ABFEAC001C0C95 /* HomeCyCleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCyCleViewCell.h; sourceTree = "<group>"; };
 		4266F51825CBD5ED00B9EF0B /* ShadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadeView.m; sourceTree = "<group>"; };
 		4266F51925CBD5ED00B9EF0B /* ShadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadeView.h; sourceTree = "<group>"; };
+		42717C6D25CCEE6C00481303 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		427733A32574C88D00A96A82 /* CustomPopOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopOverView.h; sourceTree = "<group>"; };
 		427733A42574C88D00A96A82 /* CustomPopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopOverView.m; sourceTree = "<group>"; };
 		427733B12574C8F500A96A82 /* LinkageRootScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkageRootScrollView.h; sourceTree = "<group>"; };
@@ -548,13 +549,14 @@
 				C18D65B52009E6D7001B5CCA /* AppDelegate.m */,
 				C11B48EB20662B63009857D9 /* LaunchVC.h */,
 				C11B48EC20662B63009857D9 /* LaunchVC.m */,
-				C18D65F32009ECCE001B5CCA /* Project.pch */,
 				C18D65F82009F145001B5CCA /* Common.h */,
 				C11B48EE20662BEA009857D9 /* Common.m */,
 				C18D65BA2009E6D7001B5CCA /* Main.storyboard */,
 				C18D65BF2009E6D7001B5CCA /* LaunchScreen.storyboard */,
 				C18D65C22009E6D7001B5CCA /* Info.plist */,
 				C18D65C32009E6D7001B5CCA /* main.m */,
+				42717C6D25CCEE6C00481303 /* Macro.h */,
+				C18D65F32009ECCE001B5CCA /* Project.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

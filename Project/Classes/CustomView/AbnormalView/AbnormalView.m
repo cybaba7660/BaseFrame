@@ -10,7 +10,8 @@
 @interface AbnormalView () {
     
 }
-@property (nonatomic, copy) CallBackBlock refreshBlock;
+@property (nonatomic, copy) CommonBlock refreshBlock;
+@property (nonatomic, weak) UIView *contentView;
 @property (nonatomic, weak) UIImageView *tipsImageView;
 @property (nonatomic, weak) UILabel *tipsLabel;
 @property (nonatomic, weak) UIButton *reloadButton;
@@ -18,7 +19,7 @@
 @implementation AbnormalView
 #pragma mark - Set/Get
 #pragma mark - External
-+ (void)showInView:(UIView *)inView imageName:(NSString *)imageName tips:(NSString *)tips refreshText:(NSString *)refreshText refreshEvent:(CallBackBlock)refreshEvent {
++ (void)showInView:(UIView *)inView imageName:(NSString *)imageName tips:(NSString *)tips refreshText:(NSString *)refreshText refreshEvent:(CommonBlock)refreshEvent {
     if (!inView) {
         return;
     }
@@ -31,10 +32,15 @@
         view.alpha = 0;
         view.backgroundColor = UIColor.whiteColor;
         [inView addSubview:view];
+        view.layer.zPosition = 1;
+        
+        UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, view.width, 0)];
+        view.contentView = contentView;
+        [view addSubview:contentView];
         
         UIImageView *tipsImageView = [[UIImageView alloc] init];
         view.tipsImageView = tipsImageView;
-        [view addSubview:tipsImageView];
+        [contentView addSubview:tipsImageView];
         
         UILabel *tipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(PADDING_HORIZ, 0, PADDING_WIDTH, 0)];
         tipsLabel.text = tips;
@@ -42,7 +48,7 @@
         tipsLabel.font = Font_Regular(13);
         tipsLabel.textColor = COLOR_W(150);
         tipsLabel.textAlignment = NSTextAlignmentCenter;
-        [view addSubview:tipsLabel];
+        [contentView addSubview:tipsLabel];
         view.tipsLabel = tipsLabel;
         
         UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -53,7 +59,7 @@
         [reloadButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
         [reloadButton addTarget:view action:@selector(reloadButtonClickedEvent) forControlEvents:UIControlEventTouchUpInside];
         [reloadButton setAdjustsImageWhenHighlighted:NO];
-        [view addSubview:reloadButton];
+        [contentView addSubview:reloadButton];
         [reloadButton setCornerRadius:5];
         [reloadButton setClipsToBounds:YES];
     }
@@ -86,11 +92,10 @@
     
 }
 - (void)refreshIcon:(NSString *)icon {
-    CGFloat top = self.height / 10 * 3;
     CGFloat iconScale = self.superview.height / kSafeArea_H();
     UIImage *image = [UIImage imageNamed:icon];
     CGFloat iconX = (self.width - image.size.width * iconScale) / 2;
-    self.tipsImageView.frame = CGRectMake(iconX, top, image.size.width * iconScale, image.size.height * iconScale);
+    self.tipsImageView.frame = CGRectMake(iconX, 0, image.size.width * iconScale, image.size.height * iconScale);
     self.tipsImageView.image = image;
     [self refreshOrigin];
 }
@@ -108,6 +113,8 @@
 - (void)refreshOrigin {
     self.tipsLabel.top = self.tipsImageView.bottom;
     self.reloadButton.top = self.tipsLabel.bottom + HEIGHT_NT(12);
+    self.contentView.height = self.reloadButton.bottom;
+    self.contentView.centerY = self.height / 2;
 }
 #pragma mark - EventMethods
 - (void)reloadButtonClickedEvent {
