@@ -11,6 +11,7 @@
 
 #import "Macro.h"
 #import "BaseTextField.h"
+#import "BaseTextView.h"
 #import "BaseNavigationController.h"
 #import "SystemManager.h"
 #import "UserInfoModel.h"

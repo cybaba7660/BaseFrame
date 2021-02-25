@@ -45,6 +45,7 @@ static NSString *channel     = @"Publish channel";
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+//    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
 }
 #pragma mark - 极光推送
 - (void)initJPushSDKWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions

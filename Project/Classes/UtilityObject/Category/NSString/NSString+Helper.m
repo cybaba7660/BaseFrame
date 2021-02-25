@@ -37,11 +37,19 @@
     [attr addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, attr.length)];
      */
     
-    if (!font) {
-        font = Font_Regular(15);
+    if (font) {
+        [attr addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attr.length)];
     }
-    [attr addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, attr.length)];
     return attr.copy;
+}
+
+/** 编码*/
+- (NSString *)encodeByUTF8 {
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+/** 解码*/
+- (NSString *)decodeByUTF8 {
+    return [self stringByRemovingPercentEncoding];
 }
 @end
 

@@ -401,8 +401,6 @@
 		4284EA7C25C93F3300AF1A15 /* CYTextView */ = {
 			isa = PBXGroup;
 			children = (
-				4284EA7D25C93F3300AF1A15 /* BaseTextView.h */,
-				4284EA7E25C93F3300AF1A15 /* BaseTextView.m */,
 			);
 			path = CYTextView;
 			sourceTree = "<group>";
@@ -1045,6 +1043,8 @@
 				E599BD34240FB82600C3A55F /* BackButton.m */,
 				E599BD2E240FB82600C3A55F /* BaseTextField.h */,
 				E599BD31240FB82600C3A55F /* BaseTextField.m */,
+				4284EA7D25C93F3300AF1A15 /* BaseTextView.h */,
+				4284EA7E25C93F3300AF1A15 /* BaseTextView.m */,
 				E599BD2F240FB82600C3A55F /* BaseTabBarItem.h */,
 				E599BD32240FB82600C3A55F /* BaseTabBarItem.m */,
 			);

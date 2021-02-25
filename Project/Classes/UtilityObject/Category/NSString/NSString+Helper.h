@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** 字符串转化成 HTML 格式内容*/
 - (NSAttributedString *)HTMLAttributedString;
 - (NSAttributedString *)HTMLAttributedStringWithFont:(UIFont * __nullable)font;
+
+/** 编码*/
+- (NSString *)encodeByUTF8;
+/** 解码*/
+- (NSString *)decodeByUTF8;
 @end
 @interface NSString (RegEx)
 - (NSString *)justChinese;
