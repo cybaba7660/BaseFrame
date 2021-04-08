@@ -25,7 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)clean;
 
-//添加虚线
+///添加渐变图层
+- (void)addGradientColors:(NSArray <UIColor *>*)colors direction:(CALayerDirection)direction;
+
+///添加虚线
 - (void)setDashLineBorderWithLineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor lineDashPattern:(NSArray<NSNumber *> *)lineDashPattern;
 
 - (void)gradualDisplay;

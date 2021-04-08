@@ -60,6 +60,11 @@
     self.layer.borderWidth = 0;
     self.layer.shadowRadius = 0;
 }
+- (void)addGradientColors:(NSArray <UIColor *>*)colors direction:(CALayerDirection)direction {
+    CALayer *layer = [CALayer gradientLayerWithFrame:self.bounds colors:colors direction:direction];
+    layer.zPosition = -1;
+    [self.layer addSublayer:layer];
+}
 //dashLine
 - (void)setDashLineBorderWithLineWidth:(CGFloat)lineWidth lineColor:(UIColor *)lineColor lineDashPattern:(NSArray<NSNumber *> *)lineDashPattern {
     CAShapeLayer *dashLineLayer = [CAShapeLayer layer];

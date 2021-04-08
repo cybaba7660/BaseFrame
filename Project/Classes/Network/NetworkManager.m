@@ -82,11 +82,11 @@ static NetworkManager *networkInstance;
         }else {
             failure ? failure(rs) : nil;
         }
-        [self printSuccessLog:task parameters:parameters response:rs.responseData];
+        [self printLogSuccess:YES task:task parameters:parameters response:rs.responseData error:nil];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         Result *rs = [Result dealWithTask:task error:error];
         failure ? failure(rs) : nil;
-        [self printFailureLog:task parameters:parameters error:error];
+        [self printLogSuccess:NO task:task parameters:parameters response:nil error:error];
     }];
 }
 - (void)POST:(NSString *)url parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure {
@@ -109,27 +109,31 @@ static NetworkManager *networkInstance;
         }else {
             failure ? failure(rs) : nil;
         }
-        [self printSuccessLog:task parameters:parameters response:rs.responseData];
+        [self printLogSuccess:YES task:task parameters:parameters response:rs.responseData error:nil];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         Result *rs = [Result dealWithTask:task error:error];
         failure ? failure(rs) : nil;
-        [self printFailureLog:task parameters:parameters error:error];
+        [self printLogSuccess:NO task:task parameters:parameters response:nil error:error];
     }];
 }
-- (void)naturalPOST:(NSString *)url parameters:(id)parameters success:(void(^)(id response))success failure:(void(^)(NSString *error))failure {
-    [self.manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+- (void)naturalGET:(NSString *)url parameters:(id)parameters success:(void(^)(id response))success failure:(void(^)(NSString *error))failure {
+    [self.manager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         id responseData = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         success ? success(responseData) : nil;
+        [self printLogSuccess:YES task:task parameters:parameters response:responseData error:nil];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSString *errorText = error.userInfo[@"NSLocalizedDescription"];
         failure ? failure(errorText) : nil;
+        [self printLogSuccess:NO task:task parameters:parameters response:nil error:error];
     }];
 }
-- (void)printSuccessLog:(NSURLSessionDataTask *)task parameters:(NSDictionary *)parameters response:(id)response {
-    NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮DATA：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, response]);
-}
-- (void)printFailureLog:(NSURLSessionDataTask *)task parameters:(NSDictionary *)parameters error:(NSError *)error {
-    NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：❌❌❌❌❌❌❌❌❌❌❌❌❌❌\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮ERROR：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, error]);
+- (void)printLogSuccess:(BOOL)success task:(NSURLSessionDataTask *)task parameters:(NSDictionary *)parameters response:(id)response error:(NSError *)error {
+    if (success) {
+        NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：✅✅✅✅✅✅✅✅✅✅✅✅✅✅\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮DATA：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, response]);
+    }else {
+        NSString *errorText = error.userInfo[@"NSLocalizedDescription"];
+        NSLog(@"%@", [NSString stringWithFormat:@"\n-----------------------------------\n🤮API：%@\n🤮RESULT：❌❌❌❌❌❌❌❌❌❌❌❌❌❌\n🤮METHOD：%@\n🤮PARAMS：%@\n🤮ERROR：%@\n\n-----------------------------------\n", task.currentRequest.URL, task.currentRequest.HTTPMethod, parameters, errorText]);
+    }
 }
 - (void)requestAPPUpdateInfoSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
     NSDictionary *params = @{

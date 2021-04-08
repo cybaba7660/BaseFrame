@@ -36,6 +36,7 @@
 //自定义UI
 
 //类别
+#import "CALayer+Helper.h"
 #import "NSString+Category.h"
 #import "UIButton+Category.h"
 #import "UIButton+Helper.h"
@@ -44,7 +45,6 @@
 #import "UIImage+Category.h"
 #import "UIImage+Helper.h"
 #import "MBProgressHUD+Extension.h"
-#import "CALayer+Helper.h"
 #import "UITextField+Helper.h"
 #import "UIImageView+Helper.h"
 #import "NSString+Helper.h"

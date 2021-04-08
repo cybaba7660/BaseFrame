@@ -38,7 +38,7 @@ typedef void(^FailureBlock)(Result *rs);
 - (void)POST:(NSString *)url parameters:(id)parameters success:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void)POST:(NSString *)url parameters:(id)parameters progress:(void (^)(NSProgress *))downloadProgress success:(SuccessBlock)success failure:(FailureBlock)failure;
 
-- (void)naturalPOST:(NSString *)url parameters:(id)parameters success:(void(^)(id response))success failure:(void(^)(NSString *error))failure;
+- (void)naturalGET:(NSString *)url parameters:(id)parameters success:(void(^)(id response))success failure:(void(^)(NSString *error))failure;
 #pragma mark - start 应用相关
 /** 检测更新*/
 - (void)requestAPPUpdateInfoSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
