@@ -168,7 +168,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [JPUSHService resetBadge];
 }
 #pragma mark - 横竖屏
-//在UIApplication实现该方法
+//实现了该方法后，这里管理状态栏的横竖屏切换，优先级 手机导航旋转开关 > 这里 > 工程info.plist配置
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     return self.allowLandscape ? UIInterfaceOrientationMaskAll : UIInterfaceOrientationMaskPortrait;
 }

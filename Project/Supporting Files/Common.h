@@ -10,7 +10,7 @@
 #define Common_h
 
 #import "Macro.h"
-#import "BaseTextField.h"
+//#import "BaseTextField.h"
 #import "BaseTextView.h"
 #import "BaseNavigationController.h"
 #import "SystemManager.h"
@@ -56,6 +56,7 @@
 #import "UILabel+Helper.h"
 #import "UITableView+Helper.h"
 #import "UICollectionView+Helper.h"
+#import "CAAnimation+Helper.h"
 
 // 通知名
 UIKIT_EXTERN NSString * const kUserLoginNotification;       //用户登录通知

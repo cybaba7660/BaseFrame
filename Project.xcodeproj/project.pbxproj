@@ -10,6 +10,7 @@
 		423E2BB624F221D100C838C0 /* UICollectionView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB224F221D100C838C0 /* UICollectionView+Helper.m */; };
 		423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BB524F221D100C838C0 /* UITableView+Helper.m */; };
 		423E2BBD24F24F1400C838C0 /* UIButton+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */; };
+		42517A48267214F200CD2D02 /* CAAnimation+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42517A46267214F200CD2D02 /* CAAnimation+Helper.m */; };
 		4262EC0725ABFEAC001C0C95 /* HomeCyCleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4262EC0525ABFEAC001C0C95 /* HomeCyCleViewCell.m */; };
 		4266F51A25CBD5ED00B9EF0B /* ShadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266F51825CBD5ED00B9EF0B /* ShadeView.m */; };
 		427733AC2574C88D00A96A82 /* CustomPopOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427733A42574C88D00A96A82 /* CustomPopOverView.m */; };
@@ -109,6 +110,8 @@
 		423E2BB524F221D100C838C0 /* UITableView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Helper.m"; sourceTree = "<group>"; };
 		423E2BBB24F24F1400C838C0 /* UIButton+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Helper.h"; sourceTree = "<group>"; };
 		423E2BBC24F24F1400C838C0 /* UIButton+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Helper.m"; sourceTree = "<group>"; };
+		42517A46267214F200CD2D02 /* CAAnimation+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Helper.m"; sourceTree = "<group>"; };
+		42517A47267214F200CD2D02 /* CAAnimation+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Helper.h"; sourceTree = "<group>"; };
 		4262EC0525ABFEAC001C0C95 /* HomeCyCleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCyCleViewCell.m; sourceTree = "<group>"; };
 		4262EC0625ABFEAC001C0C95 /* HomeCyCleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCyCleViewCell.h; sourceTree = "<group>"; };
 		4266F51825CBD5ED00B9EF0B /* ShadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadeView.m; sourceTree = "<group>"; };
@@ -320,6 +323,15 @@
 				423E2BB524F221D100C838C0 /* UITableView+Helper.m */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		42517A45267214F200CD2D02 /* CAAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				42517A46267214F200CD2D02 /* CAAnimation+Helper.m */,
+				42517A47267214F200CD2D02 /* CAAnimation+Helper.h */,
+			);
+			path = CAAnimation;
 			sourceTree = "<group>";
 		};
 		4262EC0425ABFEAC001C0C95 /* Cell */ = {
@@ -830,6 +842,7 @@
 		E599BCA6240FA9A000C3A55F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				42517A45267214F200CD2D02 /* CAAnimation */,
 				E599BCA7240FA9A000C3A55F /* UIImage */,
 				E599BCAC240FA9A000C3A55F /* UIScrollView */,
 				E599BCAF240FA9A000C3A55F /* UILabel */,
@@ -1182,6 +1195,7 @@
 				E599BD1A240FA9A000C3A55F /* SystemManager.m in Sources */,
 				E599BD09240FA9A000C3A55F /* NSString+Helper.m in Sources */,
 				E599BD0E240FA9A000C3A55F /* MBProgressHUD+Extension.m in Sources */,
+				42517A48267214F200CD2D02 /* CAAnimation+Helper.m in Sources */,
 				E599BD21240FA9A000C3A55F /* SimplePing.m in Sources */,
 				E599BD37240FB82600C3A55F /* BaseTabBarController.m in Sources */,
 				423E2BB724F221D100C838C0 /* UITableView+Helper.m in Sources */,

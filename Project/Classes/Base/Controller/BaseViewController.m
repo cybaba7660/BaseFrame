@@ -64,7 +64,7 @@
     return UIColor.blackColor;
 }
 #pragma mark - Event
-#pragma mark - 横屏设置
+#pragma mark - 横屏设置(精细化控制每个 ViewController UI界面的横竖屏切换，优先级低于 AppDelegate 的代理方法 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window)
 - (BOOL)shouldAutorotate {
       return NO;
 }
