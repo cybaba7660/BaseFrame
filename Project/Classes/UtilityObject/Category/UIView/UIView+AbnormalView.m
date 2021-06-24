@@ -20,7 +20,7 @@
         NSString *refreshText = refreshEvent ? NSLocalizedString(@"重新加载", nil) : @"";
         [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:refreshText refreshEvent:refreshEvent];
     }else if (type == AbnormalTypeNoData) {
-        NSString *refreshText = refreshEvent ? NSLocalizedString(@"刷新试试", nil) : @"";
+        NSString *refreshText = refreshEvent ? NSLocalizedString(@"刷新一下", nil) : @"";
         [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:refreshText refreshEvent:refreshEvent];
     }else if (type == AbnormalTypeNotLogged) {
         NSString *refreshText = refreshEvent ? NSLocalizedString(@"马上登录", nil) : @"";
