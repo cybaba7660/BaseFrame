@@ -17,11 +17,14 @@
 }
 - (void)showAbnormalViewWithType:(AbnormalType)type tips:(NSString *)tips refreshEvent:(CommonBlock)refreshEvent {
     if (type == AbnormalTypeNetWorkError) {
-        [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:NSLocalizedString(@"重新加载", nil) refreshEvent:refreshEvent];
+        NSString *refreshText = refreshEvent ? NSLocalizedString(@"重新加载", nil) : @"";
+        [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:refreshText refreshEvent:refreshEvent];
     }else if (type == AbnormalTypeNoData) {
-        [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:nil refreshEvent:nil];
+        NSString *refreshText = refreshEvent ? NSLocalizedString(@"刷新试试", nil) : @"";
+        [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:refreshText refreshEvent:refreshEvent];
     }else if (type == AbnormalTypeNotLogged) {
-        [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:NSLocalizedString(@"马上登录", nil) refreshEvent:refreshEvent];
+        NSString *refreshText = refreshEvent ? NSLocalizedString(@"马上登录", nil) : @"";
+        [AbnormalView showInView:self imageName:@"abnormal_image" tips:tips refreshText:refreshText refreshEvent:refreshEvent];
     }
 }
 - (void)dismissAbnormalView {
