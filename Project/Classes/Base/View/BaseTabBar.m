@@ -7,12 +7,13 @@
 //
 
 #import "BaseTabBar.h"
-#define TAG_ITEM   1100
-#define TAG_ITEM_IMAGE  1200
-#define TAG_ITEM_LABEL  1300
-#define Magin 23
+#define TAG_ITEM            1100
+#define TAG_ITEM_IMAGE      1200
+#define TAG_ITEM_LABEL      1300
+#define Magin               23
+#define TOP_ICON            4
 @implementation TabBarItemConfig
-+ (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CommonBlock)clickedEvent {
++ (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CallBackBlock)clickedEvent {
     TabBarItemConfig *config = [[TabBarItemConfig alloc] init];
     config.title = title;
     config.image = image;
@@ -29,7 +30,7 @@
     NSMutableArray<TabBarItemConfig *> *customTabBarConfigs;
     UIView *lastSelectedCustomItem;
 }
-@property (nonatomic, copy) CommonBlock itemClickedEvent;
+@property (nonatomic, copy) CallBackBlock itemClickedEvent;
 @end
 
 @implementation BaseTabBar
@@ -51,11 +52,10 @@
     
     UILabel *textLabel = [[UILabel alloc] init];
     textLabel.tag = TAG_ITEM_LABEL;
-    textLabel.textColor = TABBAT_COLOR;
-    textLabel.font = Font_Regular(13);
+    textLabel.textColor = COLOR_W(144);
+    textLabel.font = [UIFont systemFontOfSize:10];
     textLabel.textAlignment = NSTextAlignmentCenter;
     [customTabBarItem addSubview:textLabel];
-    
     imageView.normalImage = config.image;
     imageView.selectedImage = config.selectedImage;
     textLabel.text = config.title;
@@ -93,9 +93,9 @@
             UIView *customItem = [self viewWithTag:TAG_ITEM + i];
             customItem.frame = CGRectMake(itemWidth * i, 0, itemWidth, kTabBar_H);
             UIImageView *imageView = [customItem viewWithTag:TAG_ITEM_IMAGE];
-            imageView.frame = CGRectMake(0, kDevice_Is_iPhoneX ? 0 : 4, itemWidth, 30);
+            imageView.frame = CGRectMake(0, TOP_ICON, itemWidth, 30);
             UILabel *textLabel = [customItem viewWithTag:TAG_ITEM_LABEL];
-            textLabel.frame = CGRectMake(0, kDevice_Is_iPhoneX ? 30 : 29, itemWidth, kDevice_Is_iPhoneX ? 20 : 19);
+            textLabel.frame = CGRectMake(0, kTabBar_H - 14, itemWidth, 14);
             if (arrm.firstObject.raised) {
                 customItem.top = -Magin;
                 customItem.height = kTabBar_H + Magin;
