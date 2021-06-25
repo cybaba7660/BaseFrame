@@ -22,7 +22,7 @@
 #define SCREEN_MAX      MAX(SCREEN_HEIGHT, SCREEN_WIDTH)
 
 #define MAIN_COLOR              RGBCOLOR(150, 150, 150)
-#define TABBAT_COLOR            RGBCOLOR(114, 109, 109)
+#define TABBAT_COLOR            RGBCOLOR(144, 144, 144)
 #define VC_BG_COLOR             COLOR_W(246)
 #define TEXT_COMMON_COLOR       COLOR_W(67)
 

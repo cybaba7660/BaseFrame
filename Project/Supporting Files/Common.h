@@ -9,8 +9,9 @@
 #ifndef Common_h
 #define Common_h
 
+typedef void(^CommonBlock)(id obj);
 #import "Macro.h"
-//#import "BaseTextField.h"
+#import "BaseTextField.h"
 #import "BaseTextView.h"
 #import "BaseNavigationController.h"
 #import "SystemManager.h"
@@ -65,3 +66,4 @@ UIKIT_EXTERN NSString * const kUserRegisterNotification;    //用户注册通知
 UIKIT_EXTERN NSString * const kUserModifyInfoNotification;  //用户修改资料通知
 
 #endif /* Common_h */
+
