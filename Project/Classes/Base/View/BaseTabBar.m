@@ -7,13 +7,13 @@
 //
 
 #import "BaseTabBar.h"
-#define TAG_ITEM            1100
-#define TAG_ITEM_IMAGE      1200
-#define TAG_ITEM_LABEL      1300
-#define Magin               23
+#define TAG_ITEM   1100
+#define TAG_ITEM_IMAGE  1200
+#define TAG_ITEM_LABEL  1300
+#define Magin 23
 #define TOP_ICON            4
 @implementation TabBarItemConfig
-+ (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CallBackBlock)clickedEvent {
++ (instancetype)configWithTitle:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage raised:(BOOL)raised index:(NSInteger)index clickedEvent:(CommonBlock)clickedEvent {
     TabBarItemConfig *config = [[TabBarItemConfig alloc] init];
     config.title = title;
     config.image = image;
@@ -30,7 +30,7 @@
     NSMutableArray<TabBarItemConfig *> *customTabBarConfigs;
     UIView *lastSelectedCustomItem;
 }
-@property (nonatomic, copy) CallBackBlock itemClickedEvent;
+@property (nonatomic, copy) CommonBlock itemClickedEvent;
 @end
 
 @implementation BaseTabBar
