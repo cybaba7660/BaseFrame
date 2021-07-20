@@ -60,4 +60,40 @@
 - (void)heightToFitByAttributedTextWithIncrease:(CGFloat)increase {
     self.height = [self.attributedText calculateHeightWithLimitWidth:self.width] + increase;
 }
+
+//Text color status.
+static const void *kNormalTextColor = &kNormalTextColor;
+- (void)setNormalTextColor:(UIColor *)normalTextColor {
+    objc_setAssociatedObject(self, kNormalTextColor, normalTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (!self.selected) {
+        self.textColor = normalTextColor;
+    }
+}
+- (UIColor *)normalTextColor {
+    return objc_getAssociatedObject(self, kNormalTextColor) ? : self.textColor;
+}
+
+static const void *kselectedTextColor = &kselectedTextColor;
+- (void)setSelectedTextColor:(UIColor *)selectedTextColor {
+    objc_setAssociatedObject(self, kselectedTextColor, selectedTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.selected) {
+        self.textColor = selectedTextColor;
+    }
+}
+- (UIColor *)selectedTextColor {
+    return objc_getAssociatedObject(self, kselectedTextColor);
+}
+
+static const void *kSelectedStatus = &kSelectedStatus;
+- (void)setSelected:(BOOL)selected {
+    objc_setAssociatedObject(self, kSelectedStatus, [NSNumber numberWithBool:selected], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (selected && self.selectedTextColor) {
+        self.textColor = self.selectedTextColor;
+    }else if (!selected && self.normalTextColor) {
+        self.textColor = self.normalTextColor;
+    }
+}
+- (BOOL)selected {
+    return [objc_getAssociatedObject(self, kSelectedStatus) boolValue];
+}
 @end

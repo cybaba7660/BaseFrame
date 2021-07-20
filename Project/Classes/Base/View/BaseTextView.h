@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface BaseTextView : UIView
 @property (nonatomic, copy) NSString *__nullable text;
+@property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, copy) NSString *placeholder;
 @property (nonatomic, strong) UIColor *placeholderColor;

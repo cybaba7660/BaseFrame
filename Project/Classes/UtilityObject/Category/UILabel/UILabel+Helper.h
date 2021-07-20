@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)widthToFitByAttributedTextWithIncrease:(CGFloat)increase;
 - (void)heightToFitByAttributedText;
 - (void)heightToFitByAttributedTextWithIncrease:(CGFloat)increase;
+
+//Text color status.
+@property (nonatomic, strong) UIColor *normalTextColor;
+@property (nonatomic, strong) UIColor *selectedTextColor;
+@property (nonatomic, assign) BOOL selected;
 @end
 
 NS_ASSUME_NONNULL_END

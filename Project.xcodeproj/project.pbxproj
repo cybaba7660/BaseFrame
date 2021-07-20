@@ -410,13 +410,6 @@
 			path = VerificationCodeButton;
 			sourceTree = "<group>";
 		};
-		4284EA7C25C93F3300AF1A15 /* CYTextView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CYTextView;
-			sourceTree = "<group>";
-		};
 		6029D8093044171CD7B8B59E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,7 +572,6 @@
 				E599B95C240F9D7300C3A55F /* AbnormalView */,
 				C18D66282009FDAB001B5CCA /* GuidancePage */,
 				427733B02574C8F500A96A82 /* LinkageScrollView */,
-				4284EA7C25C93F3300AF1A15 /* CYTextView */,
 				C11B4835206627C8009857D9 /* CYStarRateView */,
 				C11B4838206627C8009857D9 /* CYNavigationBarView */,
 				42810A392568F42C0056E4A9 /* VerificationCodeButton */,
