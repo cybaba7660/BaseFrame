@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void(^maxLengthEvent)(UITextView *textView);
 @property (nonatomic, copy) void(^textDidChanged)(UITextView *textView);
+@property (nonatomic, copy) void(^textDidBegin)(UITextView *textView);
 
 @property (nonatomic, assign) BOOL adaptiveHeight;
 @end

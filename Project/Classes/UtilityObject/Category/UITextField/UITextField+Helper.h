@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, TextFieldInputType) {
     TextFieldInputTypeVerificationCode
 };
 typedef NS_ENUM(NSUInteger, TextFieldInputLimit) {
+    TextFieldInputLimitNone = 0,
     TextFieldInputLimitChinese,
     TextFieldInputLimitNumber,
     TextFieldInputLimitDecimal,

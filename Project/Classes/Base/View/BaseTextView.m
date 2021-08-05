@@ -27,6 +27,10 @@
         [self textViewDidChange:self.textView];
     }
 }
+- (void)setTextColor:(UIColor *)textColor {
+    _textColor = textColor;
+    self.textView.textColor = textColor;
+}
 - (void)setFont:(UIFont *)font {
     _font = font;
     self.textView.font = font;
@@ -167,6 +171,9 @@
     [self setNeedsLayout];
     self.textDidChanged ? self.textDidChanged(textView) : nil;
     if (self.adaptiveHeight) [self adjustContentTextViewHeight];
+}
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    self.textDidBegin ? self.textDidBegin(textView) : nil;
 }
 #pragma mark - CommonMethods
 
