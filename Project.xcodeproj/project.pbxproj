@@ -26,6 +26,8 @@
 		427F6FA224D6A7A300977AA4 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 427F6FA124D6A7A300977AA4 /* NetworkReachabilityManager.m */; };
 		42810A3C2568F42C0056E4A9 /* VerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42810A3A2568F42C0056E4A9 /* VerificationCodeButton.m */; };
 		4284EA7F25C93F3300AF1A15 /* BaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4284EA7E25C93F3300AF1A15 /* BaseTextView.m */; };
+		42A37C2726BBDDE4008972FF /* LanguageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A37C2426BBDDE3008972FF /* LanguageModel.m */; };
+		42A37C2826BBDDE4008972FF /* SwitchLanguageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A37C2626BBDDE3008972FF /* SwitchLanguageVC.m */; };
 		C11B487A206627C8009857D9 /* CYStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B4837206627C8009857D9 /* CYStarRateView.m */; };
 		C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B483A206627C8009857D9 /* CYNavBarView.m */; };
 		C11B48ED20662B63009857D9 /* LaunchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C11B48EC20662B63009857D9 /* LaunchVC.m */; };
@@ -137,6 +139,10 @@
 		42810A3B2568F42C0056E4A9 /* VerificationCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationCodeButton.h; sourceTree = "<group>"; };
 		4284EA7D25C93F3300AF1A15 /* BaseTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextView.h; sourceTree = "<group>"; };
 		4284EA7E25C93F3300AF1A15 /* BaseTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextView.m; sourceTree = "<group>"; };
+		42A37C2326BBDDE3008972FF /* LanguageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageModel.h; sourceTree = "<group>"; };
+		42A37C2426BBDDE3008972FF /* LanguageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageModel.m; sourceTree = "<group>"; };
+		42A37C2526BBDDE3008972FF /* SwitchLanguageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchLanguageVC.h; sourceTree = "<group>"; };
+		42A37C2626BBDDE3008972FF /* SwitchLanguageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchLanguageVC.m; sourceTree = "<group>"; };
 		79309685694D3A097E741DDE /* libPods-Project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA68AC9A1EF23F570A6DC9D6 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		C11B4836206627C8009857D9 /* CYStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYStarRateView.h; sourceTree = "<group>"; };
@@ -392,6 +398,10 @@
 		42A37C2226BBD435008972FF /* SwitchLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				42A37C2326BBDDE3008972FF /* LanguageModel.h */,
+				42A37C2426BBDDE3008972FF /* LanguageModel.m */,
+				42A37C2526BBDDE3008972FF /* SwitchLanguageVC.h */,
+				42A37C2626BBDDE3008972FF /* SwitchLanguageVC.m */,
 			);
 			path = SwitchLanguage;
 			sourceTree = "<group>";
@@ -1194,6 +1204,7 @@
 				E599BD1E240FA9A000C3A55F /* AppInfo.m in Sources */,
 				E599BACA240FA1F700C3A55F /* RegisterVC.m in Sources */,
 				E53D95BA24625818000FF680 /* NSObject+ImpChangeTool.m in Sources */,
+				42A37C2726BBDDE4008972FF /* LanguageModel.m in Sources */,
 				E599BD22240FA9A000C3A55F /* NENPingManager.m in Sources */,
 				427DCB7F259C6841009A5ABE /* UIView+ViewController.m in Sources */,
 				E599BD35240FB82600C3A55F /* BaseViewController.m in Sources */,
@@ -1205,6 +1216,7 @@
 				C11B487B206627C8009857D9 /* CYNavBarView.m in Sources */,
 				4262EC0725ABFEAC001C0C95 /* HomeCyCleViewCell.m in Sources */,
 				E5083DEA241793D800E13C03 /* NetworkManager+User.m in Sources */,
+				42A37C2826BBDDE4008972FF /* SwitchLanguageVC.m in Sources */,
 				427733B52574C8F500A96A82 /* LinkageSubScrollView.m in Sources */,
 				E599BD01240FA9A000C3A55F /* UIImage+Helper.m in Sources */,
 				427733BD2574C95F00A96A82 /* UIView+TXFrame.m in Sources */,
