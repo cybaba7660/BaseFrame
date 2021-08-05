@@ -15,5 +15,6 @@ pod 'YYKit'
 #pod 'TYCyclePagerView'
 #pod 'UMCAnalytics'
 #pod 'UMCCommon'
+#pod "PYSearch"
 pod 'SAMKeychain'
 end
