@@ -87,4 +87,20 @@
 - (UIScrollView *)linkage_ScrollView {
     return objc_getAssociatedObject(self, _cmd);
 }
+
+- (void)linkage_scrollViewDidScroll {
+    if (self.linkage_ScrollView.linkage_ScrollEnable) {
+        self.contentOffset = CGPointMake(self.contentOffset.x, 0);
+        return;
+    }
+    CGFloat offsetY = self.contentOffset.y;
+    CGFloat maxOffsetY = self.contentSize.height - self.height;
+    if (offsetY <= 0) {
+        self.linkage_ScrollEnable = NO;
+        self.linkage_ScrollView.linkage_ScrollEnable = YES;
+    }else if (offsetY >= maxOffsetY) {
+    }else {
+        
+    }
+}
 @end

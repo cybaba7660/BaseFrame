@@ -9,14 +9,16 @@
 #import "NSString+Helper.h"
 
 @implementation NSString (Helper)
-- (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width {
-    NSDictionary *attrs = @{NSFontAttributeName:font};
-    return [self boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attrs context:nil].size.height;
-}
-
 - (CGFloat)calculateWidthWithFont:(UIFont *)font {
     NSDictionary *attrs = @{NSFontAttributeName:font};
     return [self boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attrs context:nil].size.width;
+}
+- (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width {
+    return [self calculateHeightWithFont:font limitWidth:width limitHeight:CGFLOAT_MAX];
+}
+- (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width limitHeight:(CGFloat)height {
+    NSDictionary *attrs = @{NSFontAttributeName:font};
+    return [self boundingRectWithSize:CGSizeMake(width, height) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attrs context:nil].size.height;
 }
 
 - (NSAttributedString *)HTMLAttributedString {

@@ -17,8 +17,11 @@
 #endif
 static NSString *JPushAppKey = @"d26c424e6a81829f81fc6299";
 static NSString *channel     = @"Publish channel";
-//static NSString *UMAppKey       = @"5dd5ffe1570df379b8000389";
-//static BOOL isProduction     = 1;
+
+//友盟统计
+//#import <UMCommon/UMCommon.h>
+//#import <UMAnalytics/MobClick.h>
+static NSString *UMAppKey    = @"6114c352e623447a331b6f31";
 @interface AppDelegate ()
 
 @end
@@ -37,6 +40,9 @@ static NSString *channel     = @"Publish channel";
     self.allowLandscape = NO;
     self.tabBarController = [[BaseTabBarController alloc] init];
     
+    //友盟统计
+    [self initUMAnalytics];
+    
     // 初始化极光推送
     [self initJPushSDKWithApplication:application options:launchOptions];
     return YES;
@@ -46,6 +52,12 @@ static NSString *channel     = @"Publish channel";
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 //    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+}
+- (void)initUMAnalytics {
+//    [UMConfigure initWithAppkey:UMAppKey channel:channel];
+//    [UMConfigure setLogEnabled:YES];
+//    [MobClick setScenarioType:E_UM_NORMAL];
+//    [MobClick setCrashReportEnabled:YES];
 }
 #pragma mark - 极光推送
 - (void)initJPushSDKWithApplication:(UIApplication *)application options:(NSDictionary *)launchOptions

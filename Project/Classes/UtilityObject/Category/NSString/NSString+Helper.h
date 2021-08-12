@@ -11,10 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Helper)
-/** 计算文字高度*/
-- (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width;
 /** 计算文字宽度 */
 - (CGFloat)calculateWidthWithFont:(UIFont *)font;
+/** 计算文字高度*/
+- (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width;
+- (CGFloat)calculateHeightWithFont:(UIFont *)font limitWidth:(CGFloat)width limitHeight:(CGFloat)height;
 
 /** 字符串转化成 HTML 格式内容*/
 - (NSAttributedString *)HTMLAttributedString;

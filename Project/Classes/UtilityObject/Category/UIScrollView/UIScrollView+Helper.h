@@ -29,6 +29,7 @@ typedef NS_ENUM(NSUInteger, LinkageOffset) {
 };
 @property (nonatomic, assign) BOOL linkage_ScrollEnable;
 @property (nonatomic, retain) UIScrollView *linkage_ScrollView;
+- (void)linkage_scrollViewDidScroll;
 @end
 
 NS_ASSUME_NONNULL_END
