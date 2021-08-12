@@ -15,7 +15,7 @@
     };
 }
 + (void)requestLanguageWithCompleted:(void(^)(BOOL finished))completed {
-    [[NetworkManager shareManager] appLanguageWithSuccess:^(Result *rs) {
+//    [[NetworkManager shareManager] appLanguageWithSuccess:^(Result *rs) {
 //        NSMutableArray *tempArr = rs.list.mutableCopy;
 //        [rs.list enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //            NSString *key = @"identy";
@@ -29,18 +29,18 @@
 //            }
 //        }];
 //        rs.list = tempArr;
-        BOOL result = [rs.list writeToFile:[self filePath] atomically:YES];
-        if (result) {
-            NSLog(@"语言列表保存成功");
-        }else {
-            NSLog(@"语言列表保存失败");
-        }
-        completed ? completed(YES) : nil;
-    } failure:^(Result *rs) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self requestLanguageWithCompleted:completed];
-        });
-    }];
+//        BOOL result = [rs.list writeToFile:[self filePath] atomically:YES];
+//        if (result) {
+//            NSLog(@"语言列表保存成功");
+//        }else {
+//            NSLog(@"语言列表保存失败");
+//        }
+//        completed ? completed(YES) : nil;
+//    } failure:^(Result *rs) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self requestLanguageWithCompleted:completed];
+//        });
+//    }];
 }
 + (NSArray<LanguageModel *> *)languageList {
     NSArray *list = [NSArray arrayWithContentsOfFile:[self filePath]];

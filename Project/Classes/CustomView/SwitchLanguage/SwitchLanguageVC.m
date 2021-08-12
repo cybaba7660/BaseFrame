@@ -9,6 +9,7 @@
 #import "SwitchLanguageVC.h"
 #import <LanguageManager.h>
 #import "BaseTabBarController.h"
+#import "LanguageModel.h"
 
 @interface SwitchLanguageVC ()<UITableViewDelegate, UITableViewDataSource> {
     NSArray *languages;

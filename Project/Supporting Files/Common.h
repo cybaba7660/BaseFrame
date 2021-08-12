@@ -33,6 +33,7 @@ typedef void(^CommonBlock)(id obj);
 #import <Masonry.h>
 #import <SAMKeychain.h>
 #import <YYKit.h>
+#import <LanguageManager.h>
 
 //自定义UI
 

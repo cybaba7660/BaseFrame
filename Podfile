@@ -17,4 +17,5 @@ pod 'YYKit'
 #pod 'UMCCommon'
 #pod "PYSearch"
 pod 'SAMKeychain'
+pod 'CCLocalizedLanguage'
 end
