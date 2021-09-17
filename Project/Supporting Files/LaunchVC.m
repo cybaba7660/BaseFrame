@@ -21,12 +21,29 @@
     imageView.image        = [UIImage imageNamed:@"launchImage"];
     [self.view addSubview:imageView];
     
-    //app版本信息
-    [self appInfomation];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self completed];
-    });
+    [self testingDomains];
+}
+- (void)testingDomains {
+    [NetworkManager testingDomainsWithCompleted:^(BOOL validity) {
+        if (validity) {
+            //app版本信息
+            [AppInfo requestVersionWithCompleted:^(NSString *error, BOOL newVersion) {
+                [AppInfo checkVersion];
+                [self completed];
+            }];
+        }else {
+            [self showTestingDoaminsErrorAlert];
+        }
+    }];
+}
+- (void)showTestingDoaminsErrorAlert {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"网络连接失败，请稍后重试", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"重新使用接口池");
+        [self testingDomains];
+    }];
+    [alert addAction:confirmAction];
+    [SystemManager.currentVC presentViewController:alert animated:YES completion:nil];
 }
 - (void)completed {
     CATransition *transition = [[CATransition alloc] init];
@@ -35,12 +52,6 @@
     [transition setSubtype:kCATransitionFromRight];
     [KeyWindow.layer addAnimation:transition forKey:@"animation"];
     KeyWindow.rootViewController = [(AppDelegate *)[UIApplication sharedApplication].delegate tabBarController];
-//    [SystemManager autoLoginCompleted:^(bool result) {
-//
-//    }];
 }
 #pragma mark - 获取app信息
-- (void)appInfomation {
-    [AppInfo checkVersion];
-}
 @end

@@ -10,8 +10,8 @@
 #define NetworkUrl_h
 
 static BOOL const isProduction = 0;
-#define BASE_URL        @""
-#define BASE_URL_TEST   @""
+//#define BASE_URL        @""
+//#define BASE_URL_TEST   @""
 #define STATIC_DOMAINS_DEVELOPMENT \
 @[ \
 ]

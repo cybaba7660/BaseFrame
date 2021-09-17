@@ -31,11 +31,11 @@ static NetworkManager *networkInstance;
     static dispatch_once_t networkToken;
     dispatch_once(&networkToken, ^{
         networkInstance = [super allocWithZone:zone];
-        if (isProduction) {
-            networkInstance.domain = BASE_URL;
-        }else {
-            networkInstance.domain = BASE_URL_TEST;
-        }
+//        if (isProduction) {
+//            networkInstance.domain = BASE_URL;
+//        }else {
+//            networkInstance.domain = BASE_URL_TEST;
+//        }
     });
     return networkInstance;
 }

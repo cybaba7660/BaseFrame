@@ -19,7 +19,8 @@
 @property (nonatomic, assign) BOOL haveNewVersion;
 
 /** 检查版本*/
++ (void)requestVersion;
++ (void)requestVersionWithCompleted:(void(^)(NSString *error, BOOL newVersion))completed;
 + (void)checkVersion;
-+ (void)checkVersionWithCompleted:(void(^)(NSString *error, BOOL newVersion))completed;
 + (instancetype)info;
 @end

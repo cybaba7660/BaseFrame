@@ -18,12 +18,12 @@
     NSString *serviceVersion = self.version;
     return ![appVersion isEqualToString:serviceVersion];
 }
-+ (void)checkVersion {
-    [self checkVersionWithCompleted:nil];
++ (void)requestVersion {
+    [self requestVersionWithCompleted:nil];
 }
-+ (void)checkVersionWithCompleted:(void(^)(NSString *error, BOOL newVersion))completed {
++ (void)requestVersionWithCompleted:(void(^)(NSString *error, BOOL newVersion))completed {
     [[NetworkManager shareManager] requestAPPUpdateInfoSuccess:^(Result *rs) {
-        if (rs.code) {
+        if (rs.code == 0) {
             AppInfo *info = [AppInfo modelWithDictionary:rs.dict];
             if (!info) {
                 completed ? completed(@"未查询到版本信息", nil) : nil;
@@ -39,18 +39,23 @@
 
 + (void)dealInfo:(AppInfo *)info {
     [info saveToSandbox];
+}
++ (void)checkVersion {
+    AppInfo *info = AppInfo.info;
     if (info.haveNewVersion) {
         BOOL mandatory = [info.is_force isEqualToString:@"Y"];
         NSString *confirmTitle = @"去更新";
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"发现新版本" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:info.content preferredStyle:UIAlertControllerStyleAlert];
+        
         if (!mandatory) {
             UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
             [alert addAction:cancleAction];
         }
+        
         UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:confirmTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSURL *url = [NSURL URLWithString:info.download_url];
             if ([[UIApplication sharedApplication] canOpenURL:url]) {
-                [[UIApplication sharedApplication] openURL:url];
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             }
         }];
         [alert addAction:confirmAction];
