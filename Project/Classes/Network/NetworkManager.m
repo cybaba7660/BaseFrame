@@ -196,9 +196,9 @@ static NetworkManager *networkInstance;
     [self stringValue:responseData];
     rs.responseData = responseData;
     if ([responseData isKindOfClass:[NSDictionary class]]) {
-        rs.code = [responseData[@"code"] integerValue];
-        rs.msg = responseData[@"msg"];
-        id data = responseData[@"data"];
+        rs.code = [responseData[RESPONSE_CODE] integerValue];
+        rs.msg = responseData[RESPONSE_MSG];
+        id data = responseData[RESPONSE_DATA];
         if ([data isKindOfClass:[NSDictionary class]]) {
             rs.dict = data;
         }else if ([data isKindOfClass:[NSArray class]]) {

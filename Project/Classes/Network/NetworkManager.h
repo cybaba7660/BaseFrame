@@ -11,6 +11,9 @@
 
 #define APP_DOMAIN [NetworkManager shareManager].domain
 #define DOMAIN_BY(URL) [[NetworkManager shareManager].domain stringByAppendingString:URL]
+#define RESPONSE_CODE   @"code"
+#define RESPONSE_DATA   @"data"
+#define RESPONSE_MSG    @"msg"
 @interface Result : NSObject
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *msg;
